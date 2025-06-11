@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import logouniversidad from '../assets/images/logouniversidad.png'
 import flor from '../assets/images/flor.png'
@@ -16,19 +16,23 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.body.style.cursor = 'none';
-    return () => {
-      document.body.style.cursor = 'auto';
-    };
-  }, []);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    setMousePos({ x: e.clientX, y: e.clientY });
+  };
+
+  const iconOffsetX = -(mousePos.x - window.innerWidth / 2) * 0.02;
+  const iconOffsetY = -(mousePos.y - window.innerHeight / 2) * 0.02;
+
+
 
   const handleClick = () => {
     navigate('/cartilla'); // Adjust the path as needed
   };
 
   return (
-    <main className='w-full h-full box-border relative'>
+    <main className='w-full h-full box-border relative' onMouseMove={handleMouseMove} onClick={handleClick}>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="hidden">
         <defs>
           <filter id="squiggly-0">
@@ -105,26 +109,36 @@ const Home = () => {
         <h3 className='text-4xl font-semibold mt-4'>Johan Sierra</h3>
         <img className='w-40 mt-2' src={logouniversidad} alt="logo universidad central" />
         {/* IMPORTING MOVING ICONS */} 
-        <div className='absolute top-0 left-0 w-full h-full squiggly'>
-        <img className='w-15 absolute top-90 left-95 -rotate-15 float-1' src={reloj} alt="reloj" />
-        <img className='w-15 absolute left-109 top-49 float-2' src={atomos} alt="atomos" />
-        <img className='w-15 absolute left-162 top-47 -rotate-12 float-3' src={bombilla} alt="bombilla" />
-        <img className='w-18 absolute left-220 top-47 rotate-15 float-4' src={cerebro} alt="cerebro" />
-        <img className='w-18 absolute right-100 top-53 rotate-12 float-5' src={cohete} alt="cohete" />
-        <img className='w-15 absolute right-95 top-90 -rotate-12 float-2' src={flor} alt="flor" />
-        <img className='w-15 absolute right-131 top-100 -rotate-5 float-3' src={estrella} alt="estrella" />
-        <img className='w-14 absolute top-136 left-186 rotate-10 float-1' src={sonrisa} alt="sonrisa" />
-        <img className='w-15 absolute top-100 left-135 -rotate-15 float-4' src={fuego} alt="fuego" />
+        <div
+          className='absolute inset-0 squiggly origin-top-left scale-[0.5] sm:scale-75 md:scale-100'
+          style={{
+            transform: `translate(${iconOffsetX}px, ${iconOffsetY}px)`,
+          }}
+        >
+          <img className='w-15 absolute top-90 left-95 -rotate-15 float-1' src={reloj} alt="reloj" />
+          <img className='w-15 absolute left-109 top-49 float-2' src={atomos} alt="atomos" />
+          <img className='w-15 absolute left-162 top-47 -rotate-12 float-3' src={bombilla} alt="bombilla" />
+          <img className='w-18 absolute left-220 top-47 rotate-15 float-4' src={cerebro} alt="cerebro" />
+          <img className='w-18 absolute right-100 top-53 rotate-12 float-5' src={cohete} alt="cohete" />
+          <img className='w-15 absolute right-95 top-90 -rotate-12 float-2' src={flor} alt="flor" />
+          <img className='w-15 absolute right-131 top-100 -rotate-5 float-3' src={estrella} alt="estrella" />
+          <img className='w-14 absolute top-136 left-186 rotate-10 float-1' src={sonrisa} alt="sonrisa" />
+          <img className='w-15 absolute top-100 left-135 -rotate-15 float-4' src={fuego} alt="fuego" />
         </div>
 
       </section>
 
-      <button
-          onClick={handleClick}
-          className="absolute bottom-10 right-10 animate-bounce text-6xl text-white"
-        >
-          ➡️
-        </button>
+
+      <div
+        className="fixed w-10 h-10 pointer-events-none z-50"
+        style={{
+          top: mousePos.y,
+          left: mousePos.x,
+          transform: 'translate(-50%, -50%)',
+        }}
+      >
+        <div className="text-white text-4xl">➡️</div>
+      </div>
     </main>
   )
 }
