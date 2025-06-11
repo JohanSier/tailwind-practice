@@ -8,10 +8,10 @@ const Home = () => {
       <span className='text-xl'>“La luz es la mensajera del universo.”<br/> — James Clerk Maxwell</span>
       <span className='absolute top-0 right-0 block m-3 text-xl'>{date.toLocaleDateString('en-GB')}</span>
       
-      <section className='w-full h-[85vh] flex flex-col justify-center overflow-hidden'>
-        <h1 className='text-6xl font-bold'>Fisica 3 - Libro Digital</h1>
-        <h2 className='text-green-300'>- Hecho Por -</h2>
-        <h3 className='inline'>Johan Sierra</h3>
+      <section className='relative w-full h-[85vh] flex flex-col justify-center items-center overflow-hidden'>
+        <h1 className='text-6xl font-semibold'>Fisica 3 - Libro Digital</h1>
+        <h2 className='text-3xl font-regular mt-4'> - Hecho Por - </h2>
+        <h3 className='text-4xl font-semibold mt-4'>Johan Sierra</h3>
         {/* <img /> */}
       </section>
     </main>
