@@ -10,13 +10,21 @@ import cohete from '../assets/images/cohete.png'
 import bombilla from '../assets/images/bombilla.png'
 import atomos from '../assets/images/atomos.png'
 import cerebro from '../assets/images/cerebro.png'
+import cursor from '../assets/cursores/cursor2.png'
 
 const Home = () => {
-    let date = new Date()
+  let date = new Date()
 
   const navigate = useNavigate();
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    document.body.style.cursor = 'none';
+    return () => {
+      document.body.style.cursor = 'auto';
+    };
+  }, []);
 
   const handleMouseMove = (e) => {
     setMousePos({ x: e.clientX, y: e.clientY });
@@ -24,8 +32,6 @@ const Home = () => {
 
   const iconOffsetX = -(mousePos.x - window.innerWidth / 2) * 0.02;
   const iconOffsetY = -(mousePos.y - window.innerHeight / 2) * 0.02;
-
-
 
   const handleClick = () => {
     navigate('/cartilla'); // Adjust the path as needed
@@ -137,7 +143,7 @@ const Home = () => {
           transform: 'translate(-50%, -50%)',
         }}
       >
-        <div className="text-white text-4xl">➡️</div>
+        <img src={cursor} alt="cursor" />
       </div>
     </main>
   )
