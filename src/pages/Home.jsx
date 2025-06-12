@@ -10,7 +10,7 @@ import cohete from "../assets/images/cohete.png";
 import bombilla from "../assets/images/bombilla.png";
 import atomos from "../assets/images/atomos.png";
 import cerebro from "../assets/images/cerebro.png";
-import cursor from "../assets/cursores/cursor1.png";
+import cursor from "../assets/cursores/cursor3.png";
 
 const Home = () => {
   let date = new Date();
@@ -37,7 +37,7 @@ const Home = () => {
   const handleClick = () => {
     setIsFading(true);
     setTimeout(() => {
-      navigate("/activities"); // Adjust the path as needed
+      navigate("/actividades"); // Adjust the path as needed
     }, 2000);
   };
 
@@ -141,15 +141,15 @@ const Home = () => {
           }
         `}</style>
       </svg>
-      <span className="text-xl">
+      <span className="text-xl absolute top-20 left-35">
         “La luz es la mensajera del universo.”
         <br /> — James Clerk Maxwell
       </span>
-      <span className="absolute top-0 right-0 block m-3 text-xl">
+      <span className="absolute top-20 right-35 block m-3 text-xl">
         {date.toLocaleDateString("en-GB")}
       </span>
 
-      <section className="relative w-full h-[85vh] flex flex-col justify-center items-center overflow-hidden ">
+      <section className="relative w-full h-full flex flex-col justify-center items-center overflow-hidden ">
         <h1 className="text-6xl font-semibold">Fisica 3 - Libro Digital</h1>
         <h2 className="text-3xl font-regular mt-4"> - Hecho Por - </h2>
         <h3 className="text-4xl font-semibold mt-4">
@@ -173,49 +173,49 @@ const Home = () => {
             alt="reloj"
           />
           <img
-            className="w-15 absolute left-109 top-49 float-2"
+            className="w-15 absolute left-115 top-62 float-2"
             src={atomos}
             alt="atomos"
           />
           <img
-            className="w-15 absolute left-162 top-47 -rotate-12 float-3"
+            className="w-15 absolute left-162 top-60 -rotate-12 float-3"
             src={bombilla}
             alt="bombilla"
           />
           <img
-            className="w-18 absolute left-220 top-47 rotate-15 float-4"
+            className="w-18 absolute left-220 top-59 rotate-15 float-4"
             src={cerebro}
             alt="cerebro"
           />
           <img
-            className="w-18 absolute right-100 top-53 rotate-12 float-5"
+            className="w-18 absolute right-124 top-59 rotate-12 float-5"
             src={cohete}
             alt="cohete"
           />
           <img
-            className="w-15 absolute right-95 top-90 -rotate-12 float-2"
+            className="w-15 absolute right-105 top-90 -rotate-12 float-2"
             src={flor}
             alt="flor"
           />
           <img
-            className="w-15 absolute right-131 top-125 -rotate-5 float-3"
+            className="w-15 absolute right-151 top-140 -rotate-5 float-3"
             src={estrella}
             alt="estrella"
           />
           <img
-            className="w-14 absolute top-136 left-186 rotate-10 float-1"
+            className="w-14 absolute top-152 left-201 rotate-10 float-1"
             src={sonrisa}
             alt="sonrisa"
           />
           <img
-            className="w-15 absolute top-125 left-135 -rotate-15 float-4"
+            className="w-15 absolute top-140 left-135 -rotate-15 float-4"
             src={fuego}
             alt="fuego"
           />
         </div>
       </section>
 
-      <span className="absolute font-light bottom-10 right-0 block mr-3 text-right text-2xl animate-pulse">
+      <span className="absolute font-light bottom-20 right-35 block mr-3 text-right text-2xl animate-pulse">
         HAZ CLIC EN CUALQUIER LUGAR
         <br />
         PARA COMENZAR
