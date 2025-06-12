@@ -1,28 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-import logouniversidad from '../assets/images/logouniversidad.png'
-import flor from '../assets/images/flor.png'
-import fuego from '../assets/images/fuego.png'
-import reloj from '../assets/images/reloj.png'
-import sonrisa from '../assets/images/sonrisa.png'
-import estrella from '../assets/images/estrella.png'
-import cohete from '../assets/images/cohete.png'
-import bombilla from '../assets/images/bombilla.png'
-import atomos from '../assets/images/atomos.png'
-import cerebro from '../assets/images/cerebro.png'
-import cursor from '../assets/cursores/cursor1.png'
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logouniversidad from "../assets/images/logouniversidad.png";
+import flor from "../assets/images/flor.png";
+import fuego from "../assets/images/fuego.png";
+import reloj from "../assets/images/reloj.png";
+import sonrisa from "../assets/images/sonrisa.png";
+import estrella from "../assets/images/estrella.png";
+import cohete from "../assets/images/cohete.png";
+import bombilla from "../assets/images/bombilla.png";
+import atomos from "../assets/images/atomos.png";
+import cerebro from "../assets/images/cerebro.png";
+import cursor from "../assets/cursores/cursor1.png";
 
 const Home = () => {
-  let date = new Date()
+  let date = new Date();
 
   const navigate = useNavigate();
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
-    document.body.style.cursor = 'none';
+    document.body.style.cursor = "none";
     return () => {
-      document.body.style.cursor = 'auto';
+      document.body.style.cursor = "auto";
     };
   }, []);
 
@@ -34,31 +35,65 @@ const Home = () => {
   const iconOffsetY = -(mousePos.y - window.innerHeight / 2) * 0.02;
 
   const handleClick = () => {
-    navigate('/cartilla'); // Adjust the path as needed
+    setIsFading(true);
+    setTimeout(() => {
+      navigate("/activities"); // Adjust the path as needed
+    }, 2000);
   };
 
   return (
-    <main className='w-full h-full box-border relative' onMouseMove={handleMouseMove} onClick={handleClick}>
+    <main
+      onMouseMove={handleMouseMove}
+      onClick={handleClick}
+      className={`w-full h-full box-border relative transition-opacity duration-2000 ease-in-out ${
+        isFading ? "opacity-0" : "opacity-100"
+      }`}
+    >
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="hidden">
         <defs>
           <filter id="squiggly-0">
-            <feTurbulence baseFrequency="0.2" numOctaves="3" result="noise" seed="0" />
+            <feTurbulence
+              baseFrequency="0.2"
+              numOctaves="3"
+              result="noise"
+              seed="0"
+            />
             <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
           </filter>
           <filter id="squiggly-1">
-            <feTurbulence baseFrequency="0.2" numOctaves="3" result="noise" seed="1" />
+            <feTurbulence
+              baseFrequency="0.2"
+              numOctaves="3"
+              result="noise"
+              seed="1"
+            />
             <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
           </filter>
           <filter id="squiggly-2">
-            <feTurbulence baseFrequency="0.2" numOctaves="3" result="noise" seed="2" />
+            <feTurbulence
+              baseFrequency="0.2"
+              numOctaves="3"
+              result="noise"
+              seed="2"
+            />
             <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
           </filter>
           <filter id="squiggly-3">
-            <feTurbulence baseFrequency="0.2" numOctaves="3" result="noise" seed="3" />
+            <feTurbulence
+              baseFrequency="0.2"
+              numOctaves="3"
+              result="noise"
+              seed="3"
+            />
             <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
           </filter>
           <filter id="squiggly-4">
-            <feTurbulence baseFrequency="0.2" numOctaves="3" result="noise" seed="4" />
+            <feTurbulence
+              baseFrequency="0.2"
+              numOctaves="3"
+              result="noise"
+              seed="4"
+            />
             <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
           </filter>
         </defs>
@@ -106,51 +141,99 @@ const Home = () => {
           }
         `}</style>
       </svg>
-      <span className='text-xl'>“La luz es la mensajera del universo.”<br/> — James Clerk Maxwell</span>
-      <span className='absolute top-0 right-0 block m-3 text-xl'>{date.toLocaleDateString('en-GB')}</span>
-      
-      <section className='relative w-full h-[85vh] flex flex-col justify-center items-center overflow-hidden '>
-        <h1 className='text-6xl font-semibold'>Fisica 3 - Libro Digital</h1>
-        <h2 className='text-3xl font-regular mt-4'> - Hecho Por - </h2>
-        <h3 className='text-4xl font-semibold mt-4'>Johan Sierra, Gina Acosta, Diana Sanchez </h3>
-        <img className='w-40 mt-2' src={logouniversidad} alt="logo universidad central" />
-        {/* IMPORTING MOVING ICONS */} 
+      <span className="text-xl">
+        “La luz es la mensajera del universo.”
+        <br /> — James Clerk Maxwell
+      </span>
+      <span className="absolute top-0 right-0 block m-3 text-xl">
+        {date.toLocaleDateString("en-GB")}
+      </span>
+
+      <section className="relative w-full h-[85vh] flex flex-col justify-center items-center overflow-hidden ">
+        <h1 className="text-6xl font-semibold">Fisica 3 - Libro Digital</h1>
+        <h2 className="text-3xl font-regular mt-4"> - Hecho Por - </h2>
+        <h3 className="text-4xl font-semibold mt-4">
+          Johan Sierra, Gina Acosta, Diana Sanchez{" "}
+        </h3>
+        <img
+          className="w-40 mt-2"
+          src={logouniversidad}
+          alt="logo universidad central"
+        />
+        {/* IMPORTING MOVING ICONS */}
         <div
-          className='absolute inset-0 squiggly origin-top-left scale-[0.5] sm:scale-75 md:scale-100'
+          className="absolute inset-0 squiggly origin-top-left scale-[0.5] sm:scale-75 md:scale-100"
           style={{
             transform: `translate(${iconOffsetX}px, ${iconOffsetY}px)`,
           }}
         >
-          <img className='w-15 absolute top-90 left-95 -rotate-15 float-1' src={reloj} alt="reloj" />
-          <img className='w-15 absolute left-109 top-49 float-2' src={atomos} alt="atomos" />
-          <img className='w-15 absolute left-162 top-47 -rotate-12 float-3' src={bombilla} alt="bombilla" />
-          <img className='w-18 absolute left-220 top-47 rotate-15 float-4' src={cerebro} alt="cerebro" />
-          <img className='w-18 absolute right-100 top-53 rotate-12 float-5' src={cohete} alt="cohete" />
-          <img className='w-15 absolute right-95 top-90 -rotate-12 float-2' src={flor} alt="flor" />
-          <img className='w-15 absolute right-131 top-125 -rotate-5 float-3' src={estrella} alt="estrella" />
-          <img className='w-14 absolute top-136 left-186 rotate-10 float-1' src={sonrisa} alt="sonrisa" />
-          <img className='w-15 absolute top-125 left-135 -rotate-15 float-4' src={fuego} alt="fuego" />
+          <img
+            className="w-15 absolute top-90 left-95 -rotate-15 float-1"
+            src={reloj}
+            alt="reloj"
+          />
+          <img
+            className="w-15 absolute left-109 top-49 float-2"
+            src={atomos}
+            alt="atomos"
+          />
+          <img
+            className="w-15 absolute left-162 top-47 -rotate-12 float-3"
+            src={bombilla}
+            alt="bombilla"
+          />
+          <img
+            className="w-18 absolute left-220 top-47 rotate-15 float-4"
+            src={cerebro}
+            alt="cerebro"
+          />
+          <img
+            className="w-18 absolute right-100 top-53 rotate-12 float-5"
+            src={cohete}
+            alt="cohete"
+          />
+          <img
+            className="w-15 absolute right-95 top-90 -rotate-12 float-2"
+            src={flor}
+            alt="flor"
+          />
+          <img
+            className="w-15 absolute right-131 top-125 -rotate-5 float-3"
+            src={estrella}
+            alt="estrella"
+          />
+          <img
+            className="w-14 absolute top-136 left-186 rotate-10 float-1"
+            src={sonrisa}
+            alt="sonrisa"
+          />
+          <img
+            className="w-15 absolute top-125 left-135 -rotate-15 float-4"
+            src={fuego}
+            alt="fuego"
+          />
         </div>
-
       </section>
-      
-      <span className='absolute font-light bottom-10 right-0 block mr-3 text-right text-2xl animate-pulse'>HAZ CLIC EN CUALQUIER LUGAR<br/>PARA COMENZAR</span>
 
+      <span className="absolute font-light bottom-10 right-0 block mr-3 text-right text-2xl animate-pulse">
+        HAZ CLIC EN CUALQUIER LUGAR
+        <br />
+        PARA COMENZAR
+      </span>
 
-
-      {/* CURSOR */}    
+      {/* CURSOR */}
       <div
         className="fixed w-10 h-10 pointer-events-none z-50"
         style={{
           top: mousePos.y,
           left: mousePos.x,
-          transform: 'translate(-50%, -50%)',
+          transform: "translate(-50%, -50%)",
         }}
       >
         <img src={cursor} alt="cursor" />
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
