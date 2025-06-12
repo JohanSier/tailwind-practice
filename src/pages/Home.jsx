@@ -10,7 +10,7 @@ import cohete from '../assets/images/cohete.png'
 import bombilla from '../assets/images/bombilla.png'
 import atomos from '../assets/images/atomos.png'
 import cerebro from '../assets/images/cerebro.png'
-import cursor from '../assets/cursores/cursor2.png'
+import cursor from '../assets/cursores/cursor1.png'
 
 const Home = () => {
   let date = new Date()
@@ -112,7 +112,7 @@ const Home = () => {
       <section className='relative w-full h-[85vh] flex flex-col justify-center items-center overflow-hidden '>
         <h1 className='text-6xl font-semibold'>Fisica 3 - Libro Digital</h1>
         <h2 className='text-3xl font-regular mt-4'> - Hecho Por - </h2>
-        <h3 className='text-4xl font-semibold mt-4'>Johan Sierra</h3>
+        <h3 className='text-4xl font-semibold mt-4'>Johan Sierra, Gina Acosta, Diana Sanchez </h3>
         <img className='w-40 mt-2' src={logouniversidad} alt="logo universidad central" />
         {/* IMPORTING MOVING ICONS */} 
         <div
@@ -127,14 +127,18 @@ const Home = () => {
           <img className='w-18 absolute left-220 top-47 rotate-15 float-4' src={cerebro} alt="cerebro" />
           <img className='w-18 absolute right-100 top-53 rotate-12 float-5' src={cohete} alt="cohete" />
           <img className='w-15 absolute right-95 top-90 -rotate-12 float-2' src={flor} alt="flor" />
-          <img className='w-15 absolute right-131 top-100 -rotate-5 float-3' src={estrella} alt="estrella" />
+          <img className='w-15 absolute right-131 top-125 -rotate-5 float-3' src={estrella} alt="estrella" />
           <img className='w-14 absolute top-136 left-186 rotate-10 float-1' src={sonrisa} alt="sonrisa" />
-          <img className='w-15 absolute top-100 left-135 -rotate-15 float-4' src={fuego} alt="fuego" />
+          <img className='w-15 absolute top-125 left-135 -rotate-15 float-4' src={fuego} alt="fuego" />
         </div>
 
       </section>
+      
+      <span className='absolute font-light bottom-10 right-0 block mr-3 text-right text-2xl animate-pulse'>HAZ CLIC EN CUALQUIER LUGAR<br/>PARA COMENZAR</span>
 
 
+
+      {/* CURSOR */}    
       <div
         className="fixed w-10 h-10 pointer-events-none z-50"
         style={{
