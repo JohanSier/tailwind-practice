@@ -131,25 +131,24 @@ const Activities = () => {
             transform: `translateY(${hovered.sphere ? 0 : floatOffset * 2}px)`,
           }}
         >
-          <img className="hover:scale-120" src={sphere} alt="esfera 3d" />
+          <img className="hover:scale-120 hover:opacity-50" src={sphere} alt="esfera 3d" />
         </Link>
 
-        <Link
-          onMouseEnter={() =>
-            setHovered((prev) => ({ ...prev, resorte: true }))
-          }
-          onMouseLeave={() =>
-            setHovered((prev) => ({ ...prev, resorte: false }))
-          }
-          className="w-20 absolute top-9 left-95 -rotate-20"
-          style={{
-            transform: `translateY(${
-              hovered.resorte ? 0 : floatOffset * 0.9
-            }px)`,
-          }}
-        >
-          <img className="hover:scale-120" src={resorte} alt="resorte 3d" />
-        </Link>
+       <Link to='/sistemas-oscilantes'
+  className="w-20 absolute top-9 left-95 -rotate-20 group"
+  style={{
+    transform: `translateY(${hovered.resorte ? 0 : floatOffset * 0.9}px)`,
+  }}
+>
+  <img
+    src={resorte}
+    alt="resorte 3d"
+    className="transition-transform duration-300 group-hover:scale-120 group-hover:opacity-50"
+  />
+  <span className="absolute top-11 -left-9 text-4xl font-bold rotate-20 group-hover:opacity-90">
+    Sistemas <br /> Oscilantes
+  </span>
+</Link>
 
         <Link
           className="w-50 absolute top-7 left-165 -rotate-55"
@@ -157,7 +156,7 @@ const Activities = () => {
             transform: `translateY(${hovered.flor ? 0 : floatOffset * 0.8}px)`,
           }}
         >
-          <img className="hover:scale-120" src={flor} alt="flor 3d" />
+          <img className="hover:scale-120 hover:opacity-50" src={flor} alt="flor 3d" />
         </Link>
 
         <Link
@@ -166,7 +165,7 @@ const Activities = () => {
             transform: `translateY(${hovered.sol ? 0 : floatOffset * 0.7}px)`,
           }}
         >
-          <img className="hover:scale-120" src={sol} alt="sol ilustracion" />
+          <img className="hover:scale-120 hover:opacity-50" src={sol} alt="sol ilustracion" />
         </Link>
 
         <Link
@@ -177,7 +176,7 @@ const Activities = () => {
             }px)`,
           }}
         >
-          <img className="hover:scale-120" src={cubito} alt="cubo 3d" />
+          <img className="hover:scale-120 hover:opacity-50" src={cubito} alt="cubo 3d" />
         </Link>
 
         <Link
@@ -188,7 +187,7 @@ const Activities = () => {
             }px)`,
           }}
         >
-          <img className="hover:scale-120" src={bombillo} alt="bombillo 3d" />
+          <img className="hover:scale-120 hover:opacity-50" src={bombillo} alt="bombillo 3d" />
         </Link>
 
         <Link
@@ -200,7 +199,7 @@ const Activities = () => {
           }}
         >
           <img
-            className="hover:scale-120"
+            className="hover:scale-120 hover:opacity-50"
             src={aladin}
             alt="ilustracion lampara aladin"
           />
@@ -214,7 +213,7 @@ const Activities = () => {
             }px)`,
           }}
         >
-          <img className="hover:scale-120" src={pendulo} alt="pendulo 3d" />
+          <img className="hover:scale-120 hover:opacity-50" src={pendulo} alt="pendulo 3d" />
         </Link>
       </div>
       {/* CURSOR */}
