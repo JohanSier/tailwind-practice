@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import cursor from "../assets/cursores/cursor2.png";
-import { useNavigate } from 'react-router-dom';
+import NoiseBackground from "../components/NoiseBackground";
 
 const Overlay = () => {
   const fullText = `Este proyecto ha sido creado como parte del curso Física 3 en la Universidad Central, con el propósito de presentar los temas estudiados en clase de una forma más didáctica, visual e interactiva.
@@ -9,6 +9,13 @@ A través de esta cartilla podrás explorar conceptos clave de la física óptic
 
   const [typedText, setTypedText] = useState('');
   const [isVisible, setIsVisible] = useState(false)
+  const [shouldShowOverlay, setShouldShowOverlay] = useState(true);
+  useEffect(() => {
+    const overlaySeen = localStorage.getItem('overlayShown');
+    if (overlaySeen === 'true') {
+      setShouldShowOverlay(false);
+    }
+  }, []);
 
   useEffect(() => {
     let index = 0;
@@ -27,7 +34,6 @@ A través de esta cartilla podrás explorar conceptos clave de la física óptic
     return () => clearTimeout(timer);
   }, []);
 
-  const navigate = useNavigate();
   const [isFading, setIsFading] = useState(false);
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -45,20 +51,22 @@ A través de esta cartilla podrás explorar conceptos clave de la física óptic
   
   const handleClick = () => {
     if (isVisible) {
+      localStorage.setItem('overlayShown', 'true');
       setIsFading(true);
     }
   };
 
+  if (!shouldShowOverlay) return null;
   return (
-    <main className={`w-full h-full flex items-center justify-center backdrop-blur-md transition-opacity duration-2000 ease-in-out ${
-        isFading ? "opacity-0 hidden" : "opacity-100"
-      }`} onMouseMove={handleMouseMove}
+    <main className={`absolute  w-full h-full flex items-center justify-center backdrop-blur-md transition-opacity duration-2000 ease-in-out ${
+      isFading ? "opacity-0 hidden" : "opacity-100"
+    } z-100`} onMouseMove={handleMouseMove}
     onClick={handleClick}>
-
       <div className="h-80 bg-neutral-900 p-8 rounded-xl shadow-xl max-w-xl w-full font-light text-lg whitespace-pre-wrap drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
         {typedText}
       </div>
 
+    <NoiseBackground />
       <span className={`${isVisible ? "absolute" : "hidden"} ease font-light bottom-20 right-35 block mr-3 text-right text-2xl animate-pulse `}>
         HAZ CLIC EN CUALQUIER LUGAR
         <br />
