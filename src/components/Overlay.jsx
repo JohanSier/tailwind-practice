@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react'
 import cursor from "../assets/cursores/cursor2.png";
 import NoiseBackground from "../components/NoiseBackground";
+import { useNavigate } from 'react-router-dom';
 
 const Overlay = () => {
   const fullText = `Este proyecto ha sido creado como parte del curso Física 3 en la Universidad Central, con el propósito de presentar los temas estudiados en clase de una forma más didáctica, visual e interactiva.
@@ -10,6 +11,9 @@ A través de esta cartilla podrás explorar conceptos clave de la física óptic
   const [typedText, setTypedText] = useState('');
   const [isVisible, setIsVisible] = useState(false)
   const [shouldShowOverlay, setShouldShowOverlay] = useState(true);
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     const overlaySeen = localStorage.getItem('overlayShown');
     if (overlaySeen === 'true') {
@@ -53,13 +57,16 @@ A través de esta cartilla podrás explorar conceptos clave de la física óptic
     if (isVisible) {
       localStorage.setItem('overlayShown', 'true');
       setIsFading(true);
+      setTimeout(()=>{
+        navigate('/actividades');
+      }, 2000)
     }
   };
 
   if (!shouldShowOverlay) return null;
   return (
-    <main className={`absolute  w-full h-full flex items-center justify-center backdrop-blur-md transition-opacity duration-2000 ease-in-out ${
-      isFading ? "opacity-0" : "opacity-100"
+    <main className={`absolute w-full h-full flex items-center justify-center backdrop-blur-md transition-opacity duration-2000 ease-in-out ${
+      isFading ? "hidden opacity-0" : "opacity-100"
     } z-100`} onMouseMove={handleMouseMove}
     onClick={handleClick}>
       <div className="h-80 bg-neutral-900 p-8 rounded-xl shadow-xl max-w-xl w-full font-light text-lg whitespace-pre-wrap drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
