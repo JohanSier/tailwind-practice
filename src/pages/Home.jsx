@@ -11,6 +11,7 @@ import bombilla from "../assets/images/bombilla.png";
 import atomos from "../assets/images/atomos.png";
 import cerebro from "../assets/images/cerebro.png";
 import cursor from "../assets/cursores/cursor3.png";
+import NoiseBackground from "../components/NoiseBackground";
 
 const Home = () => {
   let date = new Date();
@@ -111,8 +112,8 @@ const Home = () => {
           }
 
           @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
+            0%, 100% { transform: translateY(-2px); }
+            50% { transform: translateY(-20px); }
           }
 
           .float-1 {
@@ -148,6 +149,8 @@ const Home = () => {
       <span className="absolute top-20 right-35 block m-3 text-xl">
         {date.toLocaleDateString("en-GB")}
       </span>
+
+      <NoiseBackground />
 
       <section className="relative w-full h-full flex flex-col justify-center items-center overflow-hidden ">
         <h1 className="text-6xl font-semibold">Fisica 3 - Libro Digital</h1>
