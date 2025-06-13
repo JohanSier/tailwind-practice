@@ -59,7 +59,7 @@ A través de esta cartilla podrás explorar conceptos clave de la física óptic
   if (!shouldShowOverlay) return null;
   return (
     <main className={`absolute  w-full h-full flex items-center justify-center backdrop-blur-md transition-opacity duration-2000 ease-in-out ${
-      isFading ? "opacity-0 hidden" : "opacity-100"
+      isFading ? "opacity-0" : "opacity-100"
     } z-100`} onMouseMove={handleMouseMove}
     onClick={handleClick}>
       <div className="h-80 bg-neutral-900 p-8 rounded-xl shadow-xl max-w-xl w-full font-light text-lg whitespace-pre-wrap drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
