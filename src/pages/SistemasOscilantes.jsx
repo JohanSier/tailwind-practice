@@ -1,9 +1,22 @@
 import React from "react";
+import { useEffect, useRef } from "react";
+import transitionSound from "../assets/audio/audio1.mp3";
 import HTMLFlipBook from "react-pageflip";
 import BackButton from "../components/BackButton";
 import profe from "../assets/videos/oscilacionAmortiguada.mp4";
 
 function SistemasOscilantes() {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="flex justify-center items-center min-h-screen">
       <BackButton />
@@ -31,7 +44,7 @@ function SistemasOscilantes() {
             <h1 className="text-5xl font-semibold text-center">
               Sistemas Oscilantes
             </h1>
-            <p className="mt-4 italic text-2xl font-light mt-3 text-center">
+            <p className="mt-4 italic text-2xl font-light text-center">
               “La naturaleza está escrita en lenguaje matemático, y las
               oscilaciones son su pulso más delicado.”— Galileo Galilei{" "}
             </p>
@@ -148,6 +161,7 @@ function SistemasOscilantes() {
           Page 7
         </div>
       </HTMLFlipBook>
+      <audio ref={audioRef} src={transitionSound} hidden />
     </div>
   );
 }
