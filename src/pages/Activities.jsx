@@ -12,7 +12,6 @@ import flor from "../assets/images/three-d/3dflower.png";
 import aladin from "../assets/images/three-d/aladin.png";
 import bombillo from "../assets/images/three-d/bombillo.png";
 import resorte from "../assets/images/three-d/resorte.png";
-import circle from "../assets/images/three-d/circle.png";
 import cubito from "../assets/images/three-d/cubito.png";
 import pendulo from "../assets/images/three-d/penduloNewton.png";
 import sol from "../assets/images/three-d/sol.png";
@@ -73,7 +72,7 @@ const Activities = () => {
     >
       <Link
         onClick={handleClick}
-        className="z-90 cursor-pointer absolute top-20 left-30 flex items-center gap-2 justify-center w-fit box-border hover:opacity-50"
+        className="z-90 cursor-pointer absolute top-20 left-[10%] flex items-center gap-2 justify-center w-fit box-border hover:opacity-50"
       >
         <img src={arrow} alt="arrow" className="w-10 h-10" />
         <span
@@ -126,18 +125,22 @@ const Activities = () => {
         </div>
 
         <Link
-          className="w-30 absolute bottom-117 left-45"
+          className="w-30 absolute"
           style={{
-            transform: `translateY(${hovered.sphere ? 0 : floatOffset * 2}px)`,
+            top: "35%",
+            left: "15%",
+            transform: `translate(-50%, -50%) translateY(${hovered.sphere ? 0 : floatOffset * 2}px)`
           }}
         >
           <img className="hover:scale-120 hover:opacity-50" src={sphere} alt="esfera 3d" />
         </Link>
 
        <Link to='/sistemas-oscilantes'
-  className="w-20 absolute top-9 left-95 -rotate-20 group"
+  className="w-20 absolute -rotate-20 group"
   style={{
-    transform: `translateY(${hovered.resorte ? 0 : floatOffset * 0.9}px)`,
+    top: "12%",
+    left: "28%",
+    transform: `translate(-50%, -50%) translateY(${hovered.resorte ? 0 : floatOffset * 0.9}px)`,
   }}
 >
   <img
@@ -151,51 +154,55 @@ const Activities = () => {
 </Link>
 
         <Link
-          className="w-50 absolute top-7 left-165 -rotate-55"
+          className="w-50 absolute -rotate-55"
           style={{
-            transform: `translateY(${hovered.flor ? 0 : floatOffset * 0.8}px)`,
+            top: "2%",
+            left: "48%",
+            transform: `translate(-50%, -50%) translateY(${hovered.flor ? 0 : floatOffset * 0.8}px)`,
           }}
         >
           <img className="hover:scale-120 hover:opacity-50" src={flor} alt="flor 3d" />
         </Link>
 
         <Link
-          className="w-25 absolute top-65 left-100 -rotate-20"
+          className="w-25 absolute -rotate-20"
           style={{
-            transform: `translateY(${hovered.sol ? 0 : floatOffset * 0.7}px)`,
+            top: "35%",
+            left: "30%",
+            transform: `translate(-50%, -50%) translateY(${hovered.sol ? 0 : floatOffset * 0.7}px)`,
           }}
         >
           <img className="hover:scale-120 hover:opacity-50" src={sol} alt="sol ilustracion" />
         </Link>
 
         <Link
-          className="w-30 absolute top-15 right-135 rotate-5"
+          className="w-30 absolute rotate-5"
           style={{
-            transform: `translateY(${
-              hovered.cubito ? 0 : floatOffset * 1.8
-            }px)`,
+            top: "20%",
+            left: "65%",
+            transform: `translate(-50%, -50%) translateY(${hovered.cubito ? 0 : floatOffset * 1.8}px)`,
           }}
         >
           <img className="hover:scale-120 hover:opacity-50" src={cubito} alt="cubo 3d" />
         </Link>
 
         <Link
-          className="w-37 absolute top-0 right-59 -rotate-15"
+          className="w-37 absolute -rotate-15"
           style={{
-            transform: `translateY(${
-              hovered.bombillo ? 0 : floatOffset * 1.0
-            }px)`,
+            top: "10%",
+            left: "80%",
+            transform: `translate(-50%, -50%) translateY(${hovered.bombillo ? 0 : floatOffset * 1.0}px)`,
           }}
         >
           <img className="hover:scale-120 hover:opacity-50" src={bombillo} alt="bombillo 3d" />
         </Link>
 
         <Link
-          className="w-30 absolute top-60 right-95 -rotate-0"
+          className="w-30 absolute -rotate-0"
           style={{
-            transform: `translateY(${
-              hovered.aladin ? 0 : floatOffset * 1.6
-            }px)`,
+            top: "38%",
+            left: "69%",
+            transform: `translate(-50%, -50%) translateY(${hovered.aladin ? 0 : floatOffset * 1.6}px)`,
           }}
         >
           <img
@@ -206,11 +213,11 @@ const Activities = () => {
         </Link>
         
         <Link
-          className="w-45 absolute top-55 right-30 -rotate-0"
+          className="w-45 absolute -rotate-0"
           style={{
-            transform: `translateY(${
-              hovered.pendulo ? 0 : floatOffset * 1.4
-            }px)`,
+            top: "35%",
+            left: "85%",
+            transform: `translate(-50%, -50%) translateY(${hovered.pendulo ? 0 : floatOffset * 1.4}px)`,
           }}
         >
           <img className="hover:scale-120 hover:opacity-50" src={pendulo} alt="pendulo 3d" />
