@@ -10,9 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index path="/" element={<Home />} />
-          <Route path='actividades' element={<Activities/>}>
-            <Route path='sistemas-oscilantes' element={<SistemasOscilantes/>} />
-          </Route>
+          <Route path='actividades' element={<Activities/>} />
+          <Route path='sistemas-oscilantes' element={<SistemasOscilantes/>} />
         </Routes>
       </BrowserRouter>
     </>
