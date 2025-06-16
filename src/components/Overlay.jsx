@@ -1,7 +1,8 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import cursor from "../assets/cursores/cursor2.png";
 import NoiseBackground from "../components/NoiseBackground";
 import { useNavigate } from 'react-router-dom';
+import typewriterSound from "../assets/audio/audio.mp3";
 
 const Overlay = () => {
   const fullText = `Este proyecto ha sido creado como parte del curso Física 3 en la Universidad Central, con el propósito de presentar los temas estudiados en clase de una forma más didáctica, visual e interactiva.
@@ -14,11 +15,26 @@ A través de esta cartilla podrás explorar conceptos clave de la física óptic
 
   const navigate = useNavigate();
 
+  const typewriterRef = useRef(null);
+
   useEffect(() => {
     const overlaySeen = localStorage.getItem('overlayShown');
     if (overlaySeen === 'true') {
       setShouldShowOverlay(false);
     }
+  }, []);
+
+  useEffect(() => {
+    if (typewriterRef.current) {
+      typewriterRef.current.play();
+    }
+    const stopTimer = setTimeout(() => {
+      if (typewriterRef.current) {
+        typewriterRef.current.pause();
+        typewriterRef.current.currentTime = 0;
+      }
+    }, 12000);
+    return () => clearTimeout(stopTimer);
   }, []);
 
   useEffect(() => {
@@ -91,6 +107,7 @@ A través de esta cartilla podrás explorar conceptos clave de la física óptic
             >
               <img src={cursor} alt="cursor" />
             </div>
+      <audio ref={typewriterRef} src={typewriterSound} hidden />
     </main>
   )
 }
