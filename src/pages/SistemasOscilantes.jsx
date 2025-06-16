@@ -4,6 +4,7 @@ import transitionSound from "../assets/audio/audio1.mp3";
 import HTMLFlipBook from "react-pageflip";
 import BackButton from "../components/BackButton";
 import profe from "../assets/videos/oscilacionAmortiguada.mp4";
+import NoiseBackground from "../components/NoiseBackground";
 
 function SistemasOscilantes() {
   const audioRef = useRef(null);
@@ -19,6 +20,7 @@ function SistemasOscilantes() {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
+      <NoiseBackground />
       <BackButton />
       <HTMLFlipBook
         width={600}
