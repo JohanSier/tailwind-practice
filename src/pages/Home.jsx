@@ -171,47 +171,56 @@ const Home = () => {
           }}
         >
           <img
-            className="w-15 absolute top-90 left-95 -rotate-15 float-1"
+            className="w-15 absolute -rotate-15 float-1"
+            style={{ top: "44%", left: "24%" }}
             src={reloj}
             alt="reloj"
           />
           <img
-            className="w-15 absolute left-115 top-62 float-2"
+            className="w-15 absolute float-2"
+            style={{ top: "30%", left: "26%" }}
             src={atomos}
             alt="atomos"
           />
           <img
-            className="w-15 absolute left-162 top-60 -rotate-12 float-3"
+            className="w-15 absolute -rotate-12 float-3"
+            style={{ top: "27%", left: "37%" }}
             src={bombilla}
             alt="bombilla"
           />
           <img
-            className="w-18 absolute left-220 top-59 rotate-15 float-4"
+            className="w-18 absolute rotate-15 float-4"
+            style={{ top: "28%", left: "50%" }}
             src={cerebro}
             alt="cerebro"
           />
           <img
-            className="w-18 absolute right-124 top-59 rotate-12 float-5"
+            className="w-18 absolute rotate-12 float-5"
+            style={{ top: "28%", right: "31%" }}
             src={cohete}
             alt="cohete"
           />
           <img
-            className="w-15 absolute right-105 top-90 -rotate-12 float-2"
+            className="w-15 absolute -rotate-12 float-2"
+            style={{ top: "45%", right: "25%" }}
             src={flor}
             alt="flor"
           />
           <img
-            className="w-15 absolute right-151 top-140 -rotate-5 float-3"
+            className="w-15 absolute -rotate-5 float-3"
+            style={{ top: "63%", right: "35%" }}
             src={estrella}
             alt="estrella"
           />
           <img
-            className="w-14 absolute top-152 left-201 rotate-10 float-1"
+            className="w-14 absolute rotate-10 float-1"
+            style={{ top: "68%", left: "50%" }}
             src={sonrisa}
             alt="sonrisa"
           />
           <img
-            className="w-15 absolute top-140 left-135 -rotate-15 float-4"
+            className="w-15 absolute -rotate-15 float-4"
+            style={{ top: "63%", left: "37%" }}
             src={fuego}
             alt="fuego"
           />
