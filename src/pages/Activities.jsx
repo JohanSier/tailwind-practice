@@ -93,7 +93,7 @@ const Activities = () => {
       </h1>
 
       <div className="flex justify-center w-full h-full box-border relative">
-        <div className="flex justify-center gap-6 w-full h-full box-border absolute mt-[412px]">
+        <div className="flex justify-center gap-6 w-full box-border absolute bottom-0">
           <img
             className="w-105 h-100 "
             src={albert}

@@ -86,7 +86,7 @@ function SistemasOscilantes() {
           </h2>
 
           <div className="flex flex-col pt-5 w-full h-[85%] px-5">
-            <p style={{ fontFamily: "Lato, sans-serif" }} className="text-[1rem]">
+            <p style={{ fontFamily: "Times New Roman" }} className="text-[1rem] opacity-55">
               En nuestro primer laboratorio se analizaron dos sistemas oscilantes
               fundamentales: el péndulo simple y el sistema masa-resorte, con el
               propósito de estudiar y comprender el comportamiento de los
@@ -119,7 +119,7 @@ function SistemasOscilantes() {
             Marco Teórico 🧬
           </h2>
           <div className="flex flex-col pt-5 w-full h-[85%] px-5">
-            <p style={{ fontFamily: "Lato, sans-serif" }} className="text-[1rem]">
+            <p style={{ fontFamily: "Times New Roman" }} className="text-[1rem] opacity-55">
               En el ámbito de la física, los sistemas oscilantes representan una de las formas más recurrentes de movimiento. Son aquellos sistemas que, tras ser desplazados de una posición de equilibrio, responden con un movimiento repetitivo debido a la presencia de una fuerza restauradora que actúa para devolverlos a su estado original. Este tipo de comportamiento se encuentra tanto en sistemas mecánicos simples como el <em>péndulo</em> o el <em>resorte con una masa</em>, como en fenómenos más complejos como las ondas sonoras o electromagnéticas.
               <br/><br/>
               Para entender cómo funcionan, debemos primero considerar qué es un oscilador. Un oscilador es cualquier objeto o componente físico capaz de realizar movimientos cíclicos alrededor de un punto de referencia. En el caso del péndulo, es la masa suspendida que se balancea; en el sistema masa-resorte, es la masa que sube y baja verticalmente.
@@ -139,7 +139,7 @@ function SistemasOscilantes() {
         <div className="border-l-[3px] border-[#6969695d] shadow-inner justify-center items-center w-full h-full bg-amber-50 text-black p-4">
 
         <div className=" flex flex-col pt-15 w-full h-[85%] px-5">
-            <p style={{ fontFamily: "Lato, sans-serif" }} className="text-[1rem]">
+            <p style={{ fontFamily: "Times New Roman" }} className="text-[1rem] opacity-55">
             sentido del desplazamiento, y varía constantemente mientras el sistema está en movimiento. La elongación es una forma directa de cuantificar cuán lejos está el sistema de su configuración estable en un instante dado.
               <br/><br/>
               Otro concepto fundamental es el de rigidez, que expresa cuánta resistencia ofrece un sistema ante una deformación. En el caso de un resorte, esta propiedad se mide mediante una constante <code>k</code> que aparece en la ley de Hooke. Un resorte con alta rigidez (mayor <code>k</code>) se opone fuertemente al estiramiento y genera una fuerza restauradora mayor. Esta característica no solo influye en la facilidad con la que el sistema se deforma, sino también en su <em>ritmo de oscilación</em>: un sistema más rígido tenderá a oscilar más rápidamente que uno más flexible.
@@ -148,6 +148,11 @@ function SistemasOscilantes() {
                 Por último algo importante que hay que saber es que estos movimientos repetitivos pueden medirse con dos magnitudes clave: el periodo y la frecuencia. El periodo (T) es el tiempo que tarda el sistema en completar una oscilación completa, es decir, en ir y volver a su punto de inicio. Se mide en segundos y da una idea de la duración del ciclo oscilatorio.
             
                 Por otro lado, la frecuencia (f) indica cuántas oscilaciones ocurren por segundo y se mide en <em>hercios</em> (Hz). Ambas magnitudes están inversamente relacionadas: a mayor frecuencia, menor es el periodo, y viceversa.
+                Para modelar matemáticamente este tipo de movimiento, se han establecido fórmulas teóricas que permiten calcular el periodo de oscilación en distintos sistemas. En el caso de un péndulo simple, el periodo se determina mediante la fórmula:
+                <code> T = 2π √(L / g) </code>, donde <code>L</code> es la longitud del hilo y <code>g</code> la aceleración debida a la gravedad.
+                <br/><br/>
+                Por su parte, el periodo de un sistema masa-resorte está dado por la ecuación:
+                <code> T = 2π √(m / k) </code>, en la que <code>m</code> representa la masa del objeto y <code>k</code> la constante de rigidez del resorte. Estas fórmulas permiten predecir el comportamiento dinámico de los sistemas oscilantes bajo condiciones ideales, es decir, sin amortiguamiento ni fuerzas externas perturbadoras.
             </p>
           </div>
               <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
