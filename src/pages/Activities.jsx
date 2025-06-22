@@ -8,7 +8,7 @@ import albert from "../assets/images/three-d/Albert.png";
 
 import formula from "../assets/images/three-d/formulas.png";
 import tachon from "../assets/images/three-d/tachon.png";
-import flor from "../assets/images/three-d/3dflower.png";
+import corazon from "../assets/images/three-d/corazon.png";
 import aladin from "../assets/images/three-d/aladin.png";
 import bombillo from "../assets/images/three-d/bombillo.png";
 import resorte from "../assets/images/three-d/resorte.png";
@@ -154,14 +154,14 @@ const Activities = () => {
 </Link>
 
         <Link
-          className="w-50 absolute -rotate-55"
+          className="w-25 absolute -rotate-30"
           style={{
-            top: "2%",
+            top: "13%",
             left: "48%",
-            transform: `translate(-50%, -50%) translateY(${hovered.flor ? 0 : floatOffset * 0.8}px)`,
+            transform: `translate(-50%, -50%) translateY(${hovered.corazon ? 0 : floatOffset * 0.8}px)`,
           }}
         >
-          <img className="hover:scale-120 hover:opacity-50" src={flor} alt="flor 3d" />
+          <img className="hover:scale-120 hover:opacity-50" src={corazon} alt="corazon 3d" />
         </Link>
 
         <Link
