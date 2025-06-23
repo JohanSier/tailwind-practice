@@ -8,7 +8,11 @@ const RetroVideo = ({
   height,
   caption,
   border = "none",
-  rotate = "0"
+  rotate = "0",
+  muted = true,
+  loop = true,
+  autoPlay = true,
+  controls = false
 }) => {
   return (
     <div
@@ -17,9 +21,10 @@ const RetroVideo = ({
     >
       <video
         src={video}
-        loop
-        muted
-        autoPlay
+        loop={loop}
+        controls={controls}
+        muted={muted}
+        autoPlay={autoPlay}
         playsInline
         style={{ width: width, height: height }}
         className="object-cover"
