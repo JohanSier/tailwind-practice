@@ -19,7 +19,9 @@ import excel from "../assets/images/cartilla1-materiales/excel.jpg";
 import hilo from "../assets/images/cartilla1-materiales/hilo.avif";
 import soporteUniversal from "../assets/images/cartilla1-materiales/soporteUniversal.jpg";
 
-import cancelacionRuido from "../assets/videos/cancelacionRuido.mp4"
+import copaVoz from "../assets/videos/copaRota.mp4";
+import copa from "../assets/videos/copa.mp4";
+import cancelacionRuido from "../assets/videos/cancelacionRuido.mp4";
 import penduloMontaje from "../assets/videos/penduloMontaje.mp4";
 import tacoma from "../assets/videos/tacoma.mp4";
 import puenteMilenio from "../assets/videos/puenteMilenio.mp4";
@@ -198,7 +200,11 @@ function SistemasOscilantes() {
                 style={{ fontFamily: "Montserrat, sans-serif" }}
                 className="w-full mt-5 mb-4 text-[1rem] opacity-45"
               >
-                El Puente Millennium, ubicado en Londres, experimentó fuertes oscilaciones en el año 2000 al coincidir el paso rítmico de los peatones con ráfagas de viento, generando un fenómeno de resonancia inesperado. Un recordatorio claro de por qué estudiar oscilaciones es vital en ingeniería.
+                El Puente Millennium, ubicado en Londres, experimentó fuertes
+                oscilaciones en el año 2000 al coincidir el paso rítmico de los
+                peatones con ráfagas de viento, generando un fenómeno de
+                resonancia inesperado. Un recordatorio claro de por qué estudiar
+                oscilaciones es vital en ingeniería.
               </p>
 
               <RetroVideo
@@ -224,10 +230,12 @@ function SistemasOscilantes() {
                 style={{ fontFamily: "Montserrat, sans-serif" }}
                 className="w-[95%] mt-5 text-[1rem] opacity-45"
               >
-                Los audífonos canceladores de ruido funcionan generando oscilaciones opuestas a las ondas externas. Este principio de <strong className="underline">interferencia destructiva</strong> permite silenciar el sonido mediante precisión física aplicada.
+                Los audífonos canceladores de ruido funcionan generando
+                oscilaciones opuestas a las ondas externas. Este principio de{" "}
+                <strong className="underline">interferencia destructiva</strong>{" "}
+                permite silenciar el sonido mediante precisión física aplicada.
               </p>
             </div>
-
           </div>
 
           <span className="absolute bottom-[2%] left-[5%] text-xl">3</span>
@@ -239,61 +247,53 @@ function SistemasOscilantes() {
             src={argollado}
             alt="decorative image"
           />
-          <div className=" flex flex-col pt-15 w-full h-[85%] px-5">
+          <div className=" flex items-center flex-col gap-4 pt-15 w-full h-[85%] px-5">
             <p
-              style={{ fontFamily: "Times New Roman" }}
-              className="text-[1rem] opacity-55"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+              className="w-full mb-4 text-[1rem] opacity-45"
             >
-              sentido del desplazamiento, y varía constantemente mientras el
-              sistema está en movimiento. La elongación es una forma directa de
-              cuantificar cuán lejos está el sistema de su configuración estable
-              en un instante dado.
-              <br />
-              <br />
-              Otro concepto fundamental es el de rigidez, que expresa cuánta
-              resistencia ofrece un sistema ante una deformación. En el caso de
-              un resorte, esta propiedad se mide mediante una constante{" "}
-              <code>k</code> que aparece en la ley de Hooke. Un resorte con alta
-              rigidez (mayor <code>k</code>) se opone fuertemente al
-              estiramiento y genera una fuerza restauradora mayor. Esta
-              característica no solo influye en la facilidad con la que el
-              sistema se deforma, sino también en su{" "}
-              <em>ritmo de oscilación</em>: un sistema más rígido tenderá a
-              oscilar más rápidamente que uno más flexible.
-              <br />
-              <br />
-              Por último algo importante que hay que saber es que estos
-              movimientos repetitivos pueden medirse con dos magnitudes clave:
-              el periodo y la frecuencia. El periodo (T) es el tiempo que tarda
-              el sistema en completar una oscilación completa, es decir, en ir y
-              volver a su punto de inicio. Se mide en segundos y da una idea de
-              la duración del ciclo oscilatorio. Por otro lado, la frecuencia
-              (f) indica cuántas oscilaciones ocurren por segundo y se mide en{" "}
-              <em>hercios</em> (Hz). Ambas magnitudes están inversamente
-              relacionadas: a mayor frecuencia, menor es el periodo, y
-              viceversa. Para modelar matemáticamente este tipo de movimiento,
-              se han establecido fórmulas teóricas que permiten calcular el
-              periodo de oscilación en distintos sistemas. En el caso de un
-              péndulo simple, el periodo se determina mediante la fórmula:
-              <code> T = 2π √(L / g) </code>, donde <code>L</code> es la
-              longitud del hilo y <code>g</code> la aceleración debida a la
-              gravedad.
-              <br />
-              <br />
-              Por su parte, el periodo de un sistema masa-resorte está dado por
-              la ecuación:
-              <code> T = 2π √(m / k) </code>, en la que <code>m</code>{" "}
-              representa la masa del objeto y <code>k</code> la constante de
-              rigidez del resorte. Estas fórmulas permiten predecir el
-              comportamiento dinámico de los sistemas oscilantes bajo
-              condiciones ideales, es decir, sin amortiguamiento ni fuerzas
-              externas perturbadoras.
+              El estudio de los sistemas oscilantes es clave en el diseño de
+              cristales resistentes. Conociendo su{" "}
+              <strong className="underline">frecuencia natural</strong>, es
+              posible evitar que coincida con ondas externas que generen
+              resonancia, fenómeno que puede amplificar sus{" "}
+              <strong className="underline">oscilaciones</strong> y provocar su
+              fractura. Aplicando estos conceptos, se ajustan propiedades como
+              el grosor, la forma o el material, logrando que los cristales
+              disipen mejor la energía vibratoria y resistan condiciones
+              extremas.
             </p>
+
+            <RetroVideo
+              containerWidth="70%"
+              video={copaVoz}
+              width="95%"
+              height="200px"
+              caption="Copa rota con la voz"
+              border="1px solid #D4CFCF"
+              muted={false}
+              controls={true}
+              loop={false}
+              autoPlay={false}
+            />
+
+            <RetroVideo
+              containerWidth="70%"
+              video={copa}
+              width="90%"
+              height="200px"
+              caption="Copa rota con sonido"
+              border="1px solid #D4CFCF"
+              muted={false}
+              controls={true}
+              loop={false}
+              autoPlay={false}
+            />
           </div>
           <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
         </div>
 
-        <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+        {/* <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
           <h2
             style={{ fontFamily: "Caveat, sans-serif" }}
             className="mt-10 text-3xl font-bold text-center"
@@ -463,8 +463,19 @@ function SistemasOscilantes() {
           </div>
 
           <span className="absolute bottom-[2%] left-[5%] text-xl">7</span>
-        </div>
+        </div> */}
+        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+          <div className="flex flex-col pt-5 w-full h-[85%] px-5">
+            <p
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+              className="w-full mb-4 text-[1rem] opacity-45"
+            >
+              Pagina 5
+            </p>
+          </div>
 
+          <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
+        </div>
         <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
           <img
             className="w-15 h-full absolute top-0 -left-10 "
@@ -474,14 +485,14 @@ function SistemasOscilantes() {
 
           <div className="flex flex-col pt-5 w-full h-[85%] px-5">
             <p
-              style={{ fontFamily: "Times New Roman" }}
-              className="text-[1rem] opacity-55"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+              className="w-full mb-4 text-[1rem] opacity-45"
             >
-              Pagina 8
+              Pagina 6
             </p>
           </div>
 
-          <span className="absolute bottom-[2%] right-[5%] text-xl">8</span>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">6</span>
         </div>
       </HTMLFlipBook>
       <audio ref={audioRef} src={transitionSound} hidden />
