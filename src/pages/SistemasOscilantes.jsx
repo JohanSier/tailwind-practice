@@ -6,6 +6,11 @@ import BackButton from "../components/BackButton";
 import profe from "../assets/videos/oscilacionAmortiguada.mp4";
 import NoiseBackground from "../components/NoiseBackground";
 import RetroImage from "../components/RetroImage";
+import RetroVideo from "../components/RetroVideo";
+
+import taipeiReal from "../assets/images/taipei101.jpg";
+import taipeiBoceto from "../assets/images/amortiguadorTaipeiDibujo.png";
+import disenoPuente from "../assets/images/disenoPuentes.jpg";
 import resorte from "../assets/images/cartilla1-materiales/resortes.jpg";
 import regla from "../assets/images/cartilla1-materiales/regla.webp";
 import juegoMasas from "../assets/images/cartilla1-materiales/juegoMasas.webp";
@@ -13,7 +18,14 @@ import cronometro from "../assets/images/cartilla1-materiales/cronometro.png";
 import excel from "../assets/images/cartilla1-materiales/excel.jpg";
 import hilo from "../assets/images/cartilla1-materiales/hilo.avif";
 import soporteUniversal from "../assets/images/cartilla1-materiales/soporteUniversal.jpg";
+
+import cancelacionRuido from "../assets/videos/cancelacionRuido.mp4"
 import penduloMontaje from "../assets/videos/penduloMontaje.mp4";
+import tacoma from "../assets/videos/tacoma.mp4";
+import puenteMilenio from "../assets/videos/puenteMilenio.mp4";
+import argollado from "../assets/images/anillado.png";
+import amortiguadorVideo from "../assets/videos/amortiguador.mp4";
+
 function SistemasOscilantes() {
   const audioRef = useRef(null);
 
@@ -48,15 +60,15 @@ function SistemasOscilantes() {
             style={{ fontFamily: "Caveat, sans-serif" }}
             className=" w-full h-full flex flex-col items-center justify-center px-20"
           >
-            <small className="bg-black text-white text-lg font-semibold px-3 rounded-full mt-6 mb-4 ">
+            {/* <small className="bg-black text-white text-lg font-semibold px-3 rounded-full mt-6 mb-4 ">
               Laboratorio 1
-            </small>
+            </small> */}
             <h1 className="text-5xl font-semibold text-center">
               Sistemas Oscilantes
             </h1>
             <p className="mt-4 italic text-2xl font-light text-center">
-              “La naturaleza está escrita en lenguaje matemático, y las
-              oscilaciones son su pulso más delicado.”— Galileo Galilei{" "}
+              “El sistema oscilante más básico para la vida es el corazón”—
+              Profesor Orlando Organista
             </p>
             <video
               src={profe}
@@ -70,117 +82,163 @@ function SistemasOscilantes() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+        <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black py-4 px-10">
           <h2
             style={{ fontFamily: "Caveat, sans-serif" }}
             className="mt-10 text-3xl font-bold text-center"
           >
-            Contenido:
+            ¿Por qué estudiarlos?
           </h2>
 
-          <div className="flex flex-col items-center justify-center w-full h-[85%]">
-            <small>Contenido</small>
+          <div className="mt-5 flex flex-col w-full h-[85%]">
+            <div className="w-full">
+              <RetroVideo
+                containerWidth="95%"
+                video={tacoma}
+                width="95%"
+                height="220px"
+                caption="Colapso del Puente Tacoma Narrows"
+                border="1px solid #D4CFCF"
+              />
+              <p
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                className="w-[95%] mt-5 text-[1rem] opacity-45"
+              >
+                La falta de comprensión de la{" "}
+                <strong className="underline">resonancia</strong> provocó el
+                colapso del puente de Tacoma. Un ejemplo claro de cómo la
+                oscilación mal entendida puede ser fatal.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-6 mt-7 w-full">
+              <RetroImage
+                containerWidth="80%"
+                image={disenoPuente}
+                width="95%"
+                height="200px"
+                caption="Diseño de puentes Colgantes Modernos"
+                border="1px solid #D4CFCF"
+                rotate="-3deg"
+              />
+              <p
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                className="w-[95%] mt-5 text-[1rem] opacity-45"
+              >
+                Comprender los{" "}
+                <strong className="underline">sistemas oscilantes</strong> es
+                crucial: un puente mal diseñado puede colapsar no por peso, sino
+                por ritmo y resonancia.
+              </p>
+            </div>
           </div>
 
           <span className="absolute bottom-[2%] left-[5%] text-xl">1</span>
         </div>
 
-        <div className="border-l-[3px] border-[#6969695d] shadow-inner flex justify-center items-center w-full h-full bg-amber-50 text-black p-8">
-          <h2
-            style={{ fontFamily: "Caveat, sans-serif" }}
-            className="mt-10 text-3xl font-bold text-center"
-          >
-            Introducción
-          </h2>
+        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-8">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
 
-          <div className="flex flex-col pt-5 w-full h-[85%] px-5">
-            <p
-              style={{ fontFamily: "Times New Roman" }}
-              className="text-[1rem] opacity-55"
-            >
-              En nuestro primer laboratorio se analizaron dos sistemas
-              oscilantes fundamentales: el péndulo simple y el sistema
-              masa-resorte, con el propósito de estudiar y comprender el
-              comportamiento de los movimientos oscilatorios en función de
-              diversas variables físicas.
-              <br />
-              <br />
-              El objetivo principal fue determinar el periodo de oscilación en
-              ambos sistemas y observar cómo este se ve afectado (o no) por
-              distintas condiciones iniciales. <br />
-              <br />
-              Para ello, se propuso responder de manera experimental a cuatro
-              preguntas clave: <br />
-              <br />
-              1. ¿Depende el periodo de la amplitud inicial? <br />
-              2. ¿Depende el periodo de la masa?
-              <br />
-              3. ¿Depende el periodo de la longitud de la cuerda? <br />
-              4. ¿Depende el periodo de la rigidez del resorte?
-              <br />
-              <br />
-              Sin embargo, antes de hacer las prácticas se tienen que entender
-              ciertos conceptos teóricos, los cuales se aboradaran en el marco
-              teórico.
-            </p>
+          <div className="flex flex-col w-full h-[85%] px-5">
+            <div className="flex flex-col items-center w-full">
+              <p
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                className="w-full my-5 text-[1rem] opacity-45"
+              >
+                Los principios de los sistemas oscilantes son fundamentales en
+                el <strong>diseño de amortiguadores</strong> que protegen
+                edificios como el Taipei 101, evitando colapsos al controlar
+                vibraciones causadas por sismos, vientos u otros movimientos
+                extremos.
+              </p>
+
+              <RetroImage
+                containerWidth="80%"
+                image={taipeiBoceto}
+                width="95%"
+                height="240px"
+                caption="Amortiguador de masa sintonizada del Taipei 101"
+                border="1px solid #D4CFCF"
+              />
+            </div>
+
+            <div className="flex items-center mt-7 5 w-full">
+              <div className="flex items-center gap-5 w-full">
+                <RetroImage
+                  containerWidth="40%"
+                  image={taipeiReal}
+                  width="95%"
+                  height="240px"
+                  caption="Rascacielos Taipei 101"
+                  border="1px solid #D4CFCF"
+                />
+
+                <RetroVideo
+                  containerWidth="80%"
+                  video={amortiguadorVideo}
+                  width="95%"
+                  height="220px"
+                  caption="Video de su Amortiguador"
+                  border="1px solid #D4CFCF"
+                />
+              </div>
+            </div>
           </div>
-
           <span className="absolute bottom-[2%] right-[5%] text-xl">2</span>
         </div>
 
-        <div className="border-l-[3px] border-[#6969695d] shadow-inner flex justify-center items-center w-full h-full bg-amber-50 text-black p-8">
-          <h2
-            style={{ fontFamily: "Caveat, sans-serif" }}
-            className="mt-10 text-3xl font-bold text-center"
-          >
-            Marco Teórico
-          </h2>
+        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-8">
           <div className="flex flex-col pt-5 w-full h-[85%] px-5">
-            <p
-              style={{ fontFamily: "Times New Roman" }}
-              className="text-[1rem] opacity-55"
-            >
-              En el ámbito de la física, los sistemas oscilantes representan una
-              de las formas más recurrentes de movimiento. Son aquellos sistemas
-              que, tras ser desplazados de una posición de equilibrio, responden
-              con un movimiento repetitivo debido a la presencia de una fuerza
-              restauradora que actúa para devolverlos a su estado original. Este
-              tipo de comportamiento se encuentra tanto en sistemas mecánicos
-              simples como el <em>péndulo</em> o el{" "}
-              <em>resorte con una masa</em>, como en fenómenos más complejos
-              como las ondas sonoras o electromagnéticas.
-              <br />
-              <br />
-              Para entender cómo funcionan, debemos primero considerar qué es un
-              oscilador. Un oscilador es cualquier objeto o componente físico
-              capaz de realizar movimientos cíclicos alrededor de un punto de
-              referencia. En el caso del péndulo, es la masa suspendida que se
-              balancea; en el sistema masa-resorte, es la masa que sube y baja
-              verticalmente.
-              <br />
-              <br />
-              Pero este concepto puede escalar: si pensamos en una cuerda o un
-              medio elástico, cada partícula que forma parte de ese sistema
-              puede comportarse como un oscilador individual.
-              <br />
-              <br />
-              Todo sistema de este tipo parte de lo que se conoce como
-              configuración de equilibrio, que es la posición natural en la que
-              el sistema permanece en reposo si no actúa ninguna fuerza externa.
-              Esta posición de equilibrio es clave porque define el punto de
-              referencia desde el cual se mide el desplazamiento del sistema
-              cuando es perturbado.
-              <br />
-              <br />
-              Ese desplazamiento respecto al equilibrio se denomina elongación.
-              Es una magnitud que puede ser positiva o negativa dependiendo del
-            </p>
+            <div className="flex flex-col items-center w-full">
+              <p
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                className="w-full mt-5 mb-4 text-[1rem] opacity-45"
+              >
+                El Puente Millennium, ubicado en Londres, experimentó fuertes oscilaciones en el año 2000 al coincidir el paso rítmico de los peatones con ráfagas de viento, generando un fenómeno de resonancia inesperado. Un recordatorio claro de por qué estudiar oscilaciones es vital en ingeniería.
+              </p>
+
+              <RetroVideo
+                containerWidth="80%"
+                video={puenteMilenio}
+                width="95%"
+                height="190px"
+                caption="Puente Millenium Oscilando"
+                border="1px solid #D4CFCF"
+              />
+            </div>
+
+            <div className="flex items-center gap-6 mt-12 w-full">
+              <RetroVideo
+                containerWidth="70%"
+                video={cancelacionRuido}
+                width="95%"
+                height="200px"
+                caption="Cancelación de Ruido"
+                border="1px solid #D4CFCF"
+              />
+              <p
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                className="w-[95%] mt-5 text-[1rem] opacity-45"
+              >
+                Los audífonos canceladores de ruido funcionan generando oscilaciones opuestas a las ondas externas. Este principio de <strong className="underline">interferencia destructiva</strong> permite silenciar el sonido mediante precisión física aplicada.
+              </p>
+            </div>
+
           </div>
 
-          <span className="absolute bottom-[2%] right-[5%] text-xl">3</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">3</span>
         </div>
 
-        <div className="border-l-[3px] border-[#6969695d] shadow-inner justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+        <div className="relative justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
           <div className=" flex flex-col pt-15 w-full h-[85%] px-5">
             <p
               style={{ fontFamily: "Times New Roman" }}
@@ -317,10 +375,16 @@ function SistemasOscilantes() {
               />
             </div>
           </div>
-          <span className="absolute bottom-[2%] right-[5%] text-xl">5</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
         </div>
 
-        <div className="border-l-[3px] border-[#6969695d] shadow-inner justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+        <div className="relative justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+
           <h2
             style={{ fontFamily: "Caveat, sans-serif" }}
             className="mt-10 text-3xl font-bold text-center"
@@ -398,10 +462,16 @@ function SistemasOscilantes() {
             </p>
           </div>
 
-          <span className="absolute bottom-[2%] right-[5%] text-xl">7</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">7</span>
         </div>
 
-        <div className="border-l-[3px] border-[#6969695d] shadow-inner not-first-of-type:flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+
           <div className="flex flex-col pt-5 w-full h-[85%] px-5">
             <p
               style={{ fontFamily: "Times New Roman" }}
