@@ -2,12 +2,15 @@ import React from "react";
 import { useEffect, useRef } from "react";
 import transitionSound from "../assets/audio/audio1.mp3";
 import HTMLFlipBook from "react-pageflip";
+
+// COMPONENTES
 import BackButton from "../components/BackButton";
-import profe from "../assets/videos/oscilacionAmortiguada.mp4";
 import NoiseBackground from "../components/NoiseBackground";
+import DraggableCard from "../components/DraggableCard";
 import RetroImage from "../components/RetroImage";
 import RetroVideo from "../components/RetroVideo";
 
+// IMAGENES
 import taipeiReal from "../assets/images/taipei101.jpg";
 import taipeiBoceto from "../assets/images/amortiguadorTaipeiDibujo.png";
 import disenoPuente from "../assets/images/disenoPuentes.jpg";
@@ -19,10 +22,12 @@ import excel from "../assets/images/cartilla1-materiales/excel.jpg";
 import hilo from "../assets/images/cartilla1-materiales/hilo.avif";
 import soporteUniversal from "../assets/images/cartilla1-materiales/soporteUniversal.jpg";
 
+// VIDEOS
 import copaVoz from "../assets/videos/copaRota.mp4";
 import copa from "../assets/videos/copa.mp4";
 import cancelacionRuido from "../assets/videos/cancelacionRuido.mp4";
 import penduloMontaje from "../assets/videos/penduloMontaje.mp4";
+import profe from "../assets/videos/oscilacionAmortiguada.mp4";
 import tacoma from "../assets/videos/tacoma.mp4";
 import puenteMilenio from "../assets/videos/puenteMilenio.mp4";
 import argollado from "../assets/images/anillado.png";
@@ -464,16 +469,52 @@ function SistemasOscilantes() {
 
           <span className="absolute bottom-[2%] left-[5%] text-xl">7</span>
         </div> */}
-        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-          <div className="flex flex-col pt-5 w-full h-[85%] px-5">
+        <div className="relative items-center w-full h-full bg-amber-50 text-black p-4">
+          <div className="relative w-full h-full px-5">
             <p
               style={{ fontFamily: "Montserrat, sans-serif" }}
-              className="w-full mb-4 text-[1rem] opacity-45"
+              className="font-bold text-center w-full mb-4 text-[1rem] opacity-45"
             >
-              Pagina 5
+              ORDENE Y LEA LOS CONCEPTOS
             </p>
-          </div>
+            <DraggableCard
+              draggable={true}
+              title="Resonancia"
+              content="Cuando una fuerza externa tiene la misma frecuencia que la natural de un sistema, sus oscilaciones aumentan significativamente. Puede causar efectos útiles, como amplificar sonido, o peligrosos, como destruir estructuras."
+              className="absolute top-[30%] left-[30%]"
+            />
+            <DraggableCard
+              draggable={true}
+              title="Oscilaciones"
+              content="Movimiento repetitivo de un sistema respecto a un punto de equilibrio. Puede ser periódico o amortiguado dependiendo de si hay pérdida de energía o no."
+              className="absolute top-[32%] left-[20%]"
+            />
+            <DraggableCard
+              draggable={true}
+              title="Periodo"
+              content="Tiempo que tarda un sistema en completar una oscilación completa. Se mide en segundos y es inversamente proporcional a la frecuencia."
+              className="absolute top-[34%] left-[38%]"
+            />
+            <DraggableCard
+              draggable={true}
+              title="Frecuencia"
+              content="Número de oscilaciones que ocurren en un segundo. Se mide en hercios (Hz) y se relaciona con el periodo por la fórmula: f = 1/T."
+              className="absolute top-[36%] left-[22%]"
+            />
+            <DraggableCard
+              draggable={true}
+              title="Sistema oscilante"
+              content="Conjunto físico que oscila al ser perturbado desde su estado de equilibrio. Ejemplos: un péndulo, un resorte con masa o una cuerda vibrante."
+              className="absolute top-[38%] left-[36%]"
+            />
 
+            <DraggableCard
+              draggable={true}
+              title="Oscilaciones forzadas (con amortiguamiento)"
+              content="Oscilaciones que reciben energía externa periódica para mantenerse activas. Pueden alcanzar resonancia si la frecuencia de la fuerza coincide con la natural del sistema."
+              className="absolute top-[34%] left-[38%]"
+            />
+          </div>
           <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
         </div>
         <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
@@ -483,19 +524,136 @@ function SistemasOscilantes() {
             alt="decorative image"
           />
 
-          <div className="flex flex-col pt-5 w-full h-[85%] px-5">
+          <div className="flex flex-col pt-5 w-full h-full px-5">
             <p
               style={{ fontFamily: "Montserrat, sans-serif" }}
-              className="w-full mb-4 text-[1rem] opacity-45"
+              className="font-bold text-center w-full mb-4 text-[1rem] opacity-45"
             >
-              Pagina 6
+              ORDENE Y LEA LOS CONCEPTOS
             </p>
+
+            <DraggableCard
+              draggable={true}
+              title="Oscilaciones amortiguadas (sin forzamiento)"
+              content="Movimiento en el que la energía del sistema disminuye progresivamente, reduciendo la amplitud con el tiempo, debido a fricción o resistencia interna."
+              className="absolute top-[30%] left-[30%]"
+            />
+            <DraggableCard
+              draggable={true}
+              title="Oscilaciones Ideales"
+              content="Movimiento oscilatorio sin pérdida de energía, donde la amplitud se mantiene constante indefinidamente. Es un modelo teórico sin fricción ni resistencia."
+              className="absolute top-[32%] left-[20%]"
+            />
+
+            <DraggableCard
+              draggable={true}
+              title="Amplitud"
+              content="Máxima distancia desde la posición de equilibrio hasta el punto más alejado del movimiento oscilante. Representa la energía inicial del sistema."
+              className="absolute top-[36%] left-[22%]"
+            />
+            <DraggableCard
+              draggable={true}
+              title="Rigidez (constante k)"
+              content="Medida de la resistencia que opone un sistema elástico a la deformación. En resortes, se expresa como la relación entre fuerza aplicada y elongación."
+              className="absolute top-[38%] left-[36%]"
+            />
+            <DraggableCard
+              draggable={true}
+              title="Fase"
+              content="Estado del movimiento oscilatorio en un momento dado, relacionado con el ángulo en el ciclo. Permite comparar dos oscilaciones simultáneas."
+              className="absolute top-[40%] left-[30%]"
+            />
+
+            <DraggableCard
+              draggable={true}
+              title="Interferencia destructiva"
+              content="Fenómeno que ocurre cuando dos ondas se superponen con fases opuestas, cancelándose entre sí parcial o totalmente. El resultado es una disminución de la amplitud total. Es el principio que permite, por ejemplo, la cancelación de ruido en audífonos."
+              className="absolute top-[30%] left-[30%]"
+            />
+
+            <DraggableCard
+              draggable={true}
+              title="Oscilador"
+              content="Elemento individual de un sistema que repite un movimiento periódico. Puede ser mecánico, eléctrico o incluso biológico, como las cuerdas vocales."
+              className="absolute top-[40%] left-[30%]"
+            />
           </div>
 
           <span className="absolute bottom-[2%] right-[5%] text-xl">6</span>
         </div>
+
+        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+          <div className="flex flex-col pt-5 w-full h-full px-5">
+            <p
+              style={{ fontFamily: "Caveat, sans-serif" }}
+              className="mt-5 text-3xl font-bold text-center"
+            >
+              Zona de Experimentación
+            </p>
+
+            <div
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+              className="mt-5 flex flex-col gap-4"
+            >
+              <p className="text-center text-lg font-semibold">
+                Experimenta el sistema oscilante del Péndulo
+              </p>
+              <iframe
+                src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_es.html"
+                width="100%"
+                height="300"
+                loading="eager"
+              ></iframe>
+            </div>
+
+            <div
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+              className="mt-5 flex flex-col gap-4"
+            >
+              <p className="text-center text-lg font-semibold">
+                Experimenta el sistema oscilante masa-resorte
+              </p>
+              <iframe
+                src="https://phet.colorado.edu/sims/html/masses-and-springs-basics/latest/masses-and-springs-basics_es.html"
+                width="100%"
+                height="300"
+                loading="eager"
+              ></iframe>
+            </div>
+          </div>
+
+          <span className="absolute bottom-[2%] left-[5%] text-xl">7</span>
+        </div>
+
+        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+
+          <div className="flex flex-col pt-5 w-full h-full px-5">
+            <p
+              style={{ fontFamily: "Caveat, sans-serif" }}
+              className="mt-5 text-3xl font-bold text-center"
+            >
+              Evaluación de Aprendizaje
+            </p>
+            <iframe
+              className="mt-5"
+              allow="fullscreen; autoplay; allow-top-navigation-by-user-activation"
+              allowfullscreen
+              width="100%"
+              height="690"
+              frameborder="0"
+              src="https://www.educaplay.com/game/24439628-conceptos_de_los_sistemas_oscilantes.html"
+            ></iframe>
+          </div>
+
+          <span className="absolute bottom-[2%] right-[5%] text-xl">8</span>
+        </div>
       </HTMLFlipBook>
-      <audio ref={audioRef} src={transitionSound} hidden />
+      {/* MODIFICARLO POR EL AUDIO DEL PROFESOR: <audio ref={audioRef} src={transitionSound} hidden /> */}
     </div>
   );
 }
