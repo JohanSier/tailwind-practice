@@ -603,6 +603,7 @@ function SistemasOscilantes() {
                 width="100%"
                 height="300"
                 loading="eager"
+                // loading eager makes the iframe render even if its hidden in a HTMLFlipBook page
               ></iframe>
             </div>
 
@@ -617,7 +618,8 @@ function SistemasOscilantes() {
                 src="https://phet.colorado.edu/sims/html/masses-and-springs-basics/latest/masses-and-springs-basics_es.html"
                 width="100%"
                 height="300"
-                loading="eager"
+                loading="eager" 
+                // loading eager makes the iframe render even if its hidden in a HTMLFlipBook page
               ></iframe>
             </div>
           </div>

@@ -11,6 +11,7 @@ const RetroImage = ({ containerWidth, containerHeight = "fit-content", image, wi
         alt={caption}
         style={{ width: width, height: height }}
         className="object-cover"
+        loading="lazy"
       />
       <div className="mt-2 text-center font-mono text-lg  tracking-wide">
         {caption}

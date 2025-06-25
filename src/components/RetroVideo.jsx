@@ -28,6 +28,7 @@ const RetroVideo = ({
         playsInline
         style={{ width: width, height: height }}
         className="object-cover"
+        preload="none"
       />
       <div className="mt-2 text-center font-mono text-xl  tracking-wide">
         <p className="w-full text-center">{caption}</p>
