@@ -148,8 +148,8 @@ const Activities = () => {
     alt="resorte 3d"
     className="transition-transform duration-300 group-hover:scale-120 group-hover:opacity-50"
   />
-  <span className="absolute top-11 -left-9 text-4xl font-bold rotate-20 group-hover:opacity-90">
-    Sistemas <br /> Oscilantes
+  <span className="absolute top-11 -left-9 text-center text-4xl font-bold rotate-20 group-hover:opacity-90">
+    Introducción Sistemas <br /> Oscilantes
   </span>
 </Link>
 
@@ -223,6 +223,8 @@ const Activities = () => {
           <img className="hover:scale-120 hover:opacity-50" src={pendulo} alt="pendulo 3d" />
         </Link>
       </div>
+
+      
       {/* CURSOR */}
       <div
         className="fixed w-10 h-10 pointer-events-none z-50"
