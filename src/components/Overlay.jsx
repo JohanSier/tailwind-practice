@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import cursor from "../assets/cursores/cursor2.png";
+import cursor from "../assets/cursores/cursor2.webp";
 import NoiseBackground from "../components/NoiseBackground";
 import { useNavigate } from 'react-router-dom';
 import typewriterSound from "../assets/audio/audio.mp3";

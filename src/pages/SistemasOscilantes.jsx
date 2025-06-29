@@ -11,16 +11,16 @@ import RetroImage from "../components/RetroImage";
 import RetroVideo from "../components/RetroVideo";
 
 // IMAGENES
-import taipeiReal from "../assets/images/taipei101.jpg";
-import taipeiBoceto from "../assets/images/amortiguadorTaipeiDibujo.png";
-import disenoPuente from "../assets/images/disenoPuentes.jpg";
-import resorte from "../assets/images/cartilla1-materiales/resortes.jpg";
+import taipeiReal from "../assets/images/taipei101.webp";
+import taipeiBoceto from "../assets/images/amortiguadorTaipeiDibujo.webp";
+import disenoPuente from "../assets/images/disenoPuentes.webp";
+import resorte from "../assets/images/cartilla1-materiales/resortes.webp";
 import regla from "../assets/images/cartilla1-materiales/regla.webp";
 import juegoMasas from "../assets/images/cartilla1-materiales/juegoMasas.webp";
-import cronometro from "../assets/images/cartilla1-materiales/cronometro.png";
-import excel from "../assets/images/cartilla1-materiales/excel.jpg";
+import cronometro from "../assets/images/cartilla1-materiales/cronometro.webp";
+import excel from "../assets/images/cartilla1-materiales/excel.webp";
 import hilo from "../assets/images/cartilla1-materiales/hilo.avif";
-import soporteUniversal from "../assets/images/cartilla1-materiales/soporteUniversal.jpg";
+import soporteUniversal from "../assets/images/cartilla1-materiales/soporteUniversal.webp";
 
 // VIDEOS
 import copaVoz from "../assets/videos/copaRota.mp4";
@@ -30,7 +30,7 @@ import penduloMontaje from "../assets/videos/penduloMontaje.mp4";
 import profe from "../assets/videos/oscilacionAmortiguada.mp4";
 import tacoma from "../assets/videos/tacoma.mp4";
 import puenteMilenio from "../assets/videos/puenteMilenio.mp4";
-import argollado from "../assets/images/anillado.png";
+import argollado from "../assets/images/anillado.webp";
 import amortiguadorVideo from "../assets/videos/amortiguador.mp4";
 
 function SistemasOscilantes() {

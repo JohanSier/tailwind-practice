@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import Overlay from "../components/Overlay";
-import cursor from "../assets/cursores/cursor2.png";
+import cursor from "../assets/cursores/cursor2.webp";
 
-import newton from "../assets/images/three-d/Newton.png";
-import maxwell from "../assets/images/three-d/Maxwell.png";
-import albert from "../assets/images/three-d/Albert.png";
+import newton from "../assets/images/three-d/Newton.webp";
+import maxwell from "../assets/images/three-d/Maxwell.webp";
+import albert from "../assets/images/three-d/Albert.webp";
 
-import formula from "../assets/images/three-d/formulas.png";
-import tachon from "../assets/images/three-d/tachon.png";
-import corazon from "../assets/images/three-d/corazon.png";
-import aladin from "../assets/images/three-d/aladin.png";
-import bombillo from "../assets/images/three-d/bombillo.png";
-import resorte from "../assets/images/three-d/resorte.png";
-import cubito from "../assets/images/three-d/cubito.png";
-import pendulo from "../assets/images/three-d/penduloNewton.png";
-import sol from "../assets/images/three-d/sol.png";
-import sphere from "../assets/images/three-d/sphere.png";
+import formula from "../assets/images/three-d/formulas.webp";
+import tachon from "../assets/images/three-d/tachon.webp";
+import corazon from "../assets/images/three-d/corazon.webp";
+import aladin from "../assets/images/three-d/aladin.webp";
+import bombillo from "../assets/images/three-d/bombillo.webp";
+import resorte from "../assets/images/three-d/resorte.webp";
+import cubito from "../assets/images/three-d/cubito.webp";
+import pendulo from "../assets/images/three-d/penduloNewton.webp";
+import sol from "../assets/images/three-d/sol.webp";
+import sphere from "../assets/images/three-d/sphere.webp";
 
-import arrow from "../assets/images/volver.png";
+import arrow from "../assets/images/volver.webp";
 
 import NoiseBackground from "../components/NoiseBackground";
 import { Link, useNavigate } from "react-router-dom";

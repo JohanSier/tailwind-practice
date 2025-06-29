@@ -1,5 +1,5 @@
 import React from "react";
-import ruidoVisual from "../assets/images/three-d/granular.png";
+import ruidoVisual from "../assets/images/three-d/granular.webp";
 import "../index.css";
 
 const NoiseBackground = () => {

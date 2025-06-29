@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logouniversidad from "../assets/images/logouniversidad.png";
-import flor from "../assets/images/flor.png";
-import fuego from "../assets/images/fuego.png";
-import reloj from "../assets/images/reloj.png";
-import sonrisa from "../assets/images/sonrisa.png";
-import estrella from "../assets/images/estrella.png";
-import cohete from "../assets/images/cohete.png";
-import bombilla from "../assets/images/bombilla.png";
-import atomos from "../assets/images/atomos.png";
-import cerebro from "../assets/images/cerebro.png";
-import cursor from "../assets/cursores/cursor3.png";
+import logouniversidad from "../assets/images/logouniversidad.webp";
+import flor from "../assets/images/flor.webp";
+import fuego from "../assets/images/fuego.webp";
+import reloj from "../assets/images/reloj.webp";
+import sonrisa from "../assets/images/sonrisa.webp";
+import estrella from "../assets/images/estrella.webp";
+import cohete from "../assets/images/cohete.webp";
+import bombilla from "../assets/images/bombilla.webp";
+import atomos from "../assets/images/atomos.webp";
+import cerebro from "../assets/images/cerebro.webp";
+import cursor from "../assets/cursores/cursor3.webp";
 import NoiseBackground from "../components/NoiseBackground";
 
 const Home = () => {

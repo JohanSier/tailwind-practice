@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 // Configuración
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const IMAGE_DIR = path.join(__dirname, 'src', 'assets', 'images');
+const IMAGE_DIR = path.join(__dirname, 'src', 'assets', 'cursores');
 const QUALITY = 80; // Calidad de 1 a 100
 
 // Funciones
