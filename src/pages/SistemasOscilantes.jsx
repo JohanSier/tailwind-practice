@@ -26,7 +26,10 @@ import soporteUniversal from "../assets/images/cartilla1-materiales/soporteUnive
 import copaVoz from "../assets/videos/copaRota.mp4";
 import copa from "../assets/videos/copa.mp4";
 import cancelacionRuido from "../assets/videos/cancelacionRuido.mp4";
+import arenaVideo from "../assets/videos/arenaVibracion.mp4";
+import cuerdaLuz from "../assets/videos/cuerdaLuz.mp4";
 import penduloMontaje from "../assets/videos/penduloMontaje.mp4";
+import segundoModo from "../assets/videos/segundoModo.mp4";
 import profe from "../assets/videos/oscilacionAmortiguada.mp4";
 import tacoma from "../assets/videos/tacoma.mp4";
 import puenteMilenio from "../assets/videos/puenteMilenio.mp4";
@@ -77,15 +80,44 @@ function SistemasOscilantes() {
               “El sistema oscilante más básico para la vida es el corazón”—
               Profesor Orlando Organista
             </p>
-            <video
-              src={profe}
-              className="mt-10 w-[250px] h-[300px]"
-              loop
-              muted
-              autoPlay
-              playsInline
-              alt="profesor de fisica"
-            />
+            <div className="flex relative">
+              <video
+                src={arenaVideo}
+                className="absolute top-50 lef-50 w-[250px] h-[300px]"
+                loop
+                muted
+                autoPlay
+                playsInline
+                alt="Experimento de ondas con arena"
+              />
+              <video
+                src={cuerdaLuz}
+                className="absolute top-0 left-0 w-[250px] h-[300px]"
+                loop
+                muted
+                autoPlay
+                playsInline
+                alt="Experimento de ondas con cuerda y luz estroboscópica"
+              />
+              <video
+                src={segundoModo}
+                className="absolute top-0 left-0 w-[250px] h-[300px]"
+                loop
+                muted
+                autoPlay
+                playsInline
+                alt="Experimento de oscilación en el segundo modo normal de vibración"
+              />
+              <video
+                src={profe}
+                className="top-0 left-0 w-[250px] h-[300px]"
+                loop
+                muted
+                autoPlay
+                playsInline
+                alt="profesor de fisica"
+              />
+            </div>
           </div>
         </div>
 
@@ -618,7 +650,7 @@ function SistemasOscilantes() {
                 src="https://phet.colorado.edu/sims/html/masses-and-springs-basics/latest/masses-and-springs-basics_es.html"
                 width="100%"
                 height="300"
-                loading="eager" 
+                loading="eager"
                 // loading eager makes the iframe render even if its hidden in a HTMLFlipBook page
               ></iframe>
             </div>
