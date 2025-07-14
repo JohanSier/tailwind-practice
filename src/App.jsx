@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx";
 import "./index.css"
 import Activities from "./pages/Activities.jsx";
 import SistemasOscilantes from "./pages/SistemasOscilantes.jsx";
+import LaboratoriosOscilantes from "./pages/LaboratoriosOscilantes.jsx";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route index path="/" element={<Home />} />
           <Route path='actividades' element={<Activities/>} />
           <Route path='sistemas-oscilantes' element={<SistemasOscilantes/>} />
+          <Route path='laboratorios-oscilantes' element={<LaboratoriosOscilantes/>} />
         </Routes>
       </BrowserRouter>
     </>

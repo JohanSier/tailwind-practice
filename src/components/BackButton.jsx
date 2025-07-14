@@ -13,7 +13,7 @@ const BackButton = () => {
           className="text-3xl font-semibold"
           style={{ fontFamily: "Caveat, sans-serif" }}
         >
-          Volver
+          Volver al Menú
         </span>
       </Link>
   )

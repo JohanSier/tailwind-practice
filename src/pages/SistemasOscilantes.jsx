@@ -9,12 +9,14 @@ import NoiseBackground from "../components/NoiseBackground";
 import DraggableCard from "../components/DraggableCard";
 import RetroImage from "../components/RetroImage";
 import RetroVideo from "../components/RetroVideo";
+import NextButton from "../components/NextButton";
 
 // IMAGENES
 import taipeiReal from "../assets/images/taipei101.webp";
 import taipeiBoceto from "../assets/images/amortiguadorTaipeiDibujo.webp";
 import disenoPuente from "../assets/images/disenoPuentes.webp";
-import resorte from "../assets/images/cartilla1-materiales/resortes.webp";
+import resorte from "../assets/images/resorte.jpeg";
+
 import regla from "../assets/images/cartilla1-materiales/regla.webp";
 import juegoMasas from "../assets/images/cartilla1-materiales/juegoMasas.webp";
 import cronometro from "../assets/images/cartilla1-materiales/cronometro.webp";
@@ -35,6 +37,7 @@ import tacoma from "../assets/videos/tacoma.mp4";
 import puenteMilenio from "../assets/videos/puenteMilenio.mp4";
 import argollado from "../assets/images/anillado.webp";
 import amortiguadorVideo from "../assets/videos/amortiguador.mp4";
+import faseVideo from "../assets/videos/faseVideo.mp4";
 
 function SistemasOscilantes() {
   const audioRef = useRef(null);
@@ -52,6 +55,9 @@ function SistemasOscilantes() {
     <div className="flex justify-center items-center min-h-screen">
       <NoiseBackground />
       <BackButton />
+
+      <NextButton page='/laboratorios-oscilantes'/>
+
       <HTMLFlipBook
         width={600}
         height={880}
@@ -76,47 +82,40 @@ function SistemasOscilantes() {
             <h1 className="text-5xl font-semibold text-center">
               Sistemas Oscilantes
             </h1>
-            <p className="mt-4 italic text-2xl font-light text-center">
+            <p className="m-4 italic text-2xl font-light text-center">
               “El sistema oscilante más básico para la vida es el corazón”—
               Profesor Orlando Organista
             </p>
-            <div className="flex relative">
+            <div className="flex gap-2">
+              <div className="flex flex-col">
               <video
-                src={arenaVideo}
-                className="absolute top-50 lef-50 w-[250px] h-[300px]"
+                src={faseVideo}
+                className="mb-4"
                 loop
                 muted
                 autoPlay
                 playsInline
-                alt="Experimento de ondas con arena"
+                alt="Experimento de oscilación donde se ve la fase"
               />
-              <video
-                src={cuerdaLuz}
-                className="absolute top-0 left-0 w-[250px] h-[300px]"
-                loop
-                muted
-                autoPlay
-                playsInline
-                alt="Experimento de ondas con cuerda y luz estroboscópica"
-              />
-              <video
-                src={segundoModo}
-                className="absolute top-0 left-0 w-[250px] h-[300px]"
-                loop
-                muted
-                autoPlay
-                playsInline
-                alt="Experimento de oscilación en el segundo modo normal de vibración"
-              />
+                <p className="text-[.9rem]" style={{ fontFamily: "Montserrat, sans-serif" }}>Experimentando con la fase en las oscilaciones</p>
+              </div>
+
+              
+              <div className="flex flex-col">
+
               <video
                 src={profe}
-                className="top-0 left-0 w-[250px] h-[300px]"
+                className="mb-4"
                 loop
                 muted
                 autoPlay
                 playsInline
                 alt="profesor de fisica"
               />
+                <p className="text-[.9rem]" style={{ fontFamily: "Montserrat, sans-serif" }}>Experimentando con las oscilaciones amortiguadas</p>
+
+              </div>
+
             </div>
           </div>
         </div>
@@ -685,6 +684,10 @@ function SistemasOscilantes() {
           </div>
 
           <span className="absolute bottom-[2%] right-[5%] text-xl">8</span>
+        </div>
+
+        <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black py-4 px-10">
+
         </div>
       </HTMLFlipBook>
       {/* MODIFICARLO POR EL AUDIO DEL PROFESOR: <audio ref={audioRef} src={transitionSound} hidden /> */}
