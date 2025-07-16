@@ -4,6 +4,7 @@ import "./index.css"
 import Activities from "./pages/Activities.jsx";
 import SistemasOscilantes from "./pages/SistemasOscilantes.jsx";
 import LaboratoriosOscilantes from "./pages/LaboratoriosOscilantes.jsx";
+import Luz from "./pages/Luz.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='actividades' element={<Activities/>} />
           <Route path='sistemas-oscilantes' element={<SistemasOscilantes/>} />
           <Route path='laboratorios-oscilantes' element={<LaboratoriosOscilantes/>} />
+          <Route path='ondas-luz' element={<Luz/>} />
         </Routes>
       </BrowserRouter>
     </>

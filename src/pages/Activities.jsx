@@ -65,9 +65,8 @@ const Activities = () => {
 
   return (
     <main
-      className={`relative w-full h-full box-border flex flex-col items-center overflow-hidden transition-opacity duration-2000 ease-in-out ${
-        isFading ? "opacity-0" : "opacity-100"
-      }`}
+      className={`relative w-full h-full box-border flex flex-col items-center overflow-hidden transition-opacity duration-2000 ease-in-out ${isFading ? "opacity-0" : "opacity-100"
+        }`}
       onMouseMove={handleMouseMove}
     >
       <Link
@@ -135,25 +134,26 @@ const Activities = () => {
           <img className="hover:scale-120 hover:opacity-50" src={sphere} alt="esfera 3d" />
         </Link>
 
-       <Link to='/sistemas-oscilantes'
-  className="w-20 absolute -rotate-20 group"
-  style={{
-    top: "12%",
-    left: "28%",
-    transform: `translate(-50%, -50%) translateY(${hovered.resorte ? 0 : floatOffset * 0.9}px)`,
-  }}
->
-  <img
-    src={resorte}
-    alt="resorte 3d"
-    className="transition-transform duration-300 group-hover:scale-120 group-hover:opacity-50"
-  />
-  <span className="absolute top-11 -left-9 text-center text-4xl font-bold rotate-20 group-hover:opacity-90">
-    Introducción Sistemas <br /> Oscilantes
-  </span>
-</Link>
+        <Link to='/sistemas-oscilantes'
+          className="w-20 absolute -rotate-20 group"
+          style={{
+            top: "12%",
+            left: "28%",
+            transform: `translate(-50%, -50%) translateY(${hovered.resorte ? 0 : floatOffset * 0.9}px)`,
+          }}
+        >
+          <img
+            src={resorte}
+            alt="resorte 3d"
+            className="transition-transform duration-300 group-hover:scale-120 group-hover:opacity-50"
+          />
+          <span className="absolute top-11 -left-9 text-center text-4xl font-bold rotate-20 group-hover:opacity-90">
+            Introducción Sistemas <br /> Oscilantes
+          </span>
+        </Link>
 
         <Link
+          to="/laboratorios-oscilantes"
           className="w-25 absolute -rotate-30"
           style={{
             top: "13%",
@@ -162,6 +162,10 @@ const Activities = () => {
           }}
         >
           <img className="hover:scale-120 hover:opacity-50" src={corazon} alt="corazon 3d" />
+
+          <span className="absolute top-11 -left-9 text-center text-4xl font-bold rotate-20 group-hover:opacity-90">
+            Prácticas Sistemas <br /> Oscilantes
+          </span>
         </Link>
 
         <Link
@@ -211,7 +215,7 @@ const Activities = () => {
             alt="ilustracion lampara aladin"
           />
         </Link>
-        
+
         <Link
           className="w-45 absolute -rotate-0"
           style={{
@@ -224,7 +228,7 @@ const Activities = () => {
         </Link>
       </div>
 
-      
+
       {/* CURSOR */}
       <div
         className="fixed w-10 h-10 pointer-events-none z-50"

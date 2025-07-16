@@ -11,11 +11,13 @@ import RetroVideo from "../components/RetroVideo";
 import NextButton from "../components/NextButton";
 
 // IMAGENES
+import argollado from "../assets/images/anillado.webp";
 
 // VIDEOS
 import oscilacion from "../assets/videos/oscilacion.mp4";
 import pendulo from "../assets/videos/pendulo.mp4";
 import resonanciaLab from "../assets/videos/resonanciaLab.mp4";
+import oscilanteCorto from "../assets/videos/oscilanteCorto.mp4"
 
 function LaboratoriosOscilantes() {
   return (
@@ -23,7 +25,7 @@ function LaboratoriosOscilantes() {
       <NoiseBackground />
       <BackButton />
 
-      <NextButton />
+      <NextButton page="/ondas-luz" />
 
       <HTMLFlipBook
         width={600}
@@ -47,46 +49,46 @@ function LaboratoriosOscilantes() {
               Practicas
             </small>
             <h1 className="text-5xl font-semibold text-center mb-5">
-              Entendiendo las Oscilaciones con <br/> las Prácticas en el Laboratorio
+              Entendiendo las Oscilaciones con <br /> las Prácticas en el Laboratorio
             </h1>
-            
+
             <div className="flex gap-2">
               <div className="flex flex-col">
-              <video
-                src={oscilacion}
-                className="mb-4"
-                loop
-                muted
-                autoPlay
-                playsInline
-                alt="Entendiendo la amplitud en péndulo"
-              />
+                <video
+                  src={oscilacion}
+                  className="mb-4"
+                  loop
+                  muted
+                  autoPlay
+                  playsInline
+                  alt="Entendiendo la amplitud en péndulo"
+                />
                 <p className="text-[.9rem]" style={{ fontFamily: "Montserrat, sans-serif" }}>Entendiendo las oscilaciones</p>
 
                 <video
-                src={resonanciaLab}
-                className="my-4"
-                loop
-                muted
-                autoPlay
-                playsInline
-                alt="Experimentando el efecto de resonancia con dos masas oscilando"
-              />
+                  src={resonanciaLab}
+                  className="my-4"
+                  loop
+                  muted
+                  autoPlay
+                  playsInline
+                  alt="Experimentando el efecto de resonancia con dos masas oscilando"
+                />
                 <p className="text-[.9rem]" style={{ fontFamily: "Montserrat, sans-serif" }}>Experimentando el efecto de resonancia con dos masas oscilando</p>
               </div>
 
-              
+
               <div className="flex flex-col">
 
-              <video
-                src={pendulo}
-                className="mb-4"
-                loop
-                muted
-                autoPlay
-                playsInline
-                alt="profesor de fisica"
-              />
+                <video
+                  src={pendulo}
+                  className="mb-4"
+                  loop
+                  muted
+                  autoPlay
+                  playsInline
+                  alt="profesor de fisica"
+                />
                 <p className="text-[.9rem]" style={{ fontFamily: "Montserrat, sans-serif" }}>Experimentando con un péndulo y cronómetrandolo</p>
 
               </div>
@@ -95,37 +97,52 @@ function LaboratoriosOscilantes() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black py-4 px-10">
-          <h2
+        <div className="flex flex-col items-center justify-center w-full h-full bg-amber-50 text-black py-4 px-10">
+          
+
+          <div className="mt-[20%] flex flex-col items-center justiy-center w-full h-[85%]">
+
+
+            <div className="flex flex-col items-center gap-1 mt-7 w-full">
+            <h2
             style={{ fontFamily: "Caveat, sans-serif" }}
             className="mt-10 text-3xl font-bold text-center"
           >
-            ¿Por qué estudiarlos?
+            Temas a Resolver al final del apartado:
           </h2>
-
-          <div className="mt-5 flex flex-col w-full h-[85%]">
-            <div className="w-full">
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[95%] mt-5 text-[1rem] opacity-45"
+                className="w-[95%] mt-5 text-[2.5rem] opacity-75 text-center"
               >
-                La falta de comprensión de la{" "}
-                <strong className="underline">resonancia</strong> provocó el
-                colapso del puente de Tacoma. Un ejemplo claro de cómo la
-                oscilación mal entendida puede ser fatal.
+                ¿Qué es un sistema oscilante?
               </p>
-            </div>
 
-            <div className="flex items-center gap-6 mt-7 w-full">
-              
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[95%] mt-5 text-[1rem] opacity-45"
+                className="w-[95%] mt-5 text-[2rem] opacity-75 text-center text-center"
               >
-                Comprender los{" "}
-                <strong className="underline">Laboratorios oscilantes</strong> es
-                crucial: un puente mal diseñado puede colapsar no por peso, sino
-                por ritmo y resonancia.
+                ¿Cómo medir el periodo?
+              </p>
+
+              <p
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                className="w-[95%] mt-5 text-[1rem] opacity-75 text-center"
+              >
+                ¿Depende del periodo de la amplitud inicial ?
+              </p>
+
+              <p
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                className="w-[95%] mt-5 text-[3rem] opacity-75 text-center"
+              >
+                ¿Qué tipo de oscilaciones hay?
+              </p>
+
+              <p
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                className="w-[95%] mt-5 text-[1.5rem] opacity-75 text-center"
+              >
+                ¿Cómo veo representada la resonancia?
               </p>
             </div>
           </div>
@@ -133,113 +150,28 @@ function LaboratoriosOscilantes() {
           <span className="absolute bottom-[2%] left-[5%] text-xl">1</span>
         </div>
 
-        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-8">
+        <div className="flex w-full h-full bg-amber-50 text-black p-8">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
 
-          <div className="flex flex-col w-full h-[85%] px-5">
-            <div className="flex flex-col items-center w-full">
-              <p
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-full my-5 text-[1rem] opacity-45"
-              >
-                Los principios de los Laboratorios oscilantes son fundamentales en
-                el <strong>diseño de amortiguadores</strong> que protegen
-                edificios como el Taipei 101, evitando colapsos al controlar
-                vibraciones causadas por sismos, vientos u otros movimientos
-                extremos.
-              </p>
-
-            
-            </div>
-
-            <div className="flex items-center mt-7 5 w-full">
-              <div className="flex items-center gap-5 w-full">
-                
-
-    
-              </div>
+          <div className="relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="mt-[30%] flex flex-col justify-center items-center">
+            <video
+                  src={oscilanteCorto}
+                  className="mb-4"
+                  loop
+                  muted
+                  autoPlay
+                  playsInline
+                  alt="Explicacion sistemas oscilantes"
+                />
+              <h2 style={{ fontFamily: "Montserrat, sans-serif" }} className="w-[80%] text-xl font-regular mt-5">Lo que vemos en el video de arriba son movimientos que se repiten en unos intervalos especificos de tiempo. A esto lo conocemos en física como <strong>Sistema Oscilante</strong></h2>
             </div>
           </div>
           <span className="absolute bottom-[2%] right-[5%] text-xl">2</span>
-        </div>
-
-        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-8">
-          <div className="flex flex-col pt-5 w-full h-[85%] px-5">
-            <div className="flex flex-col items-center w-full">
-              <p
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-full mt-5 mb-4 text-[1rem] opacity-45"
-              >
-                El Puente Millennium, ubicado en Londres, experimentó fuertes
-                oscilaciones en el año 2000 al coincidir el paso rítmico de los
-                peatones con ráfagas de viento, generando un fenómeno de
-                resonancia inesperado. Un recordatorio claro de por qué estudiar
-                oscilaciones es vital en ingeniería.
-              </p>
-
-              
-            </div>
-
-            <div className="flex items-center gap-6 mt-12 w-full">
-              
-              <p
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[95%] mt-5 text-[1rem] opacity-45"
-              >
-                Los audífonos canceladores de ruido funcionan generando
-                oscilaciones opuestas a las ondas externas. Este principio de{" "}
-                <strong className="underline">interferencia destructiva</strong>{" "}
-                permite silenciar el sonido mediante precisión física aplicada.
-              </p>
-            </div>
-          </div>
-
-          <span className="absolute bottom-[2%] left-[5%] text-xl">3</span>
-        </div>
-        
-
-        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-          <div className="flex flex-col pt-5 w-full h-full px-5">
-            <p
-              style={{ fontFamily: "Caveat, sans-serif" }}
-              className="mt-5 text-3xl font-bold text-center"
-            >
-              Zona de Experimentación
-            </p>
-
-            <div
-              style={{ fontFamily: "Montserrat, sans-serif" }}
-              className="mt-5 flex flex-col gap-4"
-            >
-              <p className="text-center text-lg font-semibold">
-                Experimenta el sistema oscilante del Péndulo
-              </p>
-              <iframe
-                src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_es.html"
-                width="100%"
-                height="300"
-                loading="eager"
-                // loading eager makes the iframe render even if its hidden in a HTMLFlipBook page
-              ></iframe>
-            </div>
-
-            <div
-              style={{ fontFamily: "Montserrat, sans-serif" }}
-              className="mt-5 flex flex-col gap-4"
-            >
-              <p className="text-center text-lg font-semibold">
-                Experimenta el sistema oscilante masa-resorte
-              </p>
-              <iframe
-                src="https://phet.colorado.edu/sims/html/masses-and-springs-basics/latest/masses-and-springs-basics_es.html"
-                width="100%"
-                height="300"
-                loading="eager"
-                // loading eager makes the iframe render even if its hidden in a HTMLFlipBook page
-              ></iframe>
-            </div>
-          </div>
-
-          <span className="absolute bottom-[2%] left-[5%] text-xl">7</span>
         </div>
       </HTMLFlipBook>
     </div>
