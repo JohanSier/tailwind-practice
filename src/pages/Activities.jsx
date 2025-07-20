@@ -5,6 +5,7 @@ import cursor from "../assets/cursores/cursor2.webp";
 import newton from "../assets/images/three-d/Newton.webp";
 import maxwell from "../assets/images/three-d/Maxwell.webp";
 import albert from "../assets/images/three-d/Albert.webp";
+import johan from "../assets/images/johan.png";
 
 import formula from "../assets/images/three-d/formulas.webp";
 import tachon from "../assets/images/three-d/tachon.webp";
@@ -65,8 +66,9 @@ const Activities = () => {
 
   return (
     <main
-      className={`relative w-full h-full box-border flex flex-col items-center overflow-hidden transition-opacity duration-2000 ease-in-out ${isFading ? "opacity-0" : "opacity-100"
-        }`}
+      className={`relative w-full h-full box-border flex flex-col items-center overflow-hidden transition-opacity duration-2000 ease-in-out ${
+        isFading ? "opacity-0" : "opacity-100"
+      }`}
       onMouseMove={handleMouseMove}
     >
       <Link
@@ -92,6 +94,7 @@ const Activities = () => {
       </h1>
 
       <div className="flex justify-center w-full h-full box-border relative">
+        <img src={johan} alt="johan" className="relative top-120 left-[28%] w-80 h-fit" />
         <div className="flex justify-center gap-6 w-full box-border absolute bottom-0">
           <img
             className="w-105 h-100 "
@@ -128,18 +131,27 @@ const Activities = () => {
           style={{
             top: "35%",
             left: "15%",
-            transform: `translate(-50%, -50%) translateY(${hovered.sphere ? 0 : floatOffset * 2}px)`
+            transform: `translate(-50%, -50%) translateY(${
+              hovered.sphere ? 0 : floatOffset * 2
+            }px)`,
           }}
         >
-          <img className="hover:scale-120 hover:opacity-50" src={sphere} alt="esfera 3d" />
+          <img
+            className="hover:scale-120 hover:opacity-50"
+            src={sphere}
+            alt="esfera 3d"
+          />
         </Link>
 
-        <Link to='/sistemas-oscilantes'
+        <Link
+          to="/sistemas-oscilantes"
           className="w-20 absolute -rotate-20 group"
           style={{
             top: "12%",
             left: "28%",
-            transform: `translate(-50%, -50%) translateY(${hovered.resorte ? 0 : floatOffset * 0.9}px)`,
+            transform: `translate(-50%, -50%) translateY(${
+              hovered.resorte ? 0 : floatOffset * 0.9
+            }px)`,
           }}
         >
           <img
@@ -154,14 +166,20 @@ const Activities = () => {
 
         <Link
           to="/laboratorios-oscilantes"
-          className="w-25 absolute -rotate-30"
+          className="w-25 absolute -rotate-30 group"
           style={{
             top: "13%",
             left: "48%",
-            transform: `translate(-50%, -50%) translateY(${hovered.corazon ? 0 : floatOffset * 0.8}px)`,
+            transform: `translate(-50%, -50%) translateY(${
+              hovered.corazon ? 0 : floatOffset * 0.8
+            }px)`,
           }}
         >
-          <img className="hover:scale-120 hover:opacity-50" src={corazon} alt="corazon 3d" />
+          <img
+            className="relative group-hover:scale-120 group-hover:opacity-50"
+            src={corazon}
+            alt="corazon 3d"
+          />
 
           <span className="absolute top-11 -left-9 text-center text-4xl font-bold rotate-20 group-hover:opacity-90">
             Prácticas Sistemas <br /> Oscilantes
@@ -173,10 +191,16 @@ const Activities = () => {
           style={{
             top: "35%",
             left: "30%",
-            transform: `translate(-50%, -50%) translateY(${hovered.sol ? 0 : floatOffset * 0.7}px)`,
+            transform: `translate(-50%, -50%) translateY(${
+              hovered.sol ? 0 : floatOffset * 0.7
+            }px)`,
           }}
         >
-          <img className="hover:scale-120 hover:opacity-50" src={sol} alt="sol ilustracion" />
+          <img
+            className="hover:scale-120 hover:opacity-50"
+            src={sol}
+            alt="sol ilustracion"
+          />
         </Link>
 
         <Link
@@ -184,10 +208,16 @@ const Activities = () => {
           style={{
             top: "20%",
             left: "65%",
-            transform: `translate(-50%, -50%) translateY(${hovered.cubito ? 0 : floatOffset * 1.8}px)`,
+            transform: `translate(-50%, -50%) translateY(${
+              hovered.cubito ? 0 : floatOffset * 1.8
+            }px)`,
           }}
         >
-          <img className="hover:scale-120 hover:opacity-50" src={cubito} alt="cubo 3d" />
+          <img
+            className="hover:scale-120 hover:opacity-50"
+            src={cubito}
+            alt="cubo 3d"
+          />
         </Link>
 
         <Link
@@ -195,10 +225,16 @@ const Activities = () => {
           style={{
             top: "10%",
             left: "80%",
-            transform: `translate(-50%, -50%) translateY(${hovered.bombillo ? 0 : floatOffset * 1.0}px)`,
+            transform: `translate(-50%, -50%) translateY(${
+              hovered.bombillo ? 0 : floatOffset * 1.0
+            }px)`,
           }}
         >
-          <img className="hover:scale-120 hover:opacity-50" src={bombillo} alt="bombillo 3d" />
+          <img
+            className="hover:scale-120 hover:opacity-50"
+            src={bombillo}
+            alt="bombillo 3d"
+          />
         </Link>
 
         <Link
@@ -206,7 +242,9 @@ const Activities = () => {
           style={{
             top: "38%",
             left: "69%",
-            transform: `translate(-50%, -50%) translateY(${hovered.aladin ? 0 : floatOffset * 1.6}px)`,
+            transform: `translate(-50%, -50%) translateY(${
+              hovered.aladin ? 0 : floatOffset * 1.6
+            }px)`,
           }}
         >
           <img
@@ -221,13 +259,18 @@ const Activities = () => {
           style={{
             top: "35%",
             left: "85%",
-            transform: `translate(-50%, -50%) translateY(${hovered.pendulo ? 0 : floatOffset * 1.4}px)`,
+            transform: `translate(-50%, -50%) translateY(${
+              hovered.pendulo ? 0 : floatOffset * 1.4
+            }px)`,
           }}
         >
-          <img className="hover:scale-120 hover:opacity-50" src={pendulo} alt="pendulo 3d" />
+          <img
+            className="hover:scale-120 hover:opacity-50"
+            src={pendulo}
+            alt="pendulo 3d"
+          />
         </Link>
       </div>
-
 
       {/* CURSOR */}
       <div
