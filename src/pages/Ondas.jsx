@@ -6,7 +6,7 @@ import HTMLFlipBook from "react-pageflip";
 import BackButton from "../components/BackButton";
 import NoiseBackground from "../components/NoiseBackground";
 // import DraggableCard from "../components/DraggableCard";
-// import RetroImage from "../components/RetroImage";
+import RetroImage from "../components/RetroImage";
 import RetroVideo from "../components/RetroVideo";
 import NextButton from "../components/NextButton";
 
@@ -16,6 +16,7 @@ import argollado from "../assets/images/anillado.webp";
 import frontera from "../assets/images/frontera.png";
 import amortiguacion from "../assets/images/suspension.png";
 import tension from "../assets/images/tension.png";
+import longitudOnda from "../assets/images/longitudDeOnda.png";
 
 // VIDEOS
 import tresCuerdas from "../assets/videos/tresCuerdas.mp4";
@@ -23,6 +24,9 @@ import cuerdaOnda from "../assets/videos/cuerdaOnda.mp4";
 import ondasObstaculos from "../assets/videos/ondasConObstaculos.mp4";
 import cuerdaDirecciones from "../assets/videos/cuerdaDistintasDirecciones.mp4";
 import vibracionOndas from "../assets/images/vibracionesOndas.jpeg";
+import velocidadOnda from "../assets/videos/velocidadOnda.mp4";
+import nodos from "../assets/videos/nodos.mp4";
+import antinodos from "../assets/videos/antinodos.mp4";
 
 const Ondas = () => {
   return (
@@ -219,13 +223,13 @@ const Ondas = () => {
         </div>
 
         <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
-            <div className="absolute bottom-24 flex w-70 h-fit flex-col bg-amber-500 text-black px-5 py-4 rounded gap-4">
-              <span className="text-2xl font-bold">Nota:</span>
-              <p className="text-[.9rem] font-regular">
-                Cabe aclarar que el medio por el cual se propaga la onda es también un factor fundamental a tener en cuenta.
-                <br/><br/>Ya sea una cuerda, el aire, el agua, el vacio, etc.
-              </p>
-            </div>
+          <div className="absolute bottom-24 flex w-80 h-fit flex-col bg-amber-500 text-black px-5 py-4 rounded gap-4">
+            <span className="text-2xl font-bold">Nota:</span>
+            <p className="text-[.9rem] font-regular">
+              Cabe aclarar que el medio por el cual se propaga la onda es también junto con su perturbador son también factores fundamentales a tener en cuenta.
+              <br /><br />Ya sea el medio una cuerda, el aire, el agua, el vacio, etc y el perturbador una mano, una llave, una pared, etc.
+            </p>
+          </div>
           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
             <div className="flex flex-col justify-center items-center">
               <h2
@@ -269,6 +273,107 @@ const Ondas = () => {
             </div>
           </div>
           <span className="absolute bottom-[2%] left-[5%] text-xl">3</span>
+        </div>
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[80%] text-3xl font-regular mt-5 text-center"
+              >
+                ¿Cómo se cambia la velocidad de propagación de las ondas?
+              </h2>
+
+              <h2
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+                className="w-[80%] text-[.9rem] font-regular mt-5"
+              >
+                La velocidad de una onda depende del medio por el que viaja. Cambia si cambian las propiedades del medio, como su densidad o elasticidad.<br /><br />Por ejemplo, el sonido viaja más rápido en sólidos que en gases. También influye la temperatura: más calor, mayor velocidad en algunos casos.
+              </h2>
+
+
+
+            </div>
+            <RetroVideo
+              video={velocidadOnda}
+              className="grow-2"
+              loop
+              width="100%"
+              height="200px"
+              muted
+              autoPlay
+              playsInline
+              caption="Medio de propagacion de la onda: Agua"
+            />
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
+        </div>
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+          <div className="relative flex flex-col mt-15 w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[80%] text-3xl font-regular mb-6 text-center"
+              >
+                Conceptos Importantes de las Ondas
+              </h2>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-4">
+                <RetroVideo
+                  video={nodos}
+                  loop
+                  containerWidth="40%"
+                  width="100%"
+                  height="200px"
+                  muted
+                  autoPlay
+                  playsInline
+                  caption="Longitudes De Onda" />
+
+                <RetroImage
+                  image={longitudOnda}
+                  containerWidth="70%"
+                  width="100%"
+                  height="200px"
+                  caption="Normalmente se usa λ para representar estas longitudes"
+                />
+              </div>
+
+
+              <div className="flex items-center gap-4">
+                <RetroVideo
+                  video={antinodos}
+                  loop
+                  containerWidth="40%"
+                  width="100%"
+                  height="200px"
+                  muted
+                  autoPlay
+                  playsInline
+                  caption="Nodos y Antinodos" />
+
+                <h2
+                  style={{ fontFamily: "Caveat, sans-serif" }}
+                  className="w-[80%] text-xl font-regular mb-6"
+                >
+                    Los <span className="font-bold text-green-400">nodos</span> son puntos fijos donde la onda no vibra, y los <span className="font-bold text-green-400">
+                    antinodos </span> son los puntos donde la vibración es máxima. <br/> <br/> Ambos aparecen en <span className="font-bold text-yellow-400 underline">ondas estacionarias</span>, como en una cuerda tensa, mostrando zonas sin movimiento y zonas con mayor oscilación.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
         </div>
       </HTMLFlipBook>
     </div>
