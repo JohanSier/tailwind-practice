@@ -9,6 +9,7 @@ import NoiseBackground from "../components/NoiseBackground";
 // import RetroImage from "../components/RetroImage";
 import RetroVideo from "../components/RetroVideo";
 import NextButton from "../components/NextButton";
+import SketchfabHeartModel from "../components/SketchfabHeartModel";
 
 // IMAGENES
 import argollado from "../assets/images/anillado.webp";
@@ -156,7 +157,9 @@ function LaboratoriosOscilantes() {
             alt="decorative image"
           />
 
+          {/* <SketchfabHeartModel /> */}
           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
+
             <div className="mt-[30%] flex flex-col justify-center items-center">
               <RetroVideo
                 containerWidth="95%"
@@ -368,14 +371,14 @@ function LaboratoriosOscilantes() {
 
           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
             <div className="mt-[30%] flex flex-col justify-center items-center">
-            <RetroVideo
+              <RetroVideo
                 containerWidth="fit"
                 video={ideales}
                 width="fit"
                 height="380px"
                 caption="Fase"
               />
-      
+
               <h2
                 style={{ fontFamily: "Montserrat, sans-serif" }}
                 className="w-[80%] text-lg font-regular mt-5"
