@@ -17,13 +17,6 @@ import taipeiBoceto from "../assets/images/amortiguadorTaipeiDibujo.webp";
 import disenoPuente from "../assets/images/disenoPuentes.webp";
 import resorte from "../assets/images/resorte.jpeg";
 
-import regla from "../assets/images/cartilla1-materiales/regla.webp";
-import juegoMasas from "../assets/images/cartilla1-materiales/juegoMasas.webp";
-import cronometro from "../assets/images/cartilla1-materiales/cronometro.webp";
-import excel from "../assets/images/cartilla1-materiales/excel.webp";
-import hilo from "../assets/images/cartilla1-materiales/hilo.avif";
-import soporteUniversal from "../assets/images/cartilla1-materiales/soporteUniversal.webp";
-
 // VIDEOS
 import copaVoz from "../assets/videos/copaRota.mp4";
 import copa from "../assets/videos/copa.mp4";
@@ -86,34 +79,33 @@ function SistemasOscilantes() {
               “El sistema oscilante más básico para la vida es el corazón”—
               Profesor Orlando Organista
             </p>
-            <div className="flex gap-2">
+            <div className="flex gap-5">
               <div className="flex flex-col">
-              <video
-                src={faseVideo}
+              <RetroVideo
+                video={faseVideo}
                 className="mb-4"
                 loop
                 muted
                 autoPlay
                 playsInline
                 alt="Experimento de oscilación donde se ve la fase"
+                caption="Experimentando con la fase en las oscilaciones"
               />
-                <p className="text-[.9rem]" style={{ fontFamily: "Montserrat, sans-serif" }}>Experimentando con la fase en las oscilaciones</p>
               </div>
 
               
               <div className="flex flex-col">
 
-              <video
-                src={profe}
+              <RetroVideo
+                video={profe}
                 className="mb-4"
-                loop
-                muted
-                autoPlay
-                playsInline
+                loop={true}
+                muted={true}
+                autoPlay={true}
+                controls={false}
                 alt="profesor de fisica"
+                caption="Experimentando con las oscilaciones amortiguadas"
               />
-                <p className="text-[.9rem]" style={{ fontFamily: "Montserrat, sans-serif" }}>Experimentando con las oscilaciones amortiguadas</p>
-
               </div>
 
             </div>
@@ -680,6 +672,7 @@ function SistemasOscilantes() {
               height="690"
               frameborder="0"
               src="https://www.educaplay.com/game/24439628-conceptos_de_los_sistemas_oscilantes.html"
+              muted
             ></iframe>
           </div>
 

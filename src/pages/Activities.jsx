@@ -94,7 +94,11 @@ const Activities = () => {
       </h1>
 
       <div className="flex justify-center w-full h-full box-border relative">
-        <img src={johan} alt="johan" className="relative top-120 left-[28%] w-80 h-fit" />
+        {/* <img
+          src={johan}
+          alt="johan"
+          className="relative top-120 left-[28%] w-80 h-fit"
+        /> */}
         <div className="flex justify-center gap-6 w-full box-border absolute bottom-0">
           <img
             className="w-105 h-100 "
@@ -204,7 +208,8 @@ const Activities = () => {
         </Link>
 
         <Link
-          className="w-30 absolute rotate-5"
+          to="/ondas"
+          className="w-30 absolute rotate-5 group"
           style={{
             top: "20%",
             left: "65%",
@@ -214,10 +219,13 @@ const Activities = () => {
           }}
         >
           <img
-            className="hover:scale-120 hover:opacity-50"
+            className="group-hover:scale-120 group-hover:opacity-50"
             src={cubito}
             alt="cubo 3d"
           />
+          <span className="absolute top-11 -left-9 text-center text-4xl font-bold rotate-20">
+            Ondas
+          </span>
         </Link>
 
         <Link

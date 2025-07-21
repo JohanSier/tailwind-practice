@@ -30,7 +30,7 @@ function LaboratoriosOscilantes() {
       <NoiseBackground />
       <BackButton />
 
-      <NextButton page="/ondas-luz" />
+      <NextButton page="/ondas" />
 
       <HTMLFlipBook
         width={600}
@@ -58,57 +58,43 @@ function LaboratoriosOscilantes() {
               Laboratorio
             </h1>
 
-            <div className="flex gap-2">
-              <div className="flex flex-col">
-                <video
-                  src={oscilacion}
+            <div className="flex gap-5">
+              <div className="flex flex-col gap-4">
+                <RetroVideo
+                  video={oscilacion}
                   className="mb-4"
                   loop
                   muted
                   autoPlay
                   playsInline
-                  alt="Entendiendo la amplitud en péndulo"
+                  caption="Sistemas Oscilantes"
                 />
-                <p
-                  className="text-[.9rem]"
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
-                >
-                  Entendiendo las oscilaciones
-                </p>
 
-                <video
-                  src={resonanciaLab}
+                <RetroVideo
+                  video={resonanciaLab}
                   className="my-4"
                   loop
+                  width="100%"
+                  height="140px"
                   muted
                   autoPlay
                   playsInline
-                  alt="Experimentando el efecto de resonancia con dos masas oscilando"
+                  caption="Resonancia"
                 />
-                <p
-                  className="text-[.9rem]"
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
-                >
-                  Experimentando el efecto de resonancia con dos masas oscilando
-                </p>
+
               </div>
 
               <div className="flex flex-col">
-                <video
-                  src={pendulo}
-                  className="mb-4"
+                <RetroVideo
+                  video={pendulo}
+                  className="mt-10"
                   loop
                   muted
                   autoPlay
+                  width="100%"
                   playsInline
-                  alt="profesor de fisica"
+                  caption="Experimentando con un péndulo"
                 />
-                <p
-                  className="text-[.9rem]"
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
-                >
-                  Experimentando con un péndulo y cronómetrandolo
-                </p>
               </div>
             </div>
           </div>
@@ -226,7 +212,7 @@ function LaboratoriosOscilantes() {
                   />
 
                   <div className="flex flex-col gap-2 ">
-                    <div className="flex h-40 flex-col bg-amber-500 text-black p-5 rounded items-center gap-5">
+                    <div className="flex h-40 flex-col bg-amber-500 text-black p-5 rounded items-center ">
                       <span className="text-2xl font-bold ">Notas:</span>
                       <p className="text-[.9rem] font-regular">
                         En los sistemas elásticos se observa una{" "}
@@ -278,6 +264,7 @@ function LaboratoriosOscilantes() {
                   src={ideales}
                   className="w-35 h-fit border-amber-200"
                   muted
+                  loop
                   autoPlay
                   playsInline
                 />
