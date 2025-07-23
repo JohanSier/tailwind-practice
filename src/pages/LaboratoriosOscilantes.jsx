@@ -156,10 +156,9 @@ function LaboratoriosOscilantes() {
             src={argollado}
             alt="decorative image"
           />
-
-          {/* <SketchfabHeartModel /> */}
-          <div className="relative flex justify-center items-center w-full h-[85%] px-5">
-
+ 
+          
+           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
             <div className="mt-[30%] flex flex-col justify-center items-center">
               <RetroVideo
                 containerWidth="95%"
