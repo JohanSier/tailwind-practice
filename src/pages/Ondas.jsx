@@ -362,6 +362,8 @@ const Ondas = () => {
                   no necesita caminos físicos para moverse.{" "}
                 </span>{" "}
                 Ella viaja sola, a través del vacío.
+                <br/><br/>
+                La luz baila a diferentes ritmos, y a cada ritmo lo llamamos <span className="font-bold text-red-500">c</span><span className="font-bold text-orange-500">o</span><span className="font-bold text-fuchsia-500">l</span><span className="font-bold text-green-500">o</span><span className="font-bold text-blue-500">r</span>.
               </h2>
             </div>
           </div>
