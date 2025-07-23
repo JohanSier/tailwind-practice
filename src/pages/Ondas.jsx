@@ -10,6 +10,7 @@ import RetroImage from "../components/RetroImage";
 import RetroVideo from "../components/RetroVideo";
 import NextButton from "../components/NextButton";
 import LightBulb from "../components/LightBulb";
+import DrumKit from "../components/DrumKit";
 
 // IMAGENES
 import tresNodos from "../assets/images/tresNodos.jpeg";
@@ -28,6 +29,7 @@ import vibracionOndas from "../assets/images/vibracionesOndas.jpeg";
 import velocidadOnda from "../assets/videos/velocidadOnda.mp4";
 import nodos from "../assets/videos/nodos.mp4";
 import antinodos from "../assets/videos/antinodos.mp4";
+import polarizacion from "../assets/videos/polarizacion.mp4";
 
 const Ondas = () => {
   return (
@@ -324,26 +326,26 @@ const Ondas = () => {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[90%] text-4xl mb-5 font-bold mt-5 text-center"
               >
-                Los <span className="font-bold text-orange-500">nodos</span> son silencios en el canto de la onda. Los <span className="font-bold text-orange-500">antinodos</span>, su grito. 
+                Los <span className="font-bold text-orange-500">nodos</span> son silencios en el canto de la onda. Los <span className="font-bold text-orange-500">antinodos</span>, su grito.
               </h2>
 
-            <RetroVideo
-              video={antinodos}
-              loop
-              containerWidth="90%"
-              width="fit"
-              containerHeight="fit"
-              muted
-              autoPlay
-              playsInline
-            />
+              <RetroVideo
+                video={antinodos}
+                loop
+                containerWidth="90%"
+                width="fit"
+                containerHeight="fit"
+                muted
+                autoPlay
+                playsInline
+              />
             </div>
           </div>
           <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
         </div>
 
         <div className="flex w-full h-full bg-amber-50 text-black">
-        <img
+          <img
             className="w-15 h-full absolute top-0 -left-10 "
             src={argollado}
             alt="decorative image"
@@ -362,12 +364,54 @@ const Ondas = () => {
                   no necesita caminos físicos para moverse.{" "}
                 </span>{" "}
                 Ella viaja sola, a través del vacío.
-                <br/><br/>
+                <br /><br />
                 La luz baila a diferentes ritmos, y a cada ritmo lo llamamos <span className="font-bold text-red-500">c</span><span className="font-bold text-orange-500">o</span><span className="font-bold text-fuchsia-500">l</span><span className="font-bold text-green-500">o</span><span className="font-bold text-blue-500">r</span>.
               </h2>
             </div>
           </div>
           <span className="absolute bottom-[2%] right-[5%] text-xl">6</span>
+        </div>
+
+        <div className="flex w-full h-full bg-amber-50 text-black">
+          <div className="-mt-40 flex w-full h-[100%] px-5">
+            <div className=" flex flex-col items-center justify-center">
+            <RetroVideo
+                video={polarizacion}
+                loop
+                containerWidth="50%"
+                width="fit"
+                muted
+                autoPlay
+                playsInline
+              />
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[70%] text-3xl font-regular text-black -mt-64 text-center"
+              >
+                La luz vibra en todas direcciones, pero al <span className="font-bold text-red-500">Polarizarse</span>, elige un solo camino
+              </h2>
+
+              
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">7</span>
+        </div>
+
+        <div className="flex w-full h-full bg-amber-50 text-black">
+          <div className="relative flex w-full h-[100%] px-5">
+            <div className="px-10 relative flex flex-col items-center justify-center">
+                <DrumKit classe={"-mt-35"}/>
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-fit text-3xl font-regular text-black -mt-44 text-center"
+              >
+                Una <span className="font-bold text-amber-500">onda sonora</span> es la manera en que el aire recuerda nuestras palabras
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">7</span>
         </div>
       </HTMLFlipBook>
     </div>
