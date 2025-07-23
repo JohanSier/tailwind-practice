@@ -14,6 +14,7 @@ import aladin from "../assets/images/three-d/aladin.webp";
 import bombillo from "../assets/images/three-d/bombillo.webp";
 import resorte from "../assets/images/three-d/resorte.webp";
 import cubito from "../assets/images/three-d/cubito.webp";
+import atomoTwo from "../assets/images/atomoTwo.png"
 import pendulo from "../assets/images/three-d/penduloNewton.webp";
 import sol from "../assets/images/three-d/sol.webp";
 import sphere from "../assets/images/three-d/sphere.webp";
@@ -220,10 +221,10 @@ const Activities = () => {
         >
           <img
             className="group-hover:scale-120 group-hover:opacity-50"
-            src={cubito}
+            src={atomoTwo}
             alt="cubo 3d"
           />
-          <span className="absolute top-11 -left-9 text-center text-4xl font-bold rotate-20">
+          <span className="absolute top-11 -left-9 text-center text-5xl font-bold ">
             Ondas
           </span>
         </Link>

@@ -49,7 +49,7 @@ function SistemasOscilantes() {
       <NoiseBackground />
       <BackButton />
 
-      <NextButton page='/laboratorios-oscilantes'/>
+      <NextButton page="/laboratorios-oscilantes" />
 
       <HTMLFlipBook
         width={600}
@@ -81,33 +81,30 @@ function SistemasOscilantes() {
             </p>
             <div className="flex gap-5">
               <div className="flex flex-col">
-              <RetroVideo
-                video={faseVideo}
-                className="mb-4"
-                loop
-                muted
-                autoPlay
-                playsInline
-                alt="Experimento de oscilación donde se ve la fase"
-                caption="Experimentando con la fase en las oscilaciones"
-              />
+                <RetroVideo
+                  video={faseVideo}
+                  className="mb-4"
+                  loop
+                  muted
+                  autoPlay
+                  playsInline
+                  alt="Experimento de oscilación donde se ve la fase"
+                  caption="La Fase es coordinación de la que vibra"
+                />
               </div>
 
-              
               <div className="flex flex-col">
-
-              <RetroVideo
-                video={profe}
-                className="mb-4"
-                loop={true}
-                muted={true}
-                autoPlay={true}
-                controls={false}
-                alt="profesor de fisica"
-                caption="Experimentando con las oscilaciones amortiguadas"
-              />
+                <RetroVideo
+                  video={profe}
+                  className="mb-4"
+                  loop={true}
+                  muted={true}
+                  autoPlay={true}
+                  controls={false}
+                  alt="profesor de fisica"
+                  caption="La amortiguación es suavidad en el movimiento"
+                />
               </div>
-
             </div>
           </div>
         </div>
@@ -132,33 +129,29 @@ function SistemasOscilantes() {
               />
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[95%] mt-5 text-[1rem] opacity-45"
+                className="w-[95%] mt-5 text-[1rem] opacity-90"
               >
-                La falta de comprensión de la{" "}
-                <strong className="underline">resonancia</strong> provocó el
-                colapso del puente de Tacoma. Un ejemplo claro de cómo la
-                oscilación mal entendida puede ser fatal.
+                La <strong className="underline">resonancia</strong> es el
+                pálpito de lo uno con lo otro, es tan poderosa que puede ser
+                fatal: Como se ve en el colapso del puente Tacoma.
               </p>
             </div>
 
             <div className="flex items-center gap-6 mt-7 w-full">
-              <RetroImage
+              <RetroVideo
                 containerWidth="80%"
-                image={disenoPuente}
+                video={puenteMilenio}
                 width="95%"
                 height="200px"
-                caption="Diseño de puentes Colgantes Modernos"
+                muted={true}
+                caption="Puente Millenium Oscilando"
                 border="1px solid #D4CFCF"
-                rotate="-3deg"
               />
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[95%] mt-5 text-[1rem] opacity-45"
+                className="w-[90%] mt-5 text-[1rem] opacity-90"
               >
-                Comprender los{" "}
-                <strong className="underline">sistemas oscilantes</strong> es
-                crucial: un puente mal diseñado puede colapsar no por peso, sino
-                por ritmo y resonancia.
+                La conexión de lo uno con lo otro puede ser tan potente que es capaz de hacer un puente tambalear unicamente por estar en <strong className="underline">sincronía</strong>.
               </p>
             </div>
           </div>
@@ -177,13 +170,9 @@ function SistemasOscilantes() {
             <div className="flex flex-col items-center w-full">
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-full my-5 text-[1rem] opacity-45"
+                className="w-full my-5 text-xl opacity-90 text-center"
               >
-                Los principios de los sistemas oscilantes son fundamentales en
-                el <strong>diseño de amortiguadores</strong> que protegen
-                edificios como el Taipei 101, evitando colapsos al controlar
-                vibraciones causadas por sismos, vientos u otros movimientos
-                extremos.
+                Los <strong>amortiguadores</strong> son sistemas que evitan la fatalidad de la resonancia.
               </p>
 
               <RetroImage
@@ -221,53 +210,6 @@ function SistemasOscilantes() {
           <span className="absolute bottom-[2%] right-[5%] text-xl">2</span>
         </div>
 
-        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-8">
-          <div className="flex flex-col pt-5 w-full h-[85%] px-5">
-            <div className="flex flex-col items-center w-full">
-              <p
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-full mt-5 mb-4 text-[1rem] opacity-45"
-              >
-                El Puente Millennium, ubicado en Londres, experimentó fuertes
-                oscilaciones en el año 2000 al coincidir el paso rítmico de los
-                peatones con ráfagas de viento, generando un fenómeno de
-                resonancia inesperado. Un recordatorio claro de por qué estudiar
-                oscilaciones es vital en ingeniería.
-              </p>
-
-              <RetroVideo
-                containerWidth="80%"
-                video={puenteMilenio}
-                width="95%"
-                height="190px"
-                caption="Puente Millenium Oscilando"
-                border="1px solid #D4CFCF"
-              />
-            </div>
-
-            <div className="flex items-center gap-6 mt-12 w-full">
-              <RetroVideo
-                containerWidth="70%"
-                video={cancelacionRuido}
-                width="95%"
-                height="200px"
-                caption="Cancelación de Ruido"
-                border="1px solid #D4CFCF"
-              />
-              <p
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[95%] mt-5 text-[1rem] opacity-45"
-              >
-                Los audífonos canceladores de ruido funcionan generando
-                oscilaciones opuestas a las ondas externas. Este principio de{" "}
-                <strong className="underline">interferencia destructiva</strong>{" "}
-                permite silenciar el sonido mediante precisión física aplicada.
-              </p>
-            </div>
-          </div>
-
-          <span className="absolute bottom-[2%] left-[5%] text-xl">3</span>
-        </div>
 
         <div className="relative justify-center items-center w-full h-full bg-amber-50 text-black p-4">
           <img
@@ -278,18 +220,9 @@ function SistemasOscilantes() {
           <div className=" flex items-center flex-col gap-4 pt-15 w-full h-[85%] px-5">
             <p
               style={{ fontFamily: "Montserrat, sans-serif" }}
-              className="w-full mb-4 text-[1rem] opacity-45"
+              className="w-full mb-4 text-[1rem] opacity-90"
             >
-              El estudio de los sistemas oscilantes es clave en el diseño de
-              cristales resistentes. Conociendo su{" "}
-              <strong className="underline">frecuencia natural</strong>, es
-              posible evitar que coincida con ondas externas que generen
-              resonancia, fenómeno que puede amplificar sus{" "}
-              <strong className="underline">oscilaciones</strong> y provocar su
-              fractura. Aplicando estos conceptos, se ajustan propiedades como
-              el grosor, la forma o el material, logrando que los cristales
-              disipen mejor la energía vibratoria y resistan condiciones
-              extremas.
+              La magia de las ondas sonoras y una vez mas de la resonancia hace que un simple sonido sea capaz de quebrar copas y cristales.
             </p>
 
             <RetroVideo
@@ -318,185 +251,15 @@ function SistemasOscilantes() {
               autoPlay={false}
             />
           </div>
-          <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">3</span>
         </div>
 
-        {/* <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-          <h2
-            style={{ fontFamily: "Caveat, sans-serif" }}
-            className="mt-10 text-3xl font-bold text-center"
-          >
-            Materiales
-          </h2>
-          <div className="flex flex-col gap-4 pt-5 w-full h-[85%] px-5">
-            <p
-              style={{ fontFamily: "Times New Roman" }}
-              className="text-[1rem] opacity-55"
-            >
-              Ahora sí, al momento de pasar a la práctica necesitamos los
-              siguientes materiales:
-              <br />
-              <br />
-            </p>
-            <div className="-mt-7 justify-center flex gap-4">
-              <RetroImage
-                containerWidth="200px"
-                containerHeight="200px"
-                image={regla}
-                width="180px"
-                height="140px"
-                caption="Regla"
-              />
-              <RetroImage
-                containerWidth="200px"
-                containerHeight="200px"
-                image={resorte}
-                width="180px"
-                height="180px"
-                caption="Resortes"
-              />
-            </div>
-
-            <div className="flex justify-center gap-4">
-              <RetroImage
-                containerWidth="200px"
-                containerHeight="200px"
-                image={juegoMasas}
-                width="180px"
-                height="180px"
-                caption="Juego de Masas"
-              />
-              <RetroImage
-                containerWidth="200px"
-                containerHeight="200px"
-                image={cronometro}
-                width="180px"
-                height="180px"
-                caption="Cronometro"
-              />
-              <RetroImage
-                containerWidth="200px"
-                containerHeight="200px"
-                image={excel}
-                width="180px"
-                height="180px"
-                caption="Excel"
-              />
-            </div>
-
-            <div className="flex justify-center gap-4">
-              <RetroImage
-                containerWidth="200px"
-                containerHeight="260px"
-                image={soporteUniversal}
-                width="180px"
-                height="180px"
-                caption="Soporte Universal"
-              />
-              <RetroImage
-                containerWidth="200px"
-                containerHeight="240px"
-                image={hilo}
-                width="180px"
-                height="180px"
-                caption="Hilo"
-              />
-            </div>
-          </div>
-          <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
-        </div>
-
-        <div className="relative justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-          <img
-            className="w-15 h-full absolute top-0 -left-10 "
-            src={argollado}
-            alt="decorative image"
-          />
-
-          <h2
-            style={{ fontFamily: "Caveat, sans-serif" }}
-            className="mt-10 text-3xl font-bold text-center"
-          >
-            Metodología
-          </h2>
-
-          <div className="flex flex-col pt-5 w-full h-[85%] px-5">
-            <p
-              style={{ fontFamily: "Times New Roman" }}
-              className="text-[1rem] opacity-55"
-            >
-              Durante el desarrollo del laboratorio, se aplicaron procedimientos
-              similares en ambas pruebas experimentales, aunque con ciertas
-              variaciones específicas según la naturaleza de cada sistema. A
-              continuación, se describe detalladamente la metodología empleada
-              en la primera parte, correspondiente al estudio del periodo de un
-              péndulo.
-              <br />
-              <br />
-              Para iniciar esta fase del experimento, se preparó el montaje
-              utilizando un cordón, el cual fue fijado por un extremo a un
-              soporte rígido y por el otro a una masa, formando así un péndulo.
-              Una vez dispuesto el sistema, se procedió a liberar la masa desde
-              una posición inicial que podemos conocer como configuracion de
-              equilibrio. Después dejamos que el péndulo realizara diez
-              oscilaciones completas, registrando con un cronómetro el tiempo
-              total de este ciclo. Al finalizar, ese tiempo fue dividido entre
-              diez con el objetivo de obtener el valor del periodo —una magnitud
-              fundamental, ya que permite comparar cómo varía en función de
-              diferentes parámetros.
-            </p>
-
-            <video
-              src={penduloMontaje}
-              loop
-              muted
-              autoPlay
-              playsInline
-              alt="profesor de fisica"
-              className="mt-5 w-full h-75"
-            />
-            <small
-              style={{ fontFamily: "Times New Roman" }}
-              className="text-center text-[.8rem] mt-3 opacity-55"
-            >
-              Video de montaje del péndulo simple
-            </small>
-          </div>
-
-          <span className="absolute bottom-[2%] right-[5%] text-xl">6</span>
-        </div>
-
-        <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-          <div className="flex flex-col pt-5 w-full h-[85%] px-5">
-            <p
-              style={{ fontFamily: "Times New Roman" }}
-              className="text-[1rem] opacity-55"
-            >
-              Con el propósito de determinar si el periodo depende de ciertas
-              variables, se realizaron tres series de mediciones variando
-              sistemáticamente la amplitud, la masa y la longitud del hilo.
-              <br />
-              <br />
-              En primer lugar, para examinar la influencia de la amplitud, se
-              mantuvieron constantes tanto la masa como la longitud del péndulo,
-              mientras se modificaba el ángulo de lanzamiento. En cada caso, se
-              repitió el procedimiento para hallar el periodo. Posteriormente,
-              para evaluar el efecto de la masa, se utilizaron distintos cuerpos
-              con diferentes pesos, asegurándose de conservar la misma longitud
-              del hilo y el mismo ángulo inicial. Finalmente, en la última
-              prueba, se analizó la influencia de la longitud modificando la
-              distancia entre el soporte y la masa, manteniendo constante tanto
-              la masa como el ángulo de oscilación.
-            </p>
-          </div>
-
-          <span className="absolute bottom-[2%] left-[5%] text-xl">7</span>
-        </div> */}
+      
         <div className="relative items-center w-full h-full bg-amber-50 text-black p-4">
           <div className="relative w-full h-full px-5">
             <p
               style={{ fontFamily: "Montserrat, sans-serif" }}
-              className="font-bold text-center w-full mb-4 text-[1rem] opacity-45"
+              className="font-bold text-center w-full mt-14 text-[1rem] opacity-90"
             >
               ORDENE Y LEA LOS CONCEPTOS
             </p>
@@ -538,7 +301,7 @@ function SistemasOscilantes() {
               className="absolute top-[34%] left-[38%]"
             />
           </div>
-          <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
         </div>
         <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
           <img
@@ -550,7 +313,7 @@ function SistemasOscilantes() {
           <div className="flex flex-col pt-5 w-full h-full px-5">
             <p
               style={{ fontFamily: "Montserrat, sans-serif" }}
-              className="font-bold text-center w-full mb-4 text-[1rem] opacity-45"
+              className="font-bold text-center w-full mt-14 text-[1rem] opacity-90"
             >
               ORDENE Y LEA LOS CONCEPTOS
             </p>
@@ -602,7 +365,7 @@ function SistemasOscilantes() {
             />
           </div>
 
-          <span className="absolute bottom-[2%] right-[5%] text-xl">6</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
         </div>
 
         <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
@@ -679,9 +442,7 @@ function SistemasOscilantes() {
           <span className="absolute bottom-[2%] right-[5%] text-xl">8</span>
         </div>
 
-        <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black py-4 px-10">
-
-        </div>
+        <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black py-4 px-10"></div>
       </HTMLFlipBook>
       {/* MODIFICARLO POR EL AUDIO DEL PROFESOR: <audio ref={audioRef} src={transitionSound} hidden /> */}
     </div>

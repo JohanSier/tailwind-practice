@@ -9,6 +9,7 @@ import NoiseBackground from "../components/NoiseBackground";
 import RetroImage from "../components/RetroImage";
 import RetroVideo from "../components/RetroVideo";
 import NextButton from "../components/NextButton";
+import LightBulb from "../components/LightBulb";
 
 // IMAGENES
 import tresNodos from "../assets/images/tresNodos.jpeg";
@@ -198,24 +199,15 @@ const Ondas = () => {
                 video={cuerdaDirecciones}
                 width="100%"
                 height="350px"
-                caption="Ondas en cuerda"
+                caption="Ondas Manifestandose"
               />
 
               <h2
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[80%] text-[1rem] font-regular mt-5"
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[80%] text-3xl font-regular mt-5"
               >
-                En el video observamos dos <strong>ondas</strong> propagandose
-                por medio de la cuerda.
-                <br />
-                <br />
-                El profesor mueve la cuerda verticalmente y el compañero
-                horizontalmente.
-                <br />
-                <br />
-                Una <strong>onda</strong> es un movimiento que transporta
-                energía sin mover materia, como cuando el sonido viaja por el
-                aire o el agua vibra al lanzar una piedra.
+                Una <span className="font-bold text-red-500">onda</span> es el
+                susurro del universo que lleva energía sin tocar la materia.
               </h2>
             </div>
           </div>
@@ -226,8 +218,13 @@ const Ondas = () => {
           <div className="absolute bottom-24 flex w-80 h-fit flex-col bg-amber-500 text-black px-5 py-4 rounded gap-4">
             <span className="text-2xl font-bold">Nota:</span>
             <p className="text-[.9rem] font-regular">
-              Cabe aclarar que el medio por el cual se propaga la onda es también junto con su perturbador son también factores fundamentales a tener en cuenta.
-              <br /><br />Ya sea el medio una cuerda, el aire, el agua, el vacio, etc y el perturbador una mano, una llave, una pared, etc.
+              Cabe aclarar que el medio por el cual se propaga la onda es
+              también junto con su perturbador son también factores
+              fundamentales a tener en cuenta.
+              <br />
+              <br />
+              Ya sea el medio una cuerda, el aire, el agua, el vacio, etc y el
+              perturbador una mano, una llave, una pared, etc.
             </p>
           </div>
           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
@@ -276,7 +273,6 @@ const Ondas = () => {
         </div>
 
         <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
-
           <img
             className="w-15 h-full absolute top-0 -left-10 "
             src={argollado}
@@ -296,11 +292,15 @@ const Ondas = () => {
                 style={{ fontFamily: "Montserrat, sans-serif" }}
                 className="w-[80%] text-[.9rem] font-regular mt-5"
               >
-                La velocidad de una onda depende del medio por el que viaja. Cambia si cambian las propiedades del medio, como su densidad o elasticidad.<br /><br />Por ejemplo, el sonido viaja más rápido en sólidos que en gases. También influye la temperatura: más calor, mayor velocidad en algunos casos.
+                La velocidad de una onda depende del medio por el que viaja.
+                Cambia si cambian las propiedades del medio, como su densidad o
+                elasticidad.
+                <br />
+                <br />
+                Por ejemplo, el sonido viaja más rápido en sólidos que en gases.
+                También influye la temperatura: más calor, mayor velocidad en
+                algunos casos.
               </h2>
-
-
-
             </div>
             <RetroVideo
               video={velocidadOnda}
@@ -318,62 +318,56 @@ const Ondas = () => {
         </div>
 
         <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
-          <div className="relative flex flex-col mt-15 w-full h-[85%] px-5">
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
             <div className="flex flex-col justify-center items-center">
               <h2
                 style={{ fontFamily: "Caveat, sans-serif" }}
-                className="w-[80%] text-3xl font-regular mb-6 text-center"
+                className="w-[90%] text-4xl mb-5 font-bold mt-5 text-center"
               >
-                Conceptos Importantes de las Ondas
+                Los <span className="font-bold text-orange-500">nodos</span> son silencios en el canto de la onda. Los <span className="font-bold text-orange-500">antinodos</span>, su grito. 
               </h2>
-            </div>
 
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-4">
-                <RetroVideo
-                  video={nodos}
-                  loop
-                  containerWidth="40%"
-                  width="100%"
-                  height="200px"
-                  muted
-                  autoPlay
-                  playsInline
-                  caption="Longitudes De Onda" />
-
-                <RetroImage
-                  image={longitudOnda}
-                  containerWidth="70%"
-                  width="100%"
-                  height="200px"
-                  caption="Normalmente se usa λ para representar estas longitudes"
-                />
-              </div>
-
-
-              <div className="flex items-center gap-4">
-                <RetroVideo
-                  video={antinodos}
-                  loop
-                  containerWidth="40%"
-                  width="100%"
-                  height="200px"
-                  muted
-                  autoPlay
-                  playsInline
-                  caption="Nodos y Antinodos" />
-
-                <h2
-                  style={{ fontFamily: "Caveat, sans-serif" }}
-                  className="w-[80%] text-xl font-regular mb-6"
-                >
-                    Los <span className="font-bold text-green-400">nodos</span> son puntos fijos donde la onda no vibra, y los <span className="font-bold text-green-400">
-                    antinodos </span> son los puntos donde la vibración es máxima. <br/> <br/> Ambos aparecen en <span className="font-bold text-yellow-400 underline">ondas estacionarias</span>, como en una cuerda tensa, mostrando zonas sin movimiento y zonas con mayor oscilación.
-                </h2>
-              </div>
+            <RetroVideo
+              video={antinodos}
+              loop
+              containerWidth="90%"
+              width="fit"
+              containerHeight="fit"
+              muted
+              autoPlay
+              playsInline
+            />
             </div>
           </div>
           <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
+        </div>
+
+        <div className="flex w-full h-full bg-amber-50 text-black">
+        <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+          <div className="relative flex w-full h-[100%] px-5">
+            <div className="flex flex-col items-center">
+              <LightBulb />
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="relative top-[65%] w-[80%] text-3xl font-regular mt-5"
+              >
+                La luz{" "}
+                <span className="font-bold text-teal-500">
+                  {" "}
+                  no necesita caminos físicos para moverse.{" "}
+                </span>{" "}
+                Ella viaja sola, a través del vacío.
+                <br/><br/>
+                La luz baila a diferentes ritmos, y a cada ritmo lo llamamos <span className="font-bold text-red-500">c</span><span className="font-bold text-orange-500">o</span><span className="font-bold text-fuchsia-500">l</span><span className="font-bold text-green-500">o</span><span className="font-bold text-blue-500">r</span>.
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">6</span>
         </div>
       </HTMLFlipBook>
     </div>
