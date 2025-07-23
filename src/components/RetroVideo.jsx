@@ -12,11 +12,13 @@ const RetroVideo = ({
   muted = true,
   loop = true,
   autoPlay = true,
-  controls = false
+  controls = false,
+  margin = "auto",
+  className = ""
 }) => {
   return (
     <div
-      style={{ width: containerWidth, height: containerHeight, border: border, transform: `rotate(${rotate})` }}
+      style={{ margin: margin, width: containerWidth, height: containerHeight, border: border, transform: `rotate(${rotate})` }}
       className="bg-white py-5 px-2 shadow-md flex flex-col items-center justify-start"
     >
       <video
@@ -27,7 +29,7 @@ const RetroVideo = ({
         autoPlay={autoPlay}
         playsInline
         style={{ width: width, height: height }}
-        className="object-cover"
+        className={className}
         preload="none"
       />
       <div className="mt-2 text-center font-mono text-xl  tracking-wide">

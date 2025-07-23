@@ -24,6 +24,9 @@ import amortiguadaSF from "../assets/videos/amortiguadaSF.gif";
 import ideales from "../assets/videos/ideales.mp4";
 import conAmortiguamiento from "../assets/videos/conAmortiguamiento.mp4";
 import resonanciaFull from "../assets/videos/resonanciaFull.mp4";
+import osElectrica from "../assets/videos/osElectrica.mp4";
+import osElectricasDos from "../assets/videos/osElectricas2.mp4";
+import circuito from "../assets/videos/circuito.mp4";
 
 function LaboratoriosOscilantes() {
   return (
@@ -60,41 +63,16 @@ function LaboratoriosOscilantes() {
             </h1>
 
             <div className="flex gap-5">
-              <div className="flex flex-col gap-4">
-                <RetroVideo
-                  video={oscilacion}
-                  className="mb-4"
-                  loop
-                  muted
-                  autoPlay
-                  playsInline
-                  caption="Sistemas Oscilantes"
-                />
-
-                <RetroVideo
-                  video={resonanciaLab}
-                  className="my-4"
-                  loop
-                  width="100%"
-                  height="140px"
-                  muted
-                  autoPlay
-                  playsInline
-                  caption="Resonancia"
-                />
-
-              </div>
-
               <div className="flex flex-col">
                 <RetroVideo
                   video={pendulo}
-                  className="mt-10"
                   loop
                   muted
                   autoPlay
-                  width="100%"
+                  containerWidth="80%"
+                  width="70%"
                   playsInline
-                  caption="Experimentando con un péndulo"
+                  caption="La danza del péndulo"
                 />
               </div>
             </div>
@@ -159,7 +137,6 @@ function LaboratoriosOscilantes() {
 
           {/* <SketchfabHeartModel /> */}
           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
-
             <div className="mt-[30%] flex flex-col justify-center items-center">
               <RetroVideo
                 containerWidth="95%"
@@ -345,17 +322,16 @@ function LaboratoriosOscilantes() {
               />
               <h2
                 style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[80%] text-lg font-regular mt-5"
+                className="w-[80%] text-lg font-regular mt-10"
               >
                 En el video de arriba lo que se experimenta es el efecto de{" "}
                 <strong>resonancia</strong> <br />
                 <br />
-                Estando las dos masas a la misma altura y conectadas por media
-                de una cuerda en común. <br /> <br />
-                Una actúa como fuente de movimiento y otra como receptor sin
-                embargo a medida que pasa el tiempo se transfiere la oscilación
-                y de un momento a otro no se sabe cual fue la fuente original y
-                el receptor.
+                Como se ha reiterado la resonancia no es más que{" "}
+                <span className="font-bold text-green-500">
+                  la sincronía
+                </span>{" "}
+                entre dos entes.
               </h2>
             </div>
           </div>
@@ -386,14 +362,94 @@ function LaboratoriosOscilantes() {
                 Por último, arriba se observa el concepto de{" "}
                 <strong>fase entre dos movimientos</strong> <br />
                 <br />
-                La fase entre dos movimientos indica si uno va adelantado o
-                atrasado respecto al otro. Es como si dos personas saltaran en
-                la misma forma, pero una empieza un poco antes o después: hacen
-                lo mismo, pero no al mismo tiempo.
+                La fase es{" "}
+                <span className="font-bold text-purple-500">
+                  armonía en las oscilaciones
+                </span>
               </h2>
             </div>
           </div>
           <span className="absolute bottom-[2%] right-[5%] text-xl">6</span>
+        </div>
+
+        <div className="flex w-full h-full bg-amber-50 text-black p-8">
+          <div className="relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="mt-[30%] flex flex-col justify-center items-center">
+              <SketchfabHeartModel />
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[80%] text-3xl text-center font-regular mt-5"
+              >
+                Experimenta con el sistema oscilante más básico para la vida{" "}
+                <span className="font-bold text-red-500">nuestro corazón</span>{" "}
+                <br />
+                <br />
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">7</span>
+        </div>
+
+        <div className="flex w-full h-full bg-amber-50 text-black p-8">
+          <div className="relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="mt-[30%] flex flex-col justify-center items-center">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[80%] text-3xl text-center font-regular mt-5"
+              >
+                <span className="font-bold text-indigo-400">
+                  Los electrones también bailan.{" "}
+                </span>
+                Su danza invisible da vida a la corriente que mueve al mundo.
+                <br />
+                <br />
+              </h2>
+
+              <RetroVideo
+                containerWidth="fit"
+                video={osElectrica}
+                width="fit"
+                height="200px"
+              />
+
+              <RetroVideo
+                margin="20px"
+                containerWidth="fit"
+                video={circuito}
+                width="fit"
+                height="160px"
+              />
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">8</span>
+        </div>
+
+        <div className="flex w-full h-full bg-amber-50 text-black p-8">
+          <div className="relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="mt-[30%] flex flex-col justify-center items-center">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[80%] text-3xl font-regular mt-5"
+              >
+                La oscilación eléctrica es comunicación sútil. Un puente entre lo
+                visible y lo invisible
+                <br /> <br/>
+                <span className="font-bold text-pink-500">
+                  Para cuantificar estas oscilaciones hay que hacer que se
+                  manifiesten
+                </span>
+              </h2>
+
+              <RetroVideo
+              margin="25px"
+                containerWidth="fit"
+                video={osElectricasDos}
+                width="fit"
+                height="200px"
+              />
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">9</span>
         </div>
       </HTMLFlipBook>
     </div>

@@ -153,9 +153,9 @@ const Home = () => {
       <NoiseBackground />
 
       <section className="relative w-full h-full flex flex-col justify-center items-center overflow-hidden ">
-        <h1 className="text-6xl font-semibold">Fisica 3 - Libro Digital</h1>
-        <h2 className="text-3xl font-regular mt-4"> - Hecho Por - </h2>
-        <h3 className="text-4xl font-semibold mt-4">
+        <h1 className="text-6xl font-semibold">El universo develado <br/>a través de las ondas</h1>
+        <h2 className="text-2xl font-regular mt-4"> - Hecho Por - </h2>
+        <h3 className="text-3xl font-semibold mt-4">
           Johan Sierra, Gina Acosta, Diana Sanchez{" "}
         </h3>
         <img
