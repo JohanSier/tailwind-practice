@@ -97,7 +97,7 @@ function LaboratoriosOscilantes() {
 
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[95%] mt-5 text-[2rem] opacity-75 text-center text-center"
+                className="w-[95%] mt-5 text-[2rem] opacity-75 text-center"
               >
                 ¿Cómo medir el periodo?
               </p>

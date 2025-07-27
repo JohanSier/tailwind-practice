@@ -162,7 +162,7 @@ const Ondas = () => {
 
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[95%] mt-5 text-[2rem] opacity-75 text-center text-center"
+                className="w-[95%] mt-5 text-[2rem] opacity-75 text-center"
               >
                 ¿Qué es la superposición de ondas?
               </p>
@@ -197,7 +197,7 @@ const Ondas = () => {
 
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[95%] mt-5 text-[1rem] opacity-75 text-center text-center"
+                className="w-[95%] mt-5 text-[1rem] opacity-75 text-center"
               >
                 ¿Por qué medio se propaga la luz?
               </p>
