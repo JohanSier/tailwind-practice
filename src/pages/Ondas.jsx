@@ -19,6 +19,8 @@ import frontera from "../assets/images/frontera.png";
 import amortiguacion from "../assets/images/suspension.png";
 import tension from "../assets/images/tension.png";
 import longitudOnda from "../assets/images/longitudDeOnda.png";
+import difraccion from "../assets/images/difraccion.jpeg";
+import prisma from "../assets/images/prisma.jpeg";
 
 // VIDEOS
 import tresCuerdas from "../assets/videos/tresCuerdas.mp4";
@@ -30,6 +32,9 @@ import velocidadOnda from "../assets/videos/velocidadOnda.mp4";
 import nodos from "../assets/videos/nodos.mp4";
 import antinodos from "../assets/videos/antinodos.mp4";
 import polarizacion from "../assets/videos/polarizacion.mp4";
+import selloOculto1 from "../assets/videos/selloOculto.mp4";
+import selloOculto2 from "../assets/videos/sellosOcultos.mp4";
+import fluorescencia from "../assets/videos/fluorescencia.mp4";
 
 const Ondas = () => {
   return (
@@ -287,21 +292,10 @@ const Ondas = () => {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[80%] text-3xl font-regular mt-5 text-center"
               >
-                ¿Cómo se cambia la velocidad de propagación de las ondas?
-              </h2>
-
-              <h2
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[80%] text-[.9rem] font-regular mt-5"
-              >
-                La velocidad de una onda depende del medio por el que viaja.
-                Cambia si cambian las propiedades del medio, como su densidad o
-                elasticidad.
-                <br />
-                <br />
-                Por ejemplo, el sonido viaja más rápido en sólidos que en gases.
-                También influye la temperatura: más calor, mayor velocidad en
-                algunos casos.
+                Una onda puede ser rápida o lenta, pero no por voluntad propia:
+                el calor, la rigidez y la densidad del{" "}
+                <span className="font-bold text-orange-500">medio</span> son
+                quienes le marcan el ritmo.
               </h2>
             </div>
             <RetroVideo
@@ -326,7 +320,10 @@ const Ondas = () => {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[90%] text-4xl mb-5 font-bold mt-5 text-center"
               >
-                Los <span className="font-bold text-orange-500">nodos</span> son silencios en el canto de la onda. Los <span className="font-bold text-orange-500">antinodos</span>, su grito.
+                Los <span className="font-bold text-orange-500">nodos</span> son
+                silencios en el canto de la onda. Los{" "}
+                <span className="font-bold text-orange-500">antinodos</span>, su
+                grito.
               </h2>
 
               <RetroVideo
@@ -339,6 +336,22 @@ const Ondas = () => {
                 autoPlay
                 playsInline
               />
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[90%] text-3xl mb-5 font-regular mt-5"
+              >
+                Un nodo en el sonido seria{" "}
+                <span className="font-bold text-purple-500">silencio</span>, un
+                antinodo es mucho sonido.
+                <br />
+                <br />
+                Un nodo en las ondas electromagnéticas es{" "}
+                <span className="font-bold text-blue-500">oscuridad</span>, un
+                antinodo un punto brillante.
+                <br />
+                <br />
+              </h2>
             </div>
           </div>
           <span className="absolute bottom-[2%] left-[5%] text-xl">5</span>
@@ -364,8 +377,14 @@ const Ondas = () => {
                   no necesita caminos físicos para moverse.{" "}
                 </span>{" "}
                 Ella viaja sola, a través del vacío.
-                <br /><br />
-                La luz baila a diferentes ritmos, y a cada ritmo lo llamamos <span className="font-bold text-red-500">c</span><span className="font-bold text-orange-500">o</span><span className="font-bold text-fuchsia-500">l</span><span className="font-bold text-green-500">o</span><span className="font-bold text-blue-500">r</span>.
+                <br />
+                <br />
+                La luz baila a diferentes ritmos, y a cada ritmo lo llamamos{" "}
+                <span className="font-bold text-red-500">c</span>
+                <span className="font-bold text-orange-500">o</span>
+                <span className="font-bold text-fuchsia-500">l</span>
+                <span className="font-bold text-green-500">o</span>
+                <span className="font-bold text-blue-500">r</span>.
               </h2>
             </div>
           </div>
@@ -375,7 +394,7 @@ const Ondas = () => {
         <div className="flex w-full h-full bg-amber-50 text-black">
           <div className="-mt-40 flex w-full h-[100%] px-5">
             <div className=" flex flex-col items-center justify-center">
-            <RetroVideo
+              <RetroVideo
                 video={polarizacion}
                 loop
                 containerWidth="50%"
@@ -389,29 +408,126 @@ const Ondas = () => {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[70%] text-3xl font-regular text-black -mt-64 text-center"
               >
-                La luz vibra en todas direcciones, pero al <span className="font-bold text-red-500">Polarizarse</span>, elige un solo camino
+                La luz vibra en todas direcciones, pero al{" "}
+                <span className="font-bold text-red-500">Polarizarse</span>,
+                elige un solo camino
               </h2>
-
-              
             </div>
           </div>
-          <span className="absolute bottom-[2%] right-[5%] text-xl">7</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">7</span>
+        </div>
+
+        <div className="flex w-full h-full bg-amber-50 text-black">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+
+          <div className="-mt-40 flex w-full h-[100%] px-5">
+            <div className="w-full flex flex-col items-center justify-center">
+              <RetroVideo
+                video={selloOculto2}
+                loop
+                containerWidth="300px"
+                containerHeight="300px"
+                height="100%"
+                muted
+                autoPlay
+                playsInline
+              />
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className=" w-[70%] text-3xl font-regular text-black -mt-84 text-center"
+              >
+                Hay secretos que solo un cristal agrietado puede revelar. Bajo
+                su mirada torcida, la luz cuenta verdades que el ojo desnudo no
+                podría imaginar.
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">8</span>
+        </div>
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[90%] text-3xl font-regular m-5 text-center"
+              >
+                Lo invisible se vuelve visible cuando la luz correcta lo toca.
+                La{" "}
+                <span className="font-bold text-green-400">fluorescencia</span>{" "}
+                es el lenguaje secreto entre la materia y la luz.
+              </h2>
+
+              <RetroVideo
+                video={fluorescencia}
+                className="grow-2"
+                loop
+                width="100%"
+                height="200px"
+                muted
+                autoPlay
+                playsInline
+              />
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
+        </div>
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+        <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex gap-5">
+
+              <RetroImage image={prisma} 
+              containerWidth="50%"
+              containerHeight="50%"
+              />
+
+              <RetroImage image={difraccion}
+              containerWidth="50%"
+              containerHeight="50%" />
+
+              </div>
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[90%] text-3xl font-regular m-5 text-center"
+              >
+                La <span className="font-bold text-amber-700"> difracción</span> es la respuesta luminosa cuando el mundo intenta ponerle límites a la claridad.
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
         </div>
 
         <div className="flex w-full h-full bg-amber-50 text-black">
           <div className="relative flex w-full h-[100%] px-5">
             <div className="px-10 relative flex flex-col items-center justify-center">
-                <DrumKit classe={"-mt-35"}/>
+              <DrumKit classe={"-mt-35"} />
 
               <h2
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-fit text-3xl font-regular text-black -mt-44 text-center"
               >
-                Una <span className="font-bold text-amber-500">onda sonora</span> es la manera en que el aire recuerda nuestras palabras
+                Una{" "}
+                <span className="font-bold text-amber-500">onda sonora</span> es
+                la manera en que el aire recuerda nuestras palabras
               </h2>
             </div>
           </div>
-          <span className="absolute bottom-[2%] right-[5%] text-xl">7</span>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">
+            Ultima
+          </span>
         </div>
       </HTMLFlipBook>
     </div>
