@@ -13,43 +13,44 @@ import LightBulb from "../components/LightBulb";
 import DrumKit from "../components/DrumKit";
 
 // IMAGENES
-import tresNodos from "../assets/images/tresNodos.jpeg";
+import tresNodos from "../assets/images/tresNodos.webp";
 import argollado from "../assets/images/anillado.webp";
-import frontera from "../assets/images/frontera.png";
-import amortiguacion from "../assets/images/suspension.png";
-import tension from "../assets/images/tension.png";
-import longitudOnda from "../assets/images/longitudDeOnda.png";
-import difraccion from "../assets/images/difraccion.jpeg";
-import prisma from "../assets/images/prisma.jpeg";
-import aceite1 from "../assets/images/aceite1.jpeg";
-import aceite2 from "../assets/images/aceite2.jpeg";
+import frontera from "../assets/images/frontera.webp";
+import amortiguacion from "../assets/images/suspension.webp";
+import tension from "../assets/images/tension.webp";
+import longitudOnda from "../assets/images/longitudDeOnda.webp";
+import difraccion from "../assets/images/difraccion.webp";
+import prisma from "../assets/images/prisma.webp";
+import aceite1 from "../assets/images/aceite1.webp";
+import aceite2 from "../assets/images/aceite2.webp";
 //Atomos
-import Helio1 from "../assets/images/Helio1.jpeg";
-import Helio2 from "../assets/images/Helio2.jpeg";
-import Argon1 from "../assets/images/Argon1.jpeg";
-import Argon2 from "../assets/images/Argon2.jpeg";
-import Neon1 from "../assets/images/Neon1.jpeg";
-import Neon2 from "../assets/images/Neon2.jpeg";
-import Mercurio from "../assets/images/Mercurio.jpeg";
-import Hidrogeno from "../assets/images/Hidrogeno.jpeg";
-import laser1 from "../assets/images/laser1.jpeg";
-import laser2 from "../assets/images/laser2.jpeg";
+import Helio1 from "../assets/images/Helio1.webp";
+import Helio2 from "../assets/images/Helio2.webp";
+import Argon1 from "../assets/images/Argon1.webp";
+import Argon2 from "../assets/images/Argon2.webp";
+import Neon1 from "../assets/images/Neon1.webp";
+import Neon2 from "../assets/images/Neon2.webp";
+import Mercurio from "../assets/images/Mercurio.webp";
+import Hidrogeno from "../assets/images/Hidrogeno.webp";
+import laser1 from "../assets/images/laser1.webp";
+import laser2 from "../assets/images/laser2.webp";
 // VIDEOS
 import tresCuerdas from "../assets/videos/tresCuerdas.mp4";
 import cuerdaOnda from "../assets/videos/cuerdaOnda.mp4";
 import ondasObstaculos from "../assets/videos/ondasConObstaculos.mp4";
 import cuerdaDirecciones from "../assets/videos/cuerdaDistintasDirecciones.mp4";
-import vibracionOndas from "../assets/images/vibracionesOndas.jpeg";
+import vibracionOndas from "../assets/images/vibracionesOndas.webp";
 import velocidadOnda from "../assets/videos/velocidadOnda.mp4";
-import nodos from "../assets/videos/nodos.mp4";
 import antinodos from "../assets/videos/antinodos.mp4";
 import polarizacion from "../assets/videos/polarizacion.mp4";
-import selloOculto1 from "../assets/videos/selloOculto.mp4";
 import selloOculto2 from "../assets/videos/sellosOcultos.mp4";
 import fluorescencia from "../assets/videos/fluorescencia.mp4";
 import laser3 from "../assets/videos/laser3.mp4";
 import dosVibraciones from "../assets/videos/dosVibraciones.mp4";
 import formaArena from "../assets/videos/formaDelSonido.mp4";
+import superposicionAgua from "../assets/videos/superposicionAgua.mp4";
+import obstaculosAgua from "../assets/videos/obstaculosAgua.mp4";
+import ondasAgua from "../assets/videos/ondasEnAguaAmplificadorLuz.mp4";
 
 const Ondas = () => {
   return (
@@ -856,9 +857,9 @@ const Ondas = () => {
 
               <div className="mt-5 flex flex-col items-center ">
                 <RetroVideo
-                  video={tresCuerdas}
+                  video={superposicionAgua}
                   loop
-                  containerWidth="65%"
+                  containerWidth="55%"
                   containerHeight="fit"
                   muted
                   autoPlay
@@ -870,30 +871,7 @@ const Ondas = () => {
                   style={{ fontFamily: "Caveat, sans-serif" }}
                   className="mt-5 w-[80%] text-3xl font-regular text-center"
                 >
-                  No son tres cuerdas, es una sola danzando con la luz en
-                  tiempos distintos.
-                </h2>
-              </div>
-
-              <div className="mt-5 flex flex-col items-center ">
-                <RetroVideo
-                  video={dosVibraciones}
-                  loop
-                  containerWidth="65%"
-                  containerHeight="fit"
-                  muted
-                  autoPlay
-                  playsInline
-                  rotate="4deg"
-                />
-
-                <h2
-                  style={{ fontFamily: "Caveat, sans-serif" }}
-                  className="mt-5 w-[80%] text-3xl font-regular text-center"
-                >
-                  Cada curva de la cuerda es un latido. Es la{" "}
-                  <span className="font-bold text-sky-500"> distancia</span> que
-                  recorre la energía antes de repetirse.
+                  La superposición de ondas también existe en el agua. Las ondas se saludan en silencio y el agua responde con patrones.
                 </h2>
               </div>
             </div>
@@ -901,6 +879,48 @@ const Ondas = () => {
 
           <span className="absolute bottom-[2%] left-[5%] text-xl">19</span>
         </div>
+
+
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex gap-5">
+                <RetroVideo
+                  video={obstaculosAgua}
+                  containerWidth="50%"
+                  containerHeight="50%"
+                  muted
+                  autoPlay
+                  playsInline
+                />
+
+                <RetroVideo
+                  video={ondasAgua}
+                  containerWidth="50%"
+                  containerHeight="50%"
+                  muted
+                  autoPlay
+                  playsInline
+                />
+              </div>
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[90%] text-3xl font-regular m-10 text-center"
+              >
+                Las ondas no temen a los obstáculos: <span className="font-bold text-pink-500">los atraviesan</span> y florecen en nuevas formas.
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">20</span>
+        </div>
+
 
         <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
           <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
@@ -928,7 +948,7 @@ const Ondas = () => {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[90%] text-3xl font-regular m-5 text-center"
               >
-                En el silencio de los nodos, la arena reposa; en el grito de las frecuencias, la forma florece.
+                En el silencio de los nodos, la arena reposa, en el grito de las frecuencias, la forma florece.
               </h2>
             </div>
           </div>
@@ -936,6 +956,11 @@ const Ondas = () => {
         </div>
 
         <div className="flex w-full h-full bg-amber-50 text-black">
+        <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
           <div className="relative flex w-full h-[100%] px-5">
             <div className="px-10 relative flex flex-col items-center justify-center">
               <DrumKit classe={"-mt-35"} />

@@ -14,8 +14,6 @@ import NextButton from "../components/NextButton";
 // IMAGENES
 import taipeiReal from "../assets/images/taipei101.webp";
 import taipeiBoceto from "../assets/images/amortiguadorTaipeiDibujo.webp";
-import disenoPuente from "../assets/images/disenoPuentes.webp";
-import resorte from "../assets/images/resorte.jpeg";
 
 // VIDEOS
 import copaVoz from "../assets/videos/copaRota.mp4";

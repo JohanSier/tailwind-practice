@@ -5,7 +5,7 @@ import cursor from "../assets/cursores/cursor2.webp";
 import newton from "../assets/images/three-d/Newton.webp";
 import maxwell from "../assets/images/three-d/Maxwell.webp";
 import albert from "../assets/images/three-d/Albert.webp";
-import johan from "../assets/images/johan.png";
+import johan from "../assets/images/johan.webp";
 
 import formula from "../assets/images/three-d/formulas.webp";
 import tachon from "../assets/images/three-d/tachon.webp";
@@ -14,7 +14,7 @@ import aladin from "../assets/images/three-d/aladin.webp";
 import bombillo from "../assets/images/three-d/bombillo.webp";
 import resorte from "../assets/images/three-d/resorte.webp";
 import cubito from "../assets/images/three-d/cubito.webp";
-import atomoTwo from "../assets/images/atomoTwo.png"
+import atomoTwo from "../assets/images/atomoTwo.webp"
 import pendulo from "../assets/images/three-d/penduloNewton.webp";
 import sol from "../assets/images/three-d/sol.webp";
 import sphere from "../assets/images/three-d/sphere.webp";
