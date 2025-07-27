@@ -212,11 +212,7 @@ function SistemasOscilantes() {
 
 
         <div className="relative justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-          <img
-            className="w-15 h-full absolute top-0 -left-10 "
-            src={argollado}
-            alt="decorative image"
-          />
+          
           <div className=" flex items-center flex-col gap-4 pt-15 w-full h-[85%] px-5">
             <p
               style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -255,7 +251,11 @@ function SistemasOscilantes() {
         </div>
 
       
-        <div className="relative items-center w-full h-full bg-amber-50 text-black p-4">
+        <div className="relative items-center w-full h-full bg-amber-50 text-black p-4"><img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
           <div className="relative w-full h-full px-5">
             <p
               style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -304,12 +304,6 @@ function SistemasOscilantes() {
           <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
         </div>
         <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-          <img
-            className="w-15 h-full absolute top-0 -left-10 "
-            src={argollado}
-            alt="decorative image"
-          />
-
           <div className="flex flex-col pt-5 w-full h-full px-5">
             <p
               style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -369,6 +363,11 @@ function SistemasOscilantes() {
         </div>
 
         <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+        <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
           <div className="flex flex-col pt-5 w-full h-full px-5">
             <p
               style={{ fontFamily: "Caveat, sans-serif" }}
@@ -414,11 +413,7 @@ function SistemasOscilantes() {
         </div>
 
         <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-          <img
-            className="w-15 h-full absolute top-0 -left-10 "
-            src={argollado}
-            alt="decorative image"
-          />
+
 
           <div className="flex flex-col pt-5 w-full h-full px-5">
             <p
@@ -442,7 +437,6 @@ function SistemasOscilantes() {
           <span className="absolute bottom-[2%] right-[5%] text-xl">8</span>
         </div>
 
-        <div className="flex justify-center items-center w-full h-full bg-amber-50 text-black py-4 px-10"></div>
       </HTMLFlipBook>
       {/* MODIFICARLO POR EL AUDIO DEL PROFESOR: <audio ref={audioRef} src={transitionSound} hidden /> */}
     </div>
