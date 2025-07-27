@@ -21,7 +21,19 @@ import tension from "../assets/images/tension.png";
 import longitudOnda from "../assets/images/longitudDeOnda.png";
 import difraccion from "../assets/images/difraccion.jpeg";
 import prisma from "../assets/images/prisma.jpeg";
-
+import aceite1 from "../assets/images/aceite1.jpeg";
+import aceite2 from "../assets/images/aceite2.jpeg";
+//Atomos
+import Helio1 from "../assets/images/Helio1.jpeg";
+import Helio2 from "../assets/images/Helio2.jpeg";
+import Argon1 from "../assets/images/Argon1.jpeg";
+import Argon2 from "../assets/images/Argon2.jpeg";
+import Neon1 from "../assets/images/Neon1.jpeg";
+import Neon2 from "../assets/images/Neon2.jpeg";
+import Mercurio from "../assets/images/Mercurio.jpeg";
+import Hidrogeno from "../assets/images/Hidrogeno.jpeg";
+import laser1 from "../assets/images/laser1.jpeg";
+import laser2 from "../assets/images/laser2.jpeg";
 // VIDEOS
 import tresCuerdas from "../assets/videos/tresCuerdas.mp4";
 import cuerdaOnda from "../assets/videos/cuerdaOnda.mp4";
@@ -35,6 +47,9 @@ import polarizacion from "../assets/videos/polarizacion.mp4";
 import selloOculto1 from "../assets/videos/selloOculto.mp4";
 import selloOculto2 from "../assets/videos/sellosOcultos.mp4";
 import fluorescencia from "../assets/videos/fluorescencia.mp4";
+import laser3 from "../assets/videos/laser3.mp4";
+import dosVibraciones from "../assets/videos/dosVibraciones.mp4";
+import formaArena from "../assets/videos/formaDelSonido.mp4";
 
 const Ondas = () => {
   return (
@@ -452,7 +467,7 @@ const Ondas = () => {
 
         <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
           <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center gap-5">
               <h2
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[90%] text-3xl font-regular m-5 text-center"
@@ -472,14 +487,15 @@ const Ondas = () => {
                 muted
                 autoPlay
                 playsInline
+                rotate="-6deg"
               />
             </div>
           </div>
-          <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">9</span>
         </div>
 
         <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
-        <img
+          <img
             className="w-15 h-full absolute top-0 -left-10 "
             src={argollado}
             alt="decorative image"
@@ -487,27 +503,378 @@ const Ondas = () => {
           <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
             <div className="flex flex-col justify-center items-center">
               <div className="flex gap-5">
+                <RetroImage
+                  image={prisma}
+                  containerWidth="50%"
+                  containerHeight="50%"
+                />
 
-              <RetroImage image={prisma} 
-              containerWidth="50%"
-              containerHeight="50%"
-              />
-
-              <RetroImage image={difraccion}
-              containerWidth="50%"
-              containerHeight="50%" />
-
+                <RetroImage
+                  image={difraccion}
+                  containerWidth="50%"
+                  containerHeight="50%"
+                />
               </div>
 
               <h2
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[90%] text-3xl font-regular m-5 text-center"
               >
-                La <span className="font-bold text-amber-700"> difracción</span> es la respuesta luminosa cuando el mundo intenta ponerle límites a la claridad.
+                La <span className="font-bold text-amber-700"> difracción</span>{" "}
+                es la respuesta luminosa cuando el mundo intenta ponerle límites
+                a la claridad.
               </h2>
             </div>
           </div>
-          <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">10</span>
+        </div>
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex items-center justify-center gap-5">
+                <RetroImage
+                  image={aceite1}
+                  containerWidth="50%"
+                  containerHeight="50%"
+                />
+
+                <RetroImage
+                  image={aceite2}
+                  containerWidth="50%"
+                  height="100%"
+                  containerHeight="100%"
+                />
+              </div>
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[90%] text-3xl font-regular m-5 text-center"
+              >
+                Por la{" "}
+                <span className="font-bold text-amber-400">refracción</span>, lo
+                recto parece curvo, no porque cambie la forma, sino porque
+                cambia{" "}
+                <span className="font-bold text-red-400">
+                  la forma en que la luz lo cuenta.
+                </span>
+                <br />
+                <br />
+                Cada material tiene su indice de refracción, a esa cantidad se
+                conoce como indice de torcedura
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">11</span>
+        </div>
+
+        <div className="flex flex-col items-center justify-center w-full h-full bg-amber-50 text-black py-4 px-10">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+          <div className="flex flex-col items-center justiy-center w-full h-[85%]">
+            <div className="flex flex-col items-center gap-1 mt-7 w-full">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="mt-10 text-3xl font-bold text-center"
+              >
+                Electrones VS Átomos:
+              </h2>
+
+              <div className="mt-5 flex items-center gap-5">
+                <RetroImage
+                  image={Helio1}
+                  containerWidth="50%"
+                  height="fit"
+                  containerHeight="32%"
+                  caption="Helio vs Electrones"
+                />
+                <RetroImage
+                  image={Helio2}
+                  containerWidth="50%"
+                  height="fit"
+                  containerHeight="100%"
+                  caption="Helio Difractado"
+                />
+              </div>
+            </div>
+          </div>
+
+          <span className="absolute bottom-[2%] right-[5%] text-xl">12</span>
+        </div>
+
+        <div className="flex flex-col items-center justify-center w-full h-full bg-amber-50 text-black py-4 px-10">
+          <div className="flex flex-col items-center justiy-center w-full h-[85%]">
+            <div className="flex flex-col items-center gap-2 mt-7 w-full">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="mt-10 text-3xl font-bold text-center"
+              >
+                Electrones VS Átomos:
+              </h2>
+
+              <div className="mt-5 flex items-center gap-5">
+                <RetroImage
+                  image={Argon1}
+                  containerWidth="50%"
+                  height="fit"
+                  containerHeight="fit"
+                  caption="Árgon vs Electrones"
+                />
+                <RetroImage
+                  image={Argon2}
+                  containerWidth="50%"
+                  height="fit"
+                  containerHeight="100%"
+                  caption="Árgon Difractado"
+                />
+              </div>
+
+              <div className="mt-5 flex items-center gap-5">
+                <RetroImage
+                  image={Mercurio}
+                  containerWidth="50%"
+                  height="fit"
+                  containerHeight="fit"
+                  caption="Mercurio Difractado"
+                />
+                <RetroImage
+                  image={Hidrogeno}
+                  containerWidth="50%"
+                  height="fit"
+                  containerHeight="100%"
+                  caption="Hidrogeno Difractado"
+                />
+              </div>
+            </div>
+          </div>
+
+          <span className="absolute bottom-[2%] left-[5%] text-xl">13</span>
+        </div>
+
+        <div className="flex w-full h-full bg-amber-50 text-black">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+          <div className="relative flex w-full h-[100%] px-12">
+            <div className="flex flex-col justify-center items-center">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="mt-10 text-3xl font-bold text-center"
+              >
+                Electrones VS Átomos:
+              </h2>
+
+              <div className="mt-5 flex items-center gap-5">
+                <RetroImage
+                  image={Neon1}
+                  containerWidth="50%"
+                  height="fit"
+                  containerHeight="100%"
+                  caption="Neón vs Electrones"
+                />
+                <RetroImage
+                  image={Neon2}
+                  containerWidth="50%"
+                  height="fit"
+                  containerHeight="100%"
+                  caption="Neón Difractado"
+                />
+              </div>
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="mt-10 text-3xl font-regular text-center"
+              >
+                Bajo la difracción, el universo deja de ser oscuro y callado:
+                los átomos se pueden comunicar con nosotros.
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">14</span>
+        </div>
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex gap-5">
+                <RetroImage image={laser1} height="500px" />
+
+                <RetroImage image={laser2} height="500px" />
+              </div>
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[90%] text-3xl font-regular m-5 text-center"
+              >
+                A veces la luz no se ve hasta que algo la abraza.{" "}
+                <span className="font-bold text-red-500">
+                  Así supimos que el láser caminaba y dejaba huellas.
+                </span>
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">15</span>
+        </div>
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[90%] text-3xl font-regular m-5 text-center"
+              >
+                Cuando la maicena flotó, el láser dejó de ser un punto y se
+                convirtió en verdad suspendida en el aire.
+              </h2>
+
+              <div className="flex">
+                <RetroVideo
+                  video={laser3}
+                  loop
+                  containerWidth="65%"
+                  containerHeight="fit"
+                  muted
+                  autoPlay
+                  playsInline
+                  rotate="-2deg"
+                />
+              </div>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">16</span>
+        </div>
+
+        <div className="flex flex-col items-center justify-center w-full h-full bg-amber-50 text-black py-4 px-10">
+          <div className="flex flex-col items-center justiy-center w-full h-[85%]">
+            <div className="flex flex-col items-center gap-1 w-full">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="mt-10 text-5xl font-bold text-center"
+              >
+                Ondas en las cuerdas
+              </h2>
+
+              <div className="mt-5 flex flex-col items-center ">
+                <RetroVideo
+                  video={tresCuerdas}
+                  loop
+                  containerWidth="65%"
+                  containerHeight="fit"
+                  muted
+                  autoPlay
+                  playsInline
+                  rotate="-2deg"
+                />
+
+                <h2
+                  style={{ fontFamily: "Caveat, sans-serif" }}
+                  className="mt-5 w-[80%] text-3xl font-regular text-center"
+                >
+                  No son tres cuerdas, es una sola danzando con la luz en
+                  tiempos distintos.
+                </h2>
+              </div>
+
+              <div className="mt-5 flex flex-col items-center ">
+                <RetroVideo
+                  video={dosVibraciones}
+                  loop
+                  containerWidth="65%"
+                  containerHeight="fit"
+                  muted
+                  autoPlay
+                  playsInline
+                  rotate="4deg"
+                />
+
+                <h2
+                  style={{ fontFamily: "Caveat, sans-serif" }}
+                  className="mt-5 w-[80%] text-3xl font-regular text-center"
+                >
+                  Cada curva de la cuerda es un latido. Es la{" "}
+                  <span className="font-bold text-sky-500"> distancia</span> que
+                  recorre la energía antes de repetirse.
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <span className="absolute bottom-[2%] left-[5%] text-xl">17</span>
+        </div>
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+          <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="text-3xl font-regular m-5 text-center"
+              >
+                Abajo se ve como dos ondas se encuentran, y en vez de chocar, se
+                respetan. Así nace una nueva forma de moverse, la{" "}
+                <span className="font-bold text-teal-400">superposición</span>
+              </h2>
+
+              <div className="flex">
+                <RetroVideo
+                  video={cuerdaDirecciones}
+                  loop
+                  containerWidth="65%"
+                  containerHeight="fit"
+                  muted
+                  autoPlay
+                  playsInline
+                />
+              </div>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">18</span>
+        </div>
+
+        <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
+          <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
+            <div className="flex flex-col justify-center items-center gap-5">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[90%] text-3xl font-regular text-center"
+              >
+                Este hermoso experimento revela las formas invisibles del{" "}
+                <span className="font-bold text-pink-500">sonido</span>.
+              </h2>
+
+              <RetroVideo
+                video={formaArena}
+                className="grow-2"
+                loop
+                width="100%"
+                height="250px"
+                muted
+                autoPlay
+                playsInline
+              />
+
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[90%] text-3xl font-regular m-5 text-center"
+              >
+                En el silencio de los nodos, la arena reposa; en el grito de las frecuencias, la forma florece.
+              </h2>
+            </div>
+          </div>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">19</span>
         </div>
 
         <div className="flex w-full h-full bg-amber-50 text-black">

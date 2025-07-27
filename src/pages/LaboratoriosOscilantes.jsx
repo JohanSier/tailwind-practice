@@ -151,12 +151,10 @@ function LaboratoriosOscilantes() {
                 style={{ fontFamily: "Montserrat, sans-serif" }}
                 className="w-[80%] text-xl font-regular mt-5"
               >
-                Lo que vemos en el video de arriba son movimientos que se
-                repiten en unos intervalos especificos de tiempo. A esto lo
-                conocemos en física como <strong>Sistema Oscilante</strong>{" "}
+                Un sistema oscilante es el arte de moverse sin avanzar, danzando entre extremos con la precisión de un latido.
                 <br />
-                <br />Y las masas que están acopladas al sistema se conocen como{" "}
-                <strong>Osciladores</strong>
+                <br />
+                Oscila como si recordara dónde empezó, <span className="text-sky-400 font-bold">volviendo una y otra vez al mismo lugar</span>, como si el universo le susurrara el camino.
               </h2>
             </div>
           </div>
@@ -202,10 +200,9 @@ function LaboratoriosOscilantes() {
                       </p>
                     </div>
 
-                    <div className="flex h-40 flex-col bg-blue-700 text-[#e4e4e4] p-5 rounded items-center gap-5">
+                    <div className="flex h-50 flex-col bg-blue-700 text-[#e4e4e4] p-5 rounded items-center gap-5">
                       <p className="text-[.9rem] font-regular">
-                        Un <strong>Periodo</strong> es el tiempo que demora una
-                        oscilación
+                      El <strong>periodo</strong> es el tiempo que tarda una oscilación en volver a empezar su historia.
                       </p>
                       <p className="text-[.9rem] font-regular">
                         Las oscilaciones que un oscilador realiza en segundo se
@@ -322,8 +319,8 @@ function LaboratoriosOscilantes() {
                 autoPlay={true}
               />
               <h2
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[80%] text-lg font-regular mt-10"
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[80%] text-3xl font-regular mt-10"
               >
                 En el video de arriba lo que se experimenta es el efecto de{" "}
                 <strong>resonancia</strong> <br />
@@ -357,8 +354,8 @@ function LaboratoriosOscilantes() {
               />
 
               <h2
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[80%] text-lg font-regular mt-5"
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[80%] text-3xl font-regular mt-5"
               >
                 Por último, arriba se observa el concepto de{" "}
                 <strong>fase entre dos movimientos</strong> <br />
