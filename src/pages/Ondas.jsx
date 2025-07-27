@@ -844,6 +844,64 @@ const Ondas = () => {
           <span className="absolute bottom-[2%] right-[5%] text-xl">18</span>
         </div>
 
+        <div className="flex flex-col items-center justify-center w-full h-full bg-amber-50 text-black py-4 px-10">
+          <div className="flex flex-col items-center justiy-center w-full h-[85%]">
+            <div className="flex flex-col items-center gap-1 w-full">
+              <h2
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="mt-10 text-5xl font-bold text-center"
+              >
+                Ondas en el agua
+              </h2>
+
+              <div className="mt-5 flex flex-col items-center ">
+                <RetroVideo
+                  video={tresCuerdas}
+                  loop
+                  containerWidth="65%"
+                  containerHeight="fit"
+                  muted
+                  autoPlay
+                  playsInline
+                  rotate="-2deg"
+                />
+
+                <h2
+                  style={{ fontFamily: "Caveat, sans-serif" }}
+                  className="mt-5 w-[80%] text-3xl font-regular text-center"
+                >
+                  No son tres cuerdas, es una sola danzando con la luz en
+                  tiempos distintos.
+                </h2>
+              </div>
+
+              <div className="mt-5 flex flex-col items-center ">
+                <RetroVideo
+                  video={dosVibraciones}
+                  loop
+                  containerWidth="65%"
+                  containerHeight="fit"
+                  muted
+                  autoPlay
+                  playsInline
+                  rotate="4deg"
+                />
+
+                <h2
+                  style={{ fontFamily: "Caveat, sans-serif" }}
+                  className="mt-5 w-[80%] text-3xl font-regular text-center"
+                >
+                  Cada curva de la cuerda es un latido. Es la{" "}
+                  <span className="font-bold text-sky-500"> distancia</span> que
+                  recorre la energía antes de repetirse.
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <span className="absolute bottom-[2%] left-[5%] text-xl">19</span>
+        </div>
+
         <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
           <div className="mt-[10%] relative flex justify-center items-center w-full h-[85%] px-5">
             <div className="flex flex-col justify-center items-center gap-5">
@@ -874,7 +932,7 @@ const Ondas = () => {
               </h2>
             </div>
           </div>
-          <span className="absolute bottom-[2%] left-[5%] text-xl">19</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">2?</span>
         </div>
 
         <div className="flex w-full h-full bg-amber-50 text-black">
