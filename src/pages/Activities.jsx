@@ -5,8 +5,9 @@ import cursor from "../assets/cursores/cursor2.webp";
 import newton from "../assets/images/three-d/Newton.webp";
 import maxwell from "../assets/images/three-d/Maxwell.webp";
 import albert from "../assets/images/three-d/Albert.webp";
-import yo from "../assets/images/auraVerde.png";
+import yo from "../assets/images/yo.png";
 import diana from "../assets/images/diana.png";
+import gina from "../assets/images/ginaa.png";
 
 import formula from "../assets/images/three-d/formulas.webp";
 import tachon from "../assets/images/three-d/tachon.webp";
@@ -102,11 +103,12 @@ const Activities = () => {
         /> */}
         <div className="flex justify-center gap-6 w-full box-border absolute bottom-0">
           <img className="w-105 h-100 " src={albert} />
+          <img className="w-105 h-100 " src={gina} />
           <img
             className="w-55 h-100 "
             src={diana}
           />
-          <img className="w-105 h-100 " src={yo} />
+          <img className="mt-4 w-95 h-95 " src={yo} />
           
         </div>
 
