@@ -97,8 +97,8 @@ function Cuantica() {
             <h1 className="text-5xl font-semibold text-center mb-5">
               Modelos Atómicos - Niveles de Energía<br />
             </h1>
-            <RetroImage image={modelos} width="600" height="880" />
-            <span className="text-4xl">
+            <RetroImage image={modelos} containerWidth="80%" height="350px" />
+            <span className="text-4xl text-center">
               El electrón obedece al orden invisible de la energía.
             </span>
           </div>
@@ -106,20 +106,25 @@ function Cuantica() {
         </div>
 
         <div className="cursor-pointer flex justify-center items-center w-full h-full bg-black text-white p-4">
+        <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
           <div
             style={{ fontFamily: "Caveat, sans-serif" }}
-            className=" w-full h-full flex flex-col items-center justify-center px-20"
+            className=" w-full h-full flex flex-col items-center justify-center px-20 gap-20"
           >
-            <h1 className="text-4xl font-regular text-center mb-10">
-              Física Cuántica <br />
+            <h1 className="text-4xl font-regular text-center">
+              <span className="font-bold text-red-500">Bohr</span> nos enseño que los electrones giran en órbitas unicas dictadas por la energía
             </h1>
 
-            <h1 className="text-4xl font-regular text-center mb-10">
-              Física Cuántica <br />
+            <h1 className="text-4xl font-regular text-center">
+            No somos solo materia, dijo <span className="font-bold text-green-400">de Broglie</span>, somos también vibración.
             </h1>
 
-            <h1 className="text-4xl font-regular text-center mb-10">
-              Física Cuántica <br />
+            <h1 className="text-4xl font-regular text-center">
+            <span className="font-bold text-yellow-400">Schrödinger</span> nos mostró que el electrón no tiene un lugar exacto, solo probabilidades de estar.
             </h1>
           </div>
         </div>
