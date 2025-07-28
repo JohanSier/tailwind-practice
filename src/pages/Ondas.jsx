@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 
 // COMPONENTES
@@ -58,7 +57,7 @@ const Ondas = () => {
       <NoiseBackground />
       <BackButton />
 
-      <NextButton page="/ondas" />
+      <NextButton page="/cuantica" />
 
       <HTMLFlipBook
         width={600}
@@ -952,7 +951,7 @@ const Ondas = () => {
               </h2>
             </div>
           </div>
-          <span className="absolute bottom-[2%] left-[5%] text-xl">2?</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">21</span>
         </div>
 
         <div className="flex w-full h-full bg-amber-50 text-black">
@@ -976,7 +975,7 @@ const Ondas = () => {
             </div>
           </div>
           <span className="absolute bottom-[2%] right-[5%] text-xl">
-            Ultima
+            22
           </span>
         </div>
       </HTMLFlipBook>

@@ -4,7 +4,7 @@ import "./index.css"
 import Activities from "./pages/Activities.jsx";
 import SistemasOscilantes from "./pages/SistemasOscilantes.jsx";
 import LaboratoriosOscilantes from "./pages/LaboratoriosOscilantes.jsx";
-import Luz from "./pages/Luz.jsx";
+import Cuantica from "./pages/Cuantica.jsx";
 import Ondas from "./pages/Ondas.jsx";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Route path='sistemas-oscilantes' element={<SistemasOscilantes/>} />
           <Route path='laboratorios-oscilantes' element={<LaboratoriosOscilantes/>} />
           <Route path='ondas' element={<Ondas/>} />
-          {/* <Route path='ondas-luz' element={<Luz/>} /> */}
+          <Route path='cuantica' element={<Cuantica/>} />
 
         </Routes>
       </BrowserRouter>

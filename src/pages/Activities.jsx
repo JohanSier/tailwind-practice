@@ -13,12 +13,11 @@ import corazon from "../assets/images/three-d/corazon.webp";
 import aladin from "../assets/images/three-d/aladin.webp";
 import bombillo from "../assets/images/three-d/bombillo.webp";
 import resorte from "../assets/images/three-d/resorte.webp";
-import cubito from "../assets/images/three-d/cubito.webp";
-import atomoTwo from "../assets/images/atomoTwo.webp"
+import atomoTwo from "../assets/images/atomoTwo.webp";
 import pendulo from "../assets/images/three-d/penduloNewton.webp";
 import sol from "../assets/images/three-d/sol.webp";
 import sphere from "../assets/images/three-d/sphere.webp";
-
+import quantum from "../assets/images/quantum.webp";
 import arrow from "../assets/images/volver.webp";
 
 import NoiseBackground from "../components/NoiseBackground";
@@ -187,7 +186,7 @@ const Activities = () => {
           />
 
           <span className="absolute top-11 -left-9 text-center text-4xl font-bold rotate-20 group-hover:opacity-90">
-            Prácticas Sistemas <br /> Oscilantes
+            Sistemas <br /> Oscilantes
           </span>
         </Link>
 
@@ -210,10 +209,10 @@ const Activities = () => {
 
         <Link
           to="/ondas"
-          className="w-30 absolute rotate-5 group"
+          className="w-25 absolute rotate-5 group"
           style={{
             top: "20%",
-            left: "65%",
+            left: "62%",
             transform: `translate(-50%, -50%) translateY(${
               hovered.cubito ? 0 : floatOffset * 1.8
             }px)`,
@@ -221,19 +220,19 @@ const Activities = () => {
         >
           <img
             className="group-hover:scale-120 group-hover:opacity-50"
-            src={atomoTwo}
-            alt="cubo 3d"
+            src={quantum}
+            alt="reloj cuantico"
           />
-          <span className="absolute top-11 -left-9 text-center text-5xl font-bold ">
+          <span className="absolute top-11 -left-5 text-center text-5xl font-bold ">
             Ondas
           </span>
         </Link>
 
-        <Link
-          className="w-37 absolute -rotate-15"
+        <Link to="/cuantica"
+          className="w-29 absolute -rotate-15"
           style={{
             top: "10%",
-            left: "80%",
+            left: "77%",
             transform: `translate(-50%, -50%) translateY(${
               hovered.bombillo ? 0 : floatOffset * 1.0
             }px)`,
@@ -241,9 +240,13 @@ const Activities = () => {
         >
           <img
             className="hover:scale-120 hover:opacity-50"
-            src={bombillo}
-            alt="bombillo 3d"
+            src={atomoTwo}
+            alt="atomo"
           />
+
+          <span className="absolute top-11 -left-8 text-center text-5xl font-bold ">
+            Quantica
+          </span>
         </Link>
 
         <Link
