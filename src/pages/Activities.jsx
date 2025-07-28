@@ -5,7 +5,8 @@ import cursor from "../assets/cursores/cursor2.webp";
 import newton from "../assets/images/three-d/Newton.webp";
 import maxwell from "../assets/images/three-d/Maxwell.webp";
 import albert from "../assets/images/three-d/Albert.webp";
-import johan from "../assets/images/johan.webp";
+import yo from "../assets/images/auraVerde.png";
+import diana from "../assets/images/diana.png";
 
 import formula from "../assets/images/three-d/formulas.webp";
 import tachon from "../assets/images/three-d/tachon.webp";
@@ -100,21 +101,13 @@ const Activities = () => {
           className="relative top-120 left-[28%] w-80 h-fit"
         /> */}
         <div className="flex justify-center gap-6 w-full box-border absolute bottom-0">
+          <img className="w-105 h-100 " src={albert} />
           <img
-            className="w-105 h-100 "
-            src={albert}
-            alt="Isaac Newton's photo"
+            className="w-55 h-100 "
+            src={diana}
           />
-          <img
-            className="w-105 h-100 "
-            src={newton}
-            alt="Isaac Newton's funny photo"
-          />
-          <img
-            className="w-105 h-100 "
-            src={maxwell}
-            alt="Isaac Newton's photo"
-          />
+          <img className="w-105 h-100 " src={yo} />
+          
         </div>
 
         <div className="flex items-center gap-6 justify-center w-full h-full box-border relative mt-[-70px]">
@@ -228,7 +221,8 @@ const Activities = () => {
           </span>
         </Link>
 
-        <Link to="/cuantica"
+        <Link
+          to="/cuantica"
           className="w-29 absolute -rotate-15"
           style={{
             top: "10%",
