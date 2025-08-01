@@ -13,6 +13,8 @@ import RetroImage from "../components/RetroImage";
 // IMAGENES
 import argollado from "../assets/images/anillado.webp";
 import modelos from "../assets/images/nivelesenergia.gif";
+import gato from "../assets/images/gatoDormido.png";
+import ornitorrinco from "../assets/images/patoCastor.webp";
 
 // VIDEOS
 import quantum from "../assets/videos/quantum.webp";
@@ -52,7 +54,11 @@ function Cuantica() {
               electrón. -Richard Feynman
             </span>
 
-            <RetroImage image={quantum} width="600" height="880" />
+            <RetroImage image={ornitorrinco} caption={<><span className="text-lg text-black">Imagen tomada de https://shorturl.at/54Nsy</span></>} width="600" height="880" />
+
+            <span className="text-5xl text-center font-bold text-emerald-200">
+              ¿ Pato o Castor ?
+            </span>
           </div>
         </div>
 
@@ -69,16 +75,30 @@ function Cuantica() {
         </div>
 
         <div className="cursor-pointer flex flex-col justify-center items-center w-full h-full bg-black text-white p-4">
-          <img
+        <img
             className="w-15 h-full absolute top-0 -left-10 "
             src={argollado}
             alt="decorative image"
           />
           <div
             style={{ fontFamily: "Caveat, sans-serif" }}
+            className=" w-full h-full flex flex-col items-center justify-center px-10 gap-5"
+          >
+            <RetroImage image={gato} width="100%" height="500px" className="object-full w-full h-full" />
+            <span className="text-sky-300 text-5xl font-bold text-center">
+              ¿ Despierto o Dormido ?
+            </span>
+          </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">2</span>
+        </div>
+
+        <div className="cursor-pointer flex flex-col justify-center items-center w-full h-full bg-black text-white p-4">
+    
+          <div
+            style={{ fontFamily: "Caveat, sans-serif" }}
             className=" w-full h-full flex flex-col items-center justify-center px-20 gap-5"
           >
-            <RetroImage image={dobleRendija} width="600" height="880" />
+            <RetroImage image={dobleRendija} caption={<><span className="text-lg text-black">Gif tomado de https://shorturl.at/RMKhA</span></>}width="600" height="880" />
             <span className="text-3xl text-center">
               El experimento de la{" "}
               <span className="font-bold text-indigo-400">doble rendija</span>{" "}
@@ -86,10 +106,15 @@ function Cuantica() {
               que estás ahí.
             </span>
           </div>
-          <span className="absolute bottom-[2%] right-[5%] text-xl">2</span>
+          <span className="absolute bottom-[2%] left-[5%] text-xl">3</span>
         </div>
 
         <div className="cursor-pointer flex flex-col justify-center items-center w-full h-full bg-black text-white p-4">
+        <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
           <div
             style={{ fontFamily: "Caveat, sans-serif" }}
             className=" w-full h-full flex flex-col items-center justify-center px-20 gap-5"
@@ -97,20 +122,16 @@ function Cuantica() {
             <h1 className="text-5xl font-semibold text-center mb-5">
               Modelos Atómicos - Niveles de Energía<br />
             </h1>
-            <RetroImage image={modelos} containerWidth="80%" height="350px" />
+            <RetroImage image={modelos} containerWidth="80%" height="350px" caption={<><span className="text-lg text-black">Video tomado del simulador de la universidad de colorado PHET: https://shorturl.at/lll4F</span></>} />
             <span className="text-4xl text-center">
               El electrón obedece al orden invisible de la energía.
             </span>
           </div>
-          <span className="absolute bottom-[2%] left-[5%] text-xl">3</span>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">4</span>
         </div>
 
         <div className="cursor-pointer flex justify-center items-center w-full h-full bg-black text-white p-4">
-        <img
-            className="w-15 h-full absolute top-0 -left-10 "
-            src={argollado}
-            alt="decorative image"
-          />
+      
           <div
             style={{ fontFamily: "Caveat, sans-serif" }}
             className=" w-full h-full flex flex-col items-center justify-center px-20 gap-20"
@@ -127,6 +148,7 @@ function Cuantica() {
             <span className="font-bold text-yellow-400">Schrödinger</span> nos mostró que el electrón no tiene un lugar exacto, solo probabilidades de estar.
             </h1>
           </div>
+          <span className="absolute bottom-[2%] right-[5%] text-xl">5</span>
         </div>
       </HTMLFlipBook>
     </div>

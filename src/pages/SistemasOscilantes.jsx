@@ -14,7 +14,7 @@ import NextButton from "../components/NextButton";
 // IMAGENES
 import taipeiReal from "../assets/images/taipei101.webp";
 import taipeiBoceto from "../assets/images/amortiguadorTaipeiDibujo.webp";
-
+import taiwan from "../assets/images/taiwan.png";
 // VIDEOS
 import copaVoz from "../assets/videos/copaRota.mp4";
 import copa from "../assets/videos/copa.mp4";
@@ -87,7 +87,12 @@ function SistemasOscilantes() {
                   autoPlay
                   playsInline
                   alt="Experimento de oscilación donde se ve la fase"
-                  caption="La Fase es coordinación de la que vibra"
+                  caption={
+                    <>
+                      La <strong className="text-green-500">fase</strong> es
+                      armonía en las oscilaciones
+                    </>
+                  }
                 />
               </div>
 
@@ -100,7 +105,13 @@ function SistemasOscilantes() {
                   autoPlay={true}
                   controls={false}
                   alt="profesor de fisica"
-                  caption="La amortiguación es suavidad en el movimiento"
+                  caption={
+                    <>
+                      La{" "}
+                      <strong className="text-blue-500">amortiguación</strong>{" "}
+                      es suavidad en el movimiento
+                    </>
+                  }
                 />
               </div>
             </div>
@@ -120,9 +131,20 @@ function SistemasOscilantes() {
               <RetroVideo
                 containerWidth="95%"
                 video={tacoma}
+                controls={true}
                 width="95%"
                 height="220px"
-                caption="Colapso del Puente Tacoma Narrows"
+                caption={
+                  <>
+                    <span className="block">
+                      Colapso del Puente Tacoma Narrows
+                      <span className="text-red-600 text-[1rem]"> ⁽¹⁾</span>
+                    </span>{" "}
+                    <small className="block font-bold text-[.8rem]">
+                      Tacoma, Washington (1940)
+                    </small>
+                  </>
+                }
                 border="1px solid #D4CFCF"
               />
               <p
@@ -140,16 +162,27 @@ function SistemasOscilantes() {
                 containerWidth="80%"
                 video={puenteMilenio}
                 width="95%"
-                height="200px"
+                controls={true}
+                height="fit"
                 muted={true}
-                caption="Puente Millenium Oscilando"
+                caption={
+                  <>
+                    <span className="inline">Puente Millenium Oscilando</span>{" "}
+                    <span className="text-red-600 text-[1rem]"> ⁽²⁾</span>
+                    <small className="block font-bold text-[.8rem]">
+                      Londres, Inglaterra (2000)
+                    </small>
+                  </>
+                }
                 border="1px solid #D4CFCF"
               />
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
                 className="w-[90%] mt-5 text-[1rem] opacity-90"
               >
-                La conexión de lo uno con lo otro puede ser tan potente que es capaz de hacer un puente tambalear unicamente por estar en <strong className="underline">sincronía</strong>.
+                La conexión de lo uno con lo otro puede ser tan potente que es
+                capaz de hacer un puente tambalear unicamente por estar en{" "}
+                <strong className="underline">sincronía</strong>.
               </p>
             </div>
           </div>
@@ -170,7 +203,8 @@ function SistemasOscilantes() {
                 style={{ fontFamily: "Montserrat, sans-serif" }}
                 className="w-full my-5 text-xl opacity-90 text-center"
               >
-                Los <strong>amortiguadores</strong> son sistemas que evitan la fatalidad de la resonancia.
+                Los <strong>amortiguadores</strong> son sistemas que evitan la
+                fatalidad de la resonancia.
               </p>
 
               <RetroImage
@@ -178,7 +212,14 @@ function SistemasOscilantes() {
                 image={taipeiBoceto}
                 width="95%"
                 height="240px"
-                caption="Amortiguador de masa sintonizada del Taipei 101"
+                caption={
+                  <>
+                    <span className="inline">
+                      Amortiguador de masa sintonizada del Taipei 101
+                    </span>{" "}
+                    <span className="text-red-600 text-[1rem]"> ⁽³⁾</span>
+                  </>
+                }
                 border="1px solid #D4CFCF"
               />
             </div>
@@ -186,11 +227,23 @@ function SistemasOscilantes() {
             <div className="flex items-center mt-7 5 w-full">
               <div className="flex items-center gap-5 w-full">
                 <RetroImage
-                  containerWidth="40%"
+                  containerWidth="43%"
                   image={taipeiReal}
-                  width="95%"
+                  width="97%"
                   height="240px"
-                  caption="Rascacielos Taipei 101"
+                  caption={
+                    <div className="flex flex-col items-center">
+                      <span className="inline">Taipei 101</span>{" "}
+                      <span className="inline text-red-600 text-[1rem]">
+                        {" "}
+                        ⁽⁴⁾
+                      </span>
+                      <small className="block font-bold text-[.8rem]">
+                        Ubicado en Taiwán
+                      </small>
+                      <img className="w-5 h-3" src={taiwan} alt="" />
+                    </div>
+                  }
                   border="1px solid #D4CFCF"
                 />
 
@@ -198,8 +251,17 @@ function SistemasOscilantes() {
                   containerWidth="80%"
                   video={amortiguadorVideo}
                   width="95%"
+                  controls={true}
                   height="220px"
-                  caption="Video de su Amortiguador"
+                  caption={
+                    <div className="flex">
+                      <span className="inline">Amortiguador en acción</span>{" "}
+                      <span className="inline text-red-600 text-[1rem]">
+                        {" "}
+                        ⁽⁵⁾
+                      </span>
+                    </div>
+                  }
                   border="1px solid #D4CFCF"
                 />
               </div>
@@ -208,15 +270,14 @@ function SistemasOscilantes() {
           <span className="absolute bottom-[2%] right-[5%] text-xl">2</span>
         </div>
 
-
         <div className="relative justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-          
           <div className=" flex items-center flex-col gap-4 pt-15 w-full h-[85%] px-5">
             <p
               style={{ fontFamily: "Montserrat, sans-serif" }}
               className="w-full mb-4 text-[1rem] opacity-90"
             >
-              La magia de las ondas sonoras y una vez mas de la resonancia hace que un simple sonido sea capaz de quebrar copas y cristales.
+              La magia de las ondas sonoras y una vez más de la resonancia hace
+              que un simple sonido sea capaz de quebrar copas y cristales.
             </p>
 
             <RetroVideo
@@ -248,8 +309,8 @@ function SistemasOscilantes() {
           <span className="absolute bottom-[2%] left-[5%] text-xl">3</span>
         </div>
 
-      
-        <div className="relative items-center w-full h-full bg-amber-50 text-black p-4"><img
+        <div className="relative items-center w-full h-full bg-amber-50 text-black p-4">
+          <img
             className="w-15 h-full absolute top-0 -left-10 "
             src={argollado}
             alt="decorative image"
@@ -361,7 +422,7 @@ function SistemasOscilantes() {
         </div>
 
         <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-        <img
+          <img
             className="w-15 h-full absolute top-0 -left-10 "
             src={argollado}
             alt="decorative image"
@@ -384,7 +445,7 @@ function SistemasOscilantes() {
               <iframe
                 src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_es.html"
                 width="100%"
-                height="300"
+                height="230"
                 loading="eager"
                 // loading eager makes the iframe render even if its hidden in a HTMLFlipBook page
               ></iframe>
@@ -400,20 +461,28 @@ function SistemasOscilantes() {
               <iframe
                 src="https://phet.colorado.edu/sims/html/masses-and-springs-basics/latest/masses-and-springs-basics_es.html"
                 width="100%"
-                height="300"
+                height="230"
                 loading="eager"
                 // loading eager makes the iframe render even if its hidden in a HTMLFlipBook page
               ></iframe>
             </div>
+            <p
+              className="mt-10 text-[.8rem] font-semibold"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+            >
+              Las simulaciones interactivas utilizadas en esta página web son
+              desarrolladas por PhET Interactive Simulations, University of
+              Colorado Boulder, y se utilizan bajo los términos de su licencia
+              de uso. Puedes encontrar más información en
+              https://phet.colorado.edu.
+            </p>
           </div>
 
           <span className="absolute bottom-[2%] left-[5%] text-xl">7</span>
         </div>
 
         <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
-
-
-          <div className="flex flex-col pt-5 w-full h-full px-5">
+          <div className="flex flex-col pt-5 w-full h-full px-10">
             <p
               style={{ fontFamily: "Caveat, sans-serif" }}
               className="mt-5 text-3xl font-bold text-center"
@@ -435,6 +504,43 @@ function SistemasOscilantes() {
           <span className="absolute bottom-[2%] right-[5%] text-xl">8</span>
         </div>
 
+        <div className="relative flex justify-center items-center w-full h-full bg-amber-50 text-black p-4">
+        <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
+          <div className="flex flex-col pt-5 w-full h-full px-5">
+            <p
+              style={{ fontFamily: "Caveat, sans-serif" }}
+              className="mt-5 text-3xl font-bold text-center"
+            >
+              Referencias
+            </p>
+            <div
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+              className="w-full mt-5 flex flex-col gap-5"
+            >
+              <p className="break-words max-w-full">
+                <span className="font-bold text-red-600">(1)</span> Video tomado de <span className="text-blue-600">https://www.youtube.com/watch?v=XggxeuFDaDU</span>
+              </p>
+              <p className="break-words max-w-full">
+                <span className="font-bold text-red-600">(2)</span> Video tomado de <span className="text-blue-600">https://www.youtube.com/watch?v=eAXVa__XWZ8</span>
+              </p>
+              <p className="break-words max-w-full">
+                <span className="font-bold text-red-600">(3)</span> Imagen tomada de <span className="text-blue-600">https://leugimfigueroa.blogspot.com/2014/08/taipei-101.html</span>
+              </p>
+              <p className="break-words max-w-full">
+                <span className="font-bold text-red-600">(4)</span> Imagen tomada de <span className="text-blue-600">https://commons.wikimedia.org/wiki/File:101.portrait.altonthompson.jpg</span>
+              </p>
+              <p className="break-words max-w-full">
+                <span className="font-bold text-red-600">(5)</span> Video tomado de <span className="text-blue-600">https://www.youtube.com/shorts/kuyV3CaV-vk</span>
+              </p>
+            </div>
+          </div>
+
+          <span className="absolute bottom-[2%] right-[5%] text-xl">8</span>
+        </div>
       </HTMLFlipBook>
       {/* MODIFICARLO POR EL AUDIO DEL PROFESOR: <audio ref={audioRef} src={transitionSound} hidden /> */}
     </div>

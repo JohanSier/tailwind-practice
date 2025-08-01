@@ -13,7 +13,7 @@ import SketchfabHeartModel from "../components/SketchfabHeartModel";
 
 // IMAGENES
 import argollado from "../assets/images/anillado.webp";
-
+import qr from "../assets/images/frame.png"
 // VIDEOS
 import oscilacion from "../assets/videos/oscilacion.mp4";
 import pendulo from "../assets/videos/pendulo.mp4";
@@ -52,14 +52,13 @@ function LaboratoriosOscilantes() {
           <span></span>
           <div
             style={{ fontFamily: "Caveat, sans-serif" }}
-            className=" w-full h-full flex flex-col items-center justify-center px-20"
+            className=" w-full h-full flex flex-col items-center justify-center px-10"
           >
             <small className="bg-black text-white text-lg font-semibold px-3 rounded-full mt-6 mb-4 ">
               Practicas
             </small>
             <h1 className="text-5xl font-semibold text-center mb-5">
-              Entendiendo las Oscilaciones con <br /> las Prácticas en el
-              Laboratorio
+              Jugando con los Sistemas Oscilantes para entenderlos
             </h1>
 
             <div className="flex gap-5">
@@ -70,9 +69,20 @@ function LaboratoriosOscilantes() {
                   muted
                   autoPlay
                   containerWidth="80%"
-                  width="70%"
+                  width="75%"
+                  containerHeight="fit-content"
+                  height="fit-content"
                   playsInline
-                  caption="La danza del péndulo"
+                  caption={
+                    <>
+                      <span>
+                        Midiendo la{" "}
+                        <span className="text-purple-500">amplitud</span>,{" "}
+                        <span className="text-amber-500">periodo</span> y{" "}
+                        <span className="text-red-800">frecuencia</span>
+                      </span>
+                    </>
+                  }
                 />
               </div>
             </div>
@@ -86,7 +96,7 @@ function LaboratoriosOscilantes() {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="mt-10 text-3xl font-bold text-center"
               >
-                Temas a Resolver al final del apartado:
+                Preguntas para generar comprensión
               </h2>
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -137,7 +147,6 @@ function LaboratoriosOscilantes() {
 
           {/* <SketchfabHeartModel /> */}
           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
-
             <div className="mt-[30%] flex flex-col justify-center items-center">
               <RetroVideo
                 containerWidth="95%"
@@ -148,13 +157,18 @@ function LaboratoriosOscilantes() {
               />
 
               <h2
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-                className="w-[80%] text-xl font-regular mt-5"
+                style={{ fontFamily: "Caveat, sans-serif" }}
+                className="w-[80%] text-3xl font-regular mt-5 text-center"
               >
-                Un sistema oscilante es el arte de moverse sin avanzar, danzando entre extremos con la precisión de un latido.
+                Un sistema oscilante es el arte de moverse sin avanzar, bailando
+                entre extremos con la precisión de un latido.
                 <br />
                 <br />
-                Oscila como si recordara dónde empezó, <span className="text-sky-400 font-bold">volviendo una y otra vez al mismo lugar</span>, como si el universo le susurrara el camino.
+                Oscila como si tuviera memoria de dónde empezó,{" "}
+                <span className="text-sky-400 font-bold">
+                  volviendo una y otra vez al mismo lugar
+                </span>
+                .
               </h2>
             </div>
           </div>
@@ -163,53 +177,44 @@ function LaboratoriosOscilantes() {
 
         <div className="flex w-full h-full bg-amber-50 text-black p-8">
           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
-            <div className="mt-[30%] flex flex-col justify-center items-center gap-5">
+            <div className="flex flex-col justify-center items-center gap-5">
               <h2
                 style={{ fontFamily: "Caveat, sans-serif" }}
-                className="w-[80%] text-3xl font-bold text-center"
+                className="w-[80%] text-4xl font-bold text-center"
               >
-                Sistemas Oscilantes Observados
+                Sistemas Oscilantes con los que jugamos:
               </h2>
-              <div className="flex flex-col justify-center items-center">
-                <RetroVideo
-                  containerWidth="95%"
-                  video={oscilanteCorto}
-                  width="95%"
-                  height="220px"
-                  caption="Sistema: Péndulo"
-                />
-              </div>
-
-              <div className="flex flex-col">
+              <div className="w-full flex flex-col justify-center items-center">
                 <div className="flex gap-5">
-                  <RetroVideo
-                    containerWidth="95%"
-                    video={sistemaElastico}
-                    width="95%"
-                    height="220px"
-                    caption="Sistema: Elástico"
-                  />
+                  <div className="flex flex-col">
+                    <RetroVideo
+                      containerWidth="95%"
+                      video={oscilanteCorto}
+                      width="95%"
+                      height="100%"
+                    />
+                    <p
+                      style={{ fontFamily: "Caveat, sans-serif" }}
+                      className="w-[80%] -mt-50 ml-5 text-3xl font-regular text-center"
+                    >
+                      El péndulo nos prestó su baile
+                    </p>
+                  </div>
 
-                  <div className="flex flex-col gap-2 ">
-                    <div className="flex h-40 flex-col bg-amber-500 text-black p-5 rounded items-center ">
-                      <span className="text-2xl font-bold ">Notas:</span>
-                      <p className="text-[.9rem] font-regular">
-                        En los sistemas elásticos se observa una{" "}
-                        <strong>Elongación</strong> y una rigidez del resorte en
-                        donde esta acoplada la masa
-                      </p>
-                    </div>
+                  <div className="flex flex-col">
+                    <RetroVideo
+                      containerWidth="95%"
+                      video={sistemaElastico}
+                      width="95%"
+                      height="100%"
+                    />
 
-                    <div className="flex h-50 flex-col bg-blue-700 text-[#e4e4e4] p-5 rounded items-center gap-5">
-                      <p className="text-[.9rem] font-regular">
-                      El <strong>periodo</strong> es el tiempo que tarda una oscilación en volver a empezar su historia.
-                      </p>
-                      <p className="text-[.9rem] font-regular">
-                        Las oscilaciones que un oscilador realiza en segundo se
-                        conoce como <strong>Frecuencia</strong> y se mdie en
-                        Hertz (Hz)
-                      </p>
-                    </div>
+                    <p
+                      style={{ fontFamily: "Caveat, sans-serif" }}
+                      className="w-full mt-5 text-3xl font-regular text-center"
+                    >
+                      Y el sistema elástico nos regaló su <span className="text-purple-700 font-bold">elasticidad</span> y <span className="text-red-800 font-bold">rigidez</span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -355,7 +360,7 @@ function LaboratoriosOscilantes() {
 
               <h2
                 style={{ fontFamily: "Caveat, sans-serif" }}
-                className="w-[80%] text-3xl font-regular mt-5"
+                className="w-[90%] text-3xl font-regular text-center mt-5"
               >
                 Por último, arriba se observa el concepto de{" "}
                 <strong>fase entre dos movimientos</strong> <br />
@@ -373,15 +378,15 @@ function LaboratoriosOscilantes() {
         <div className="flex w-full h-full bg-amber-50 text-black p-8">
           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
             <div className="mt-[30%] flex flex-col justify-center items-center">
-              <SketchfabHeartModel />
+              {/* <SketchfabHeartModel /> */}
+              <img className="w-80" src={qr} alt="heart" />
               <h2
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[80%] text-3xl text-center font-regular mt-5"
               >
-                Experimenta con el sistema oscilante más básico para la vida{" "}
-                <span className="font-bold text-red-500">nuestro corazón</span>{" "}
-                <br />
-                <br />
+                Escanea el código y juega con el sistema oscilante más básico para la vida:{" "}
+                <span className="font-bold text-red-500">Nuestro corazón</span>{" "}
+              
               </h2>
             </div>
           </div>
@@ -389,6 +394,11 @@ function LaboratoriosOscilantes() {
         </div>
 
         <div className="flex w-full h-full bg-amber-50 text-black p-8">
+        <img
+            className="w-15 h-full absolute top-0 -left-10 "
+            src={argollado}
+            alt="decorative image"
+          />
           <div className="relative flex justify-center items-center w-full h-[85%] px-5">
             <div className="mt-[30%] flex flex-col justify-center items-center">
               <h2
@@ -396,9 +406,9 @@ function LaboratoriosOscilantes() {
                 className="w-[80%] text-3xl text-center font-regular mt-5"
               >
                 <span className="font-bold text-indigo-400">
-                  Los electrones también bailan.{" "}
+                  Los electrones también gozan.{" "}
                 </span>
-                Su danza invisible da vida a la corriente que mueve al mundo.
+                Su baile invisible da vida a la corriente que mueve al mundo.
                 <br />
                 <br />
               </h2>
@@ -429,9 +439,9 @@ function LaboratoriosOscilantes() {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[80%] text-3xl font-regular mt-5"
               >
-                La oscilación eléctrica es comunicación sútil. Un puente entre lo
-                visible y lo invisible
-                <br /> <br/>
+                La oscilación eléctrica es comunicación sútil. Un puente entre
+                lo visible y lo invisible
+                <br /> <br />
                 <span className="font-bold text-pink-500">
                   Para cuantificar estas oscilaciones hay que hacer que se
                   manifiesten
@@ -439,7 +449,7 @@ function LaboratoriosOscilantes() {
               </h2>
 
               <RetroVideo
-              margin="25px"
+                margin="25px"
                 containerWidth="fit"
                 video={osElectricasDos}
                 width="fit"

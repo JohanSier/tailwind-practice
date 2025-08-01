@@ -151,7 +151,7 @@ const Ondas = () => {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="mt-10 text-3xl font-bold text-center"
               >
-                Temas a Resolver al final del apartado:
+                Preguntas para generar comprensión
               </h2>
               <p
                 style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -221,7 +221,7 @@ const Ondas = () => {
                 video={cuerdaDirecciones}
                 width="100%"
                 height="350px"
-                caption="Ondas Manifestandose"
+                caption="Onda Manifestandose"
               />
 
               <h2
@@ -237,19 +237,7 @@ const Ondas = () => {
         </div>
 
         <div className="relative flex w-full h-full bg-amber-50 text-black p-8">
-          <div className="absolute bottom-24 flex w-80 h-fit flex-col bg-amber-500 text-black px-5 py-4 rounded gap-4">
-            <span className="text-2xl font-bold">Nota:</span>
-            <p className="text-[.9rem] font-regular">
-              Cabe aclarar que el medio por el cual se propaga la onda es
-              también junto con su perturbador son también factores
-              fundamentales a tener en cuenta.
-              <br />
-              <br />
-              Ya sea el medio una cuerda, el aire, el agua, el vacio, etc y el
-              perturbador una mano, una llave, una pared, etc.
-            </p>
-          </div>
-          <div className="relative flex justify-center items-center w-full h-[85%] px-5">
+          <div className="relative flex justify-center items-center w-full h-[100%]">
             <div className="flex flex-col justify-center items-center">
               <h2
                 style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -454,9 +442,9 @@ const Ondas = () => {
 
               <h2
                 style={{ fontFamily: "Caveat, sans-serif" }}
-                className=" w-[70%] text-3xl font-regular text-black -mt-84 text-center"
+                className=" w-[85%] text-3xl font-regular text-black -mt-104 text-center"
               >
-                Hay secretos que solo un cristal agrietado puede revelar. Bajo
+                Hay secretos que solo un cristal roto puede revelar. Bajo
                 su mirada torcida, la luz cuenta verdades que el ojo desnudo no
                 podría imaginar.
               </h2>
@@ -520,7 +508,7 @@ const Ondas = () => {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[90%] text-3xl font-regular m-5 text-center"
               >
-                La <span className="font-bold text-amber-700"> difracción</span>{" "}
+                La <span className="font-bold text-amber-700"> Dispersión</span>{" "}
                 es la respuesta luminosa cuando el mundo intenta ponerle límites
                 a la claridad.
               </h2>
@@ -554,10 +542,12 @@ const Ondas = () => {
                 Por la{" "}
                 <span className="font-bold text-amber-400">refracción</span>, lo
                 recto parece curvo, no porque cambie la forma, sino porque
-                cambia{" "}
+                {" "}
                 <span className="font-bold text-red-400">
-                  la forma en que la luz lo cuenta.
+                  la velocidad de la luz cambia
                 </span>
+                {" "}
+                cuando penetra en otro medio.
                 <br />
                 <br />
                 Cada material tiene su indice de refracción, a esa cantidad se
@@ -689,8 +679,8 @@ const Ondas = () => {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="mt-10 text-3xl font-regular text-center"
               >
-                Bajo la difracción, el universo deja de ser oscuro y callado:
-                los átomos se pueden comunicar con nosotros.
+                Las anteriores imagenes son grabaciones de cuando nos comunicamos con los átomos. <br/><br/>
+                Lo anterior nos develó la <span className="font-bold text-pink-400">intimidad del átomo</span>
               </h2>
             </div>
           </div>
@@ -710,7 +700,7 @@ const Ondas = () => {
                 style={{ fontFamily: "Caveat, sans-serif" }}
                 className="w-[90%] text-3xl font-regular m-5 text-center"
               >
-                A veces la luz no se ve hasta que algo la abraza.{" "}
+                A veces la luz no se ve, hasta que algo la abraza.{" "}
                 <span className="font-bold text-red-500">
                   Así supimos que el láser caminaba y dejaba huellas.
                 </span>
